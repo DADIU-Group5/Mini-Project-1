@@ -21,4 +21,13 @@ public class NumberMovement : MonoBehaviour {
         //set a constant velocity in the z-direction
         rigidBody.velocity = new Vector3(rigidBody.velocity.x, rigidBody.velocity.y, -1f * speed);
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Despawner")
+        {
+            //send number info to GameState
+            Destroy(gameObject);
+        }
+    }
 }
