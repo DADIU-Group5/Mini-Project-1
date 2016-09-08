@@ -18,7 +18,7 @@ public class Number : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        thisNumber = 50;
+        //thisNumber = 50;
         string Digits = thisNumber.ToString();
         //GetComponent<MeshRenderer>().material = (Material)Resources.Load("number" + Digits[0]);
         TextMesh childText = transform.Find("FloatingText").GetComponent<TextMesh>();
