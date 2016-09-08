@@ -9,7 +9,7 @@ public class GameState : MonoBehaviour {
 
     public static GameState _instance;
 
-    int lastNumber = 0;
+    int lastNumber = 20;
 
 	// Use this for initialization
 	void Awake () {
@@ -27,6 +27,18 @@ public class GameState : MonoBehaviour {
     public int GetNumber()
     {
         return lastNumber;
+    }
+
+    public int GetNextNumber()
+    {
+        if(lastNumber == 100)
+        {
+            return 1;
+        }
+        else
+        {
+            return lastNumber + 1;
+        }
     }
 
     public void PlayerGotNumber(int newNum)
