@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameState : MonoBehaviour {
 
@@ -10,6 +11,9 @@ public class GameState : MonoBehaviour {
     public static GameState _instance;
 
     int lastNumber = 20;
+
+    List<int> missedNumbers;
+    public int missedCorrectNumberTimes = 0;
 
 	// Use this for initialization
 	void Awake () {
@@ -22,6 +26,8 @@ public class GameState : MonoBehaviour {
             Debug.LogError("There should not be 2 GameStates, destroys the newly created GameState");
             Destroy(gameObject);
         }
+
+        missedNumbers = new List<int>();
 	}
 
     public int GetNumber()
@@ -44,5 +50,13 @@ public class GameState : MonoBehaviour {
     public void PlayerGotNumber(int newNum)
     {
         //Code to handle the number the player recieved.
+    }
+
+    public void NumberMissed(int numberMissed)
+    {
+        missedNumbers.Add(numberMissed);
+        Debug.Log(numberMissed);
+        if (numberMissed == lastNumber + 1)
+            missedCorrectNumberTimes += 1;
     }
 }
