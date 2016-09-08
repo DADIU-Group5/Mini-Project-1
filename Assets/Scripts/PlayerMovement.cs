@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System;
 
 /// <summary>
 /// Handles player movement + input.
@@ -9,10 +8,6 @@ public class PlayerMovement : MonoBehaviour
 {
     // TODO: Only for testing
     private bool touch = false;
-
-    private DateTime jumpStarted;
-    public float jumpDuration = 0.6f;
-    public float jumpHeight = 2f;
 
     private Vector3 leftLane = new Vector3(-2f, 0.5f, -8f);
     private Vector3 middleLane = new Vector3(0f, 0.5f, -8f);
@@ -32,15 +27,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Transform transform = GetComponent<Transform>();
-
-        // Check if jumping and should go down
-        bool jumpFinished = (DateTime.Now - jumpStarted).Milliseconds > jumpDuration * 1000;
-        if (transform.position.y > 0.5f && jumpFinished)
-        {
-            transform.Translate(0.0f, -jumpHeight, 0.0f);
-        }
-
         int horizontal = 0;     //Used to store the horizontal move direction.
         int vertical = 0;       //Used to store the vertical move direction.
 
@@ -148,11 +134,6 @@ public class PlayerMovement : MonoBehaviour
                     lane = 1;
                 }
             }
-        }
-        else if (vertical > 0 && transform.position.y == 0.5)
-        {
-            transform.Translate(0.0f, jumpHeight, 0.0f);
-            jumpStarted = DateTime.Now;
         }
     }
 }
