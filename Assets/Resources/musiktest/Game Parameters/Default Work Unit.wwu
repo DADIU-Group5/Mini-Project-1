@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1B579089-84F2-4998-872F-529479CE73FE}" SchemaVersion="72">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{1B579089-84F2-4998-872F-529479CE73FE}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="truckSpeed" ID="{CA8E297C-61FD-4BC6-9436-EEF4FCBC0653}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>
