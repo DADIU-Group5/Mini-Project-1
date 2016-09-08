@@ -8,7 +8,7 @@ public class GameState : MonoBehaviour {
     /// Know the score, which number has to be accessed next etc.
     /// </summary>
 
-    private int lastNumber = 0, score = 0, scoreMultiplier = 1;
+    private int lastNumber = 0;
 
     public static GameState _instance;
     public int playerLives;
