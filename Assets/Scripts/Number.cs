@@ -18,6 +18,7 @@ public class Number : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        ThisNumber = 20;
         string Digits = thisNumber.ToString();
         GetComponent<MeshRenderer>().material = (Material)Resources.Load("number" + Digits[0]);
 
