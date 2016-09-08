@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{92825D5E-2113-418A-B63E-F7D06BB3BE8E}" SchemaVersion="72">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{92825D5E-2113-418A-B63E-F7D06BB3BE8E}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="jungleAmbience" ID="{6BFBD596-7D90-4091-A9D6-BA712BC54FF8}">
+					<ChildrenList>
+						<Action Name="Play" ID="{E6CF4630-8BEE-4E8C-B1CC-6EAB441DB318}" ShortID="408506569" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{26460AE9-8AB5-4FC8-970C-058E6D78AED7}" Global="false">
+									<ObjectRef Name="birds" ID="{E2CB9914-6565-4220-BE66-B50C094608A3}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{70BE6229-54B2-4ABD-969F-F9C8E6570183}" ShortID="747257995" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{BDEC470F-58E9-4178-8AB2-09B2FAEEA798}" Global="false">
+									<ObjectRef Name="water" ID="{F189D9FB-8B39-44D4-B0F1-B12CDE502977}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{0957A608-BF39-4F7A-A59A-EBB8C8256856}" ShortID="693470286" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{D2F2F931-5903-482D-96DD-13122BEDF951}" Global="false">
+									<ObjectRef Name="monkey" ID="{D8CF6147-D98C-48E7-BA03-54BF7D6D06CF}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{CFE3200F-D8AC-4932-99D0-22C81801EA3A}" ShortID="678394111" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{97C3F0D8-15E9-4E5C-BBD0-F96D8A9B43A5}" Global="false">
+									<ObjectRef Name="thunder" ID="{4A2C69E4-641E-4C9C-B311-4A1F8563875A}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="truckEngine" ID="{C11D5DD3-72C5-4705-AFAE-CD92A6A08220}">
+					<ChildrenList>
+						<Action Name="Play" ID="{5FA249DA-B2A7-4162-B4A2-834734341B79}" ShortID="971976910" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{5A8227C6-4BE4-4284-ACED-B87A0D8DE83E}" Global="false">
+									<ObjectRef Name="truck_engine" ID="{5F67D0D4-E0DC-40E1-A9B7-ABEC5BA5FFD2}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="truckHonk" ID="{0B50BD6D-EFD4-4184-829C-95F256B13828}">
+					<ChildrenList>
+						<Action Name="Play" ID="{33F72009-79D6-4331-9AF8-8AB99F4D9653}" ShortID="1054526093" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{CE1004E9-80B9-4D55-9B9A-3938EA4F9682}" Global="false">
+									<ObjectRef Name="truck honk" ID="{A25CF9FC-8577-46D6-8A82-8BB3ECD56549}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

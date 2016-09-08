@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{994168D0-3D84-4C9A-B3FB-901F4A174977}" SchemaVersion="72">
+	<Modulators>
+		<WorkUnit Name="Default Work Unit" ID="{994168D0-3D84-4C9A-B3FB-901F4A174977}" PersistMode="Standalone">
+			<ChildrenList>
+				<ModulatorLfo Name="New Modulator LFO" ID="{DD336EFB-A10E-49E8-9EBB-D339379EC9F2}" ShortID="926443815">
+					<PropertyList>
+						<Property Name="LfoDepth" Type="Real64" Value="21.1"/>
+						<Property Name="LfoFrequency" Type="Real64" Value="0.1">
+							<RTPCList>
+								<RTPC Name="" ID="{5B498513-BEE4-489C-9364-E91BEEDB1F3F}" ShortID="393942665">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="New Modulator LFO_01" ID="{59FE27B1-7798-41E2-A57C-57A99F563E4E}" WorkUnitID="{994168D0-3D84-4C9A-B3FB-901F4A174977}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{66AE5746-2C49-4C38-93D6-9CAB158D6F17}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="5"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>0.99996</YPos>
+												<Flags>21</Flags>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>0.17907</YPos>
+												<Flags>53</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+				</ModulatorLfo>
+				<ModulatorLfo Name="New Modulator LFO_01" ID="{59FE27B1-7798-41E2-A57C-57A99F563E4E}" ShortID="18808235">
+					<PropertyList>
+						<Property Name="LfoFrequency" Type="Real64" Value="4.481"/>
+						<Property Name="LfoWaveform" Type="int32" Value="2"/>
+					</PropertyList>
+				</ModulatorLfo>
+			</ChildrenList>
+		</WorkUnit>
+	</Modulators>
+</WwiseDocument>
