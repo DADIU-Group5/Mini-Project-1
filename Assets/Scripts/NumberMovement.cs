@@ -8,12 +8,14 @@ using System.Collections;
 
 public class NumberMovement : MonoBehaviour {
 
+    GameState gameState;
     public Rigidbody rigidBody;
     public float speed = 1f;
 
 	// Use this for initialization
 	void Start () {
         rigidBody = GetComponent<Rigidbody>();
+        gameState = GameObject.Find("GameState").GetComponent<GameState>();
 	}
 	
 	// Update is called once per frame
@@ -27,6 +29,7 @@ public class NumberMovement : MonoBehaviour {
         if (collision.gameObject.name == "Despawner")
         {
             //send number info to GameState
+            gameState.NumberMissed(gameObject.GetComponent<Number>().thisNumber);
             Destroy(gameObject);
         }
     }
