@@ -56,20 +56,20 @@ public class GameState : MonoBehaviour {
         }
         else
         {
-            playerLives--;
-            // TODO Move cart away as player lose lives.
-            if (playerLives <= 0)
-            {
-                // Game-Over, reload the game.
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
+            LoseLife();
         }
     }
 
     // Makes the player lose a life. Initiates game-over if all lives are lost.
     public void LoseLife()
     {
-        
+        playerLives--;
+        // TODO Move cart away as player lose lives.
+        if (playerLives <= 0)
+        {
+            // Game-Over, reload the game.
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     public void NumberMissed(int numberMissed)
