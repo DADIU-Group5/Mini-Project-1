@@ -6,6 +6,10 @@
 				<Event Name="jungleAmbience" ID="{6BFBD596-7D90-4091-A9D6-BA712BC54FF8}">
 					<ChildrenList>
 						<Action Name="Play" ID="{E6CF4630-8BEE-4E8C-B1CC-6EAB441DB318}" ShortID="408506569" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeCurve" Type="int16" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="5"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{26460AE9-8AB5-4FC8-970C-058E6D78AED7}" Global="false">
 									<ObjectRef Name="birds" ID="{E2CB9914-6565-4220-BE66-B50C094608A3}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
@@ -13,6 +17,10 @@
 							</ElementList>
 						</Action>
 						<Action Name="Play" ID="{70BE6229-54B2-4ABD-969F-F9C8E6570183}" ShortID="747257995" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeCurve" Type="int16" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="5"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{BDEC470F-58E9-4178-8AB2-09B2FAEEA798}" Global="false">
 									<ObjectRef Name="water" ID="{F189D9FB-8B39-44D4-B0F1-B12CDE502977}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
@@ -20,6 +28,10 @@
 							</ElementList>
 						</Action>
 						<Action Name="Play" ID="{0957A608-BF39-4F7A-A59A-EBB8C8256856}" ShortID="693470286" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeCurve" Type="int16" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="5"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{D2F2F931-5903-482D-96DD-13122BEDF951}" Global="false">
 									<ObjectRef Name="monkey" ID="{D8CF6147-D98C-48E7-BA03-54BF7D6D06CF}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
@@ -27,6 +39,10 @@
 							</ElementList>
 						</Action>
 						<Action Name="Play" ID="{CFE3200F-D8AC-4932-99D0-22C81801EA3A}" ShortID="678394111" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeCurve" Type="int16" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="5"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{97C3F0D8-15E9-4E5C-BBD0-F96D8A9B43A5}" Global="false">
 									<ObjectRef Name="thunder" ID="{4A2C69E4-641E-4C9C-B311-4A1F8563875A}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
@@ -52,6 +68,50 @@
 							<ElementList>
 								<Element ID="{CE1004E9-80B9-4D55-9B9A-3938EA4F9682}" Global="false">
 									<ObjectRef Name="truck honk" ID="{A25CF9FC-8577-46D6-8A82-8BB3ECD56549}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{EC68B26B-8E0C-4DE8-A57E-7E61D6125EE5}" ShortID="298879214" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{984BDFCD-CEFC-48EF-9DB8-2BD25D1B2E76}" Global="false">
+									<ObjectRef Name="truck honk_01" ID="{7A56A886-58FC-418B-B163-DC73B0DDA239}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="numberDrop" ID="{B97DD5B8-5695-456D-B725-E9FDF10DA88E}">
+					<ChildrenList>
+						<Action Name="Play" ID="{403CE30A-B642-4877-A0B9-31A54A14D8FA}" ShortID="784290032" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{F97E2D67-F3FE-4DD9-BA32-F22B69F5F9B6}" Global="false">
+									<ObjectRef Name="tal drop" ID="{475E86AF-6B9C-421D-B389-28BB7047C2EE}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="correctNumberPickup" ID="{2D73A963-CE33-4B9E-BB1D-049C94E8235D}">
+					<ChildrenList>
+						<Action Name="Play" ID="{AB5080D8-2853-480E-AEA2-9159CE8E3222}" ShortID="332088199" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{B033C659-677D-41C5-86D9-D7DB2D91F3E6}" Global="false">
+									<ObjectRef Name="talPickup" ID="{500221F4-276C-45E1-9F16-0F376457353C}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="wrongNumberPickup" ID="{744AF011-AE4C-47CD-8295-24110D646EE9}"/>
+				<Event Name="menuPressStart" ID="{28B4C443-C655-4450-AC2E-CE887EAAD721}">
+					<ChildrenList>
+						<Action Name="Play" ID="{66FB8CD6-7EE3-421D-B262-B47FF10098BE}" ShortID="149859594" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{8737BA9B-27A3-46B5-8B95-CA61E4D2F086}" Global="false">
+									<ObjectRef Name="start game" ID="{5469C7C8-0874-4603-8B25-D84A1619D49A}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
 								</Element>
 							</ElementList>
 						</Action>
