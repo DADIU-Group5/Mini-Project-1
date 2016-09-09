@@ -10,6 +10,7 @@ public class Number : MonoBehaviour {
     public Texture numberTexture;
     public int thisNumber = 20;
     public string Digits;
+    float distance = -0.75f;
 
     //alternatively, change number from spawn script by public variable.
 
@@ -28,7 +29,8 @@ public class Number : MonoBehaviour {
         // instantiate the correct number-prefabs
         for (int i = 0; i < Digits.Length; i++)
         {
-            GameObject digit = (GameObject)Instantiate(Resources.Load("models/MikeSnakeV001"));
+            GameObject digit = (GameObject)Instantiate(Resources.Load("models/MikeSnakeV001"), transform.position + new Vector3(.25f, 0, 0) + (transform.right * distance * i),transform.rotation);
+            //distance = digit.GetComponent<MeshFilter>().mesh.bounds.size.x;
             //GameObject digit = (GameObject) Instantiate(Resources.Load("models/Number"+Digits[i]));
             //Assign the correct positions (how do I take object width into account here?)
             digit.transform.SetParent(gameObject.transform);
@@ -39,7 +41,7 @@ public class Number : MonoBehaviour {
    public void SetNumber () {
         //ThisNumber = 20;
         Digits = thisNumber.ToString();
-        GetComponent<MeshRenderer>().material = (Material)Resources.Load("number" + Digits[0]);
+        //GetComponent<MeshRenderer>().material = (Material)Resources.Load("number" + Digits[0]);
         gameObject.transform.Find("NumberText").GetComponent<TextMesh>().text = Digits;
     }
 }

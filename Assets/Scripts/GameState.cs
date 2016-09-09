@@ -93,7 +93,7 @@ public class GameState : MonoBehaviour
         if (playerLives <= 0)
         {
             // Game-Over, reload the game.
-           // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(0);
         }
     }
 
