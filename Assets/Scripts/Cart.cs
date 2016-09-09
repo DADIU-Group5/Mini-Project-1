@@ -26,7 +26,6 @@ public class Cart : MonoBehaviour {
 
     void Update()
     {
-        Debug.Log("moving next: " + nextMove);
         currentPosition = gameObject.transform.position;
         if (nextMove <= Time.time)
         {
