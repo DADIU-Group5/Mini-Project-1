@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -10,13 +11,16 @@ public class GameState : MonoBehaviour {
 
     public static GameState _instance;
 
-    int lastNumber = 20;
+    private int lastNumber = 0;
+    private int missedNumbers = 0;
 
-    List<int> missedNumbers;
-    public int missedCorrectNumberTimes = 0;
+    public int playerLives = 3;
 
-	// Use this for initialization
-	void Awake () {
+    public float laneWidth = 1.5f;
+    public int missedNumbersThreshold = 5;
+
+    // Use this for initialization
+    void Awake () {
         if (_instance == null)
         {
             _instance = this;
@@ -26,8 +30,6 @@ public class GameState : MonoBehaviour {
             Debug.LogError("There should not be 2 GameStates, destroys the newly created GameState");
             Destroy(gameObject);
         }
-
-        missedNumbers = new List<int>();
 	}
 
     public int GetNumber()
@@ -37,26 +39,49 @@ public class GameState : MonoBehaviour {
 
     public int GetNextNumber()
     {
-        if(lastNumber == 100)
-        {
-            return 1;
-        }
-        else
-        {
-            return lastNumber + 1;
-        }
+        return lastNumber + 1;
     }
 
     public void PlayerGotNumber(int newNum)
     {
-        //Code to handle the number the player recieved.
+        //Determine if the right number was caught.
+        if (newNum == lastNumber++)
+        {
+            lastNumber++;
+            if (lastNumber >= 100)
+            {
+                // Loop number-counter back to zero.
+                lastNumber = 0;
+            }
+        }
+        else
+        {
+            playerLives--;
+            // TODO Move cart away as player lose lives.
+            if (playerLives <= 0)
+            {
+                // Game-Over, reload the game.
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
+    }
+
+    // Makes the player lose a life. Initiates game-over if all lives are lost.
+    public void LoseLife()
+    {
+        
     }
 
     public void NumberMissed(int numberMissed)
     {
-        missedNumbers.Add(numberMissed);
-        Debug.Log(numberMissed);
-        if (numberMissed == lastNumber + 1)
-            missedCorrectNumberTimes += 1;
+        if (numberMissed == GetNextNumber())
+        {
+            missedNumbers++;
+            if (missedNumbers >= missedNumbersThreshold)
+            {
+                missedNumbers = 0;
+                LoseLife();
+            }
+        }
     }
 }
