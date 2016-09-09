@@ -9,7 +9,7 @@ public class NumberMovement : MonoBehaviour {
 
     GameState gameState;
     public Rigidbody rigidBody;
-    public float speed = 1f;
+    public float numberSpeed = 1f;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +20,7 @@ public class NumberMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //set a constant velocity in the z-direction
-        rigidBody.velocity = new Vector3(rigidBody.velocity.x, rigidBody.velocity.y, -1f * speed);
+        rigidBody.velocity = new Vector3(rigidBody.velocity.x, rigidBody.velocity.y, -1f * numberSpeed);
     }
 
     void OnCollisionEnter(Collision collision)

@@ -54,9 +54,9 @@ public class GameState : MonoBehaviour {
 
     public void NumberMissed(int numberMissed)
     {
-        missedNumbers.Add(numberMissed);
-        Debug.Log(numberMissed);
-        if (numberMissed == lastNumber + 1)
-            missedCorrectNumberTimes += 1;
+        missedNumbers.Add(numberMissed); //add to list
+
+        if (numberMissed == lastNumber + 1) //if it was the correct number...
+            missedCorrectNumberTimes += 1; //missed count + 1
     }
 }
