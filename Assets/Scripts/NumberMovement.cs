@@ -9,8 +9,8 @@ public class NumberMovement : MonoBehaviour {
 
     public Rigidbody rigidBody;
 
-    //should this be updates from the gameState script?
-    //Then every new number will be instantiated with the correct speed,
+    //numberspeed is set in the GameState.
+    //Every new number will be instantiated with the correct speed,
     //but number from before the change will not have the correct speed.
     public float numberSpeed = 1f; 
 

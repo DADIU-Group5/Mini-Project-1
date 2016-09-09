@@ -15,6 +15,8 @@ public class UIController : MonoBehaviour {
     public Text lives;
     public Text unpauseCountdown;
 
+    public PlayerMovement playerMove;
+
     private bool countingDown = false;
     private float countdown = 3;
     private DateTime countTo;
@@ -62,7 +64,9 @@ public class UIController : MonoBehaviour {
     public void Pause()
     {
         Time.timeScale = 0;
+        playerMove.enabled = false;
     }
+
     public void Unpuase()
     {
         countTo = DateTime.Now;
@@ -80,6 +84,7 @@ public class UIController : MonoBehaviour {
                 Time.timeScale = 1;
                 countingDown = false;
                 unpauseCountdown.gameObject.SetActive(false);
+                playerMove.enabled = true;
             }
         }
     }
