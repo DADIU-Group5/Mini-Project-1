@@ -13,6 +13,7 @@ public class GameState : MonoBehaviour {
 
     private int lastNumber = 0;
     private int missedNumbers = 0;
+    private float numberSpeed = 3;
 
     public int playerLives = 3;
 
@@ -43,6 +44,11 @@ public class GameState : MonoBehaviour {
     public int GetNextNumber()
     {
         return lastNumber + 1;
+    }
+
+    public float GetNumberSpeed()
+    {
+        return numberSpeed;
     }
 
     public void PlayerGotNumber(int newNum)

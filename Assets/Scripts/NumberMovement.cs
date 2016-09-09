@@ -7,7 +7,6 @@ using System.Collections;
 
 public class NumberMovement : MonoBehaviour {
 
-    GameState gameState;
     public Rigidbody rigidBody;
 
     //should this be updates from the gameState script?
@@ -18,8 +17,7 @@ public class NumberMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rigidBody = GetComponent<Rigidbody>();
-        gameState = GameObject.Find("GameState").GetComponent<GameState>();
-        numberSpeed = gameState.numberSpeed;
+        numberSpeed = GameState._instance.GetNumberSpeed();
 	}
 	
 	// Update is called once per frame
@@ -33,7 +31,7 @@ public class NumberMovement : MonoBehaviour {
         if (collision.gameObject.name == "Despawner")
         {
             //send number info to GameState
-            gameState.NumberMissed(gameObject.GetComponent<Number>().thisNumber);
+            GameState._instance.NumberMissed(gameObject.GetComponent<Number>().thisNumber);
             Destroy(gameObject);
         }
     }
