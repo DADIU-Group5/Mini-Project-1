@@ -15,12 +15,16 @@ public class Spawner : MonoBehaviour {
 
     private float spawnDistance = 0.0f;
 
+    public GameObject numberPrefab;
+
     public void Spawn(Vector3 pos)
     {
         int newNumber = NumberGenerator._instance.GetNumber();
         int randomDistance = Random.Range(minDistance, (maxDistance + 1));
         Vector3 tempPosition = new Vector3(0, randomDistance, 0);
-        pos += tempPosition;
+        Vector3 numberPos = pos + tempPosition;
         //instantiate + set number
+        GameObject number = Instantiate(numberPrefab, numberPos, Quaternion.identity) as GameObject;
+        number.GetComponent<Number>().ThisNumber = newNumber;
     }
 }
