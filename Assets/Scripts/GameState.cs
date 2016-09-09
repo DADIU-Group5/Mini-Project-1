@@ -27,7 +27,7 @@ public class GameState : MonoBehaviour
     public int missedNumbersThreshold = 5;
 
     // private fields
-    public float score;
+    private float score;
     private int lastNumber;
     private int missedNumbers;
     private int numberStreak;
