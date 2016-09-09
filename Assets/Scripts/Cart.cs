@@ -28,7 +28,7 @@ public class Cart : MonoBehaviour {
     void Update()
     {
         currentPosition = gameObject.transform.position;
-        if (nextMove <= Time.time)
+        if (nextMove <= Time.timeSinceLevelLoad)
         {
             MoveCart();
         }
