@@ -3,27 +3,34 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
-public class GameState : MonoBehaviour {
-
-    /// <summary>
-    /// Know the score, which number has to be accessed next etc.
-    /// </summary>
-
+public class GameState : MonoBehaviour
+{
+    // singleton
     public static GameState _instance;
 
-    private int lastNumber = 0;
-    private int missedNumbers = 0;
-    [Range(0,10)]
-    float numberSpeed = 3;
-
-    public int playerLives = 3;
-
+    // editable fields used for balancing game
+    [Range(0, 5)]
+    public float initialSpeed = 3;
+    [Range(0, 1)]
+    public float speedMultiplierIncrease = 0.1f;
+    [Range(0, 1)]
+    public float scoreMultiplierIncrease = 0.1f;
+    [Range(1, 10)]
+    public int initialLifes = 3;
+    [Range(1, 5)]
+    public float laneWidth = 1.5f;
     // Determines the width between the incoming numbers.
     // This is also used for determining how much the player and car moves.
-    [Range(1f,3f)]
-    public float laneWidth = 1.5f;
+    [Range(1f, 3f)]
     public int missedNumbersThreshold = 5;
 
+    // private fields
+    private int lastNumber = 0;
+    private int missedNumbers = 0;
+    private float numberSpeed = 3;
+    private int playerLives = 3;
+    private float speedMultiplier;
+    private float scoreMultiplier;
 
     // Use this for initialization
     void Awake () {
