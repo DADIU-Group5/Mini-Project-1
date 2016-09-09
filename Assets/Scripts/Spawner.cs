@@ -13,8 +13,6 @@ public class Spawner : MonoBehaviour {
     [Range(2,10)]
     public int maxDistance = 2;
 
-    private float spawnDistance = 0.0f;
-
     public GameObject numberPrefab;
 
     public void Spawn(Vector3 pos)

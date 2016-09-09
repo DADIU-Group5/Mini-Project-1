@@ -27,7 +27,7 @@ public class Cart : MonoBehaviour {
     void Update()
     {
         currentPosition = gameObject.transform.position;
-        if (nextMove == Time.timeSinceLevelLoad)
+        if (nextMove <= Time.time)
         {
             MoveCart();
         }
@@ -37,7 +37,7 @@ public class Cart : MonoBehaviour {
     {
 
         spawner.Spawn(currentPosition);
-        nextMove = Time.timeSinceLevelLoad + cartMoveTimer;
+        nextMove += cartMoveTimer;
         if (currentLane == newLane)
         {
             int random = Random.Range(1, 3);
