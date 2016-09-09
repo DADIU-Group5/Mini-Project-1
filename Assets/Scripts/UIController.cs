@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System;
 
 /// <summary>
 /// Used to update the UI. Is a singleton, access using UIController._instance.METHOD
@@ -12,6 +13,11 @@ public class UIController : MonoBehaviour {
     public Text score;
     public Text nextNumber;
     public Text lives;
+    public Text unpauseCountdown;
+
+    private bool countingDown = false;
+    private float countdown = 3;
+    private DateTime countTo;
 
     void Awake()
     {
@@ -51,5 +57,30 @@ public class UIController : MonoBehaviour {
     public void UpdateLives(int newLives)
     {
         lives.text = "Lives: " + newLives;
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0;
+    }
+    public void Unpuase()
+    {
+        countTo = DateTime.Now;
+        countTo = countTo.AddSeconds(countdown);
+        countingDown = true;
+    }
+    void Update()
+    {
+        if (countingDown)
+        {
+            DateTime now = DateTime.Now;
+            unpauseCountdown.text = "Resuming in:\n"+(int)((countTo - now).TotalSeconds+1) + "!";
+            if (countTo.CompareTo(now) < 0)
+            {
+                Time.timeScale = 1;
+                countingDown = false;
+                unpauseCountdown.gameObject.SetActive(false);
+            }
+        }
     }
 }
