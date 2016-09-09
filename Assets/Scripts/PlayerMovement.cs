@@ -6,6 +6,7 @@ using System.Collections;
 /// </summary>
 public class PlayerMovement : MonoBehaviour
 {
+    enum Lane { Left, Middle, Right };
     private Vector3 leftLane = new Vector3(-2f, 0.5f, -8f);
     private Vector3 middleLane = new Vector3(0f, 0.5f, -8f);
     private Vector3 rightLane = new Vector3(2f, 0.5f, -8f);
@@ -13,12 +14,13 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 touchOrigin = -Vector2.one;
 
     // Current lane (0 - left, 1 - middle, 2 - right)
-    private int lane;
+    private Lane lane;
 
     // Use this for initialization
     void Start()
     {
-        lane = 1;
+        Transform transform = GetComponent<Transform>();
+        lane = Lane.Middle;
     }
 
     // Update is called once per frame
@@ -97,17 +99,17 @@ public class PlayerMovement : MonoBehaviour
         if (horizontal < 0)
         {
             // Not in leftmost lane
-            if (lane != 0)
+            if (lane != Lane.Left)
             {
-                if (lane == 1)
+                if (lane == Lane.Middle)
                 {
                     transform.position = leftLane;
-                    lane = 0;
+                    lane = Lane.Left;
                 }
                 else
                 {
                     transform.position = middleLane;
-                    lane = 1;
+                    lane = Lane.Middle;
                 }
             }
         }
@@ -115,17 +117,17 @@ public class PlayerMovement : MonoBehaviour
         {
 
             // Not in rightmost lane
-            if (lane != 2)
+            if (lane != Lane.Right)
             {
-                if (lane == 1)
+                if (lane == Lane.Middle)
                 {
                     transform.position = rightLane;
-                    lane = 2;
+                    lane = Lane.Right;
                 }
                 else
                 {
                     transform.position = middleLane;
-                    lane = 1;
+                    lane = Lane.Middle;
                 }
             }
         }
