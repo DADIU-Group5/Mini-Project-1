@@ -8,17 +8,19 @@ using System.Collections;
 public class Number : MonoBehaviour {
 
     public Texture numberTexture;
-    public int thisNumber;
+    public int thisNumber = 20;
 
-    public int ThisNumber//alternatively, change number from spawn script by public variable.
-    {
-        get { return thisNumber; }
-        set { thisNumber = value; }
-    }
+    //alternatively, change number from spawn script by public variable.
 
-	// Use this for initialization
-	void Start () {
-        ThisNumber = 20;
+    /* public int ThisNumber
+     {
+         get { return thisNumber; }
+         set { thisNumber = value; }
+     }*/
+
+    // Use this for initialization
+    void Start () {
+        //ThisNumber = 20;
         string Digits = thisNumber.ToString();
         GetComponent<MeshRenderer>().material = (Material)Resources.Load("number" + Digits[0]);
         gameObject.transform.Find("NumberText").GetComponent<TextMesh>().text = Digits;
