@@ -17,6 +17,11 @@ public class Cart : MonoBehaviour {
     private int currentLane = 1;
     private int newLane = 1;
 
+    void Start()
+    {
+        spawner = GetComponent<Spawner>();
+    }
+
     void Update()
     {
         currentPosition = gameObject.transform.position;
