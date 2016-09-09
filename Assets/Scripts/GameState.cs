@@ -13,12 +13,14 @@ public class GameState : MonoBehaviour {
 
     private int lastNumber = 0;
     private int missedNumbers = 0;
-    private float numberSpeed = 3;
+    [Range(0,10)]
+    float numberSpeed = 3;
 
     public int playerLives = 3;
 
     // Determines the width between the incoming numbers.
     // This is also used for determining how much the player and car moves.
+    [Range(1f,3f)]
     public float laneWidth = 1.5f;
     public int missedNumbersThreshold = 5;
 
@@ -51,10 +53,15 @@ public class GameState : MonoBehaviour {
         return numberSpeed;
     }
 
+    public float GetLaneWidth()
+    {
+        return laneWidth;
+    }
+
     public void PlayerGotNumber(int newNum)
     {
         //Determine if the right number was caught.
-        if (newNum == lastNumber++)
+        if (newNum == GetNextNumber())
         {
             lastNumber++;
             if (lastNumber >= 100)
@@ -67,17 +74,19 @@ public class GameState : MonoBehaviour {
         {
             LoseLife();
         }
+        UIController._instance.UpdateNextNumber(GetNextNumber());
     }
 
     // Makes the player lose a life. Initiates game-over if all lives are lost.
     public void LoseLife()
     {
         playerLives--;
+        UIController._instance.UpdateLives(playerLives);
         // TODO Move cart away as player lose lives.
         if (playerLives <= 0)
         {
             // Game-Over, reload the game.
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+           // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
