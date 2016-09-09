@@ -25,6 +25,7 @@ public class Player : MonoBehaviour {
             int caughtNumber = collision.gameObject.GetComponent<Number>().thisNumber;
             //send number info to GameState
             gameState.PlayerGotNumber(caughtNumber);
+            Destroy(collision.gameObject);
         }
     }
 }
