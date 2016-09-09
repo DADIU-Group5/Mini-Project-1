@@ -3,7 +3,6 @@ using System.Collections;
 
 /// <summary>
 /// Handles Number movement.
-/// Moves towards player (one dimension)
 /// </summary>
 
 public class NumberMovement : MonoBehaviour {

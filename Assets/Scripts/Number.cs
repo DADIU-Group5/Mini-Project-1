@@ -18,10 +18,13 @@ public class Number : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //thisNumber = 1;
+        ThisNumber = 20;
         string Digits = thisNumber.ToString();
-        //GetComponent<MeshRenderer>().material = (Material)Resources.Load("number" + Digits[0]);
-        TextMesh childText = transform.Find("FloatingText").GetComponent<TextMesh>();
-        childText.text = Digits;
+        GetComponent<MeshRenderer>().material = (Material)Resources.Load("number" + Digits[0]);
+
+        //In the real prototype, we attach the correct model instead...
+
+        //Tried to flip texture
+        //GetComponent<MeshRenderer>().material.SetTextureScale("_MainTex", new Vector2(1, -1));
     }
 }

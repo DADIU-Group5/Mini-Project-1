@@ -15,6 +15,7 @@ public class Snake : MonoBehaviour {
         {
             anim.SetBool("Snaking", true);
             print("Snaking");
+            AkSoundEngine.PostEvent("jungleAmbience", gameObject);
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {

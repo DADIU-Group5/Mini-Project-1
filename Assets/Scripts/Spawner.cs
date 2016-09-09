@@ -7,9 +7,13 @@ using System.Collections;
 
 public class Spawner : MonoBehaviour {
 
-    private NumberGenerator numberGenerator;
-
-    public void Spawn(Vector3 pos) {
-        numberGenerator.GetNumber();
-    }
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
 }

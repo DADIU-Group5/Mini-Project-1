@@ -7,24 +7,13 @@ using System.Collections;
 
 public class Cart : MonoBehaviour {
 
-    public float moveTimer = 2.0f;
-    private float nextMove;
-    private Spawner spawner;
-    private Vector3 currentPosition;
-    private Vector3 newPosition;
-    private int currentLane = 2;
-
-    void Update () {
-        if (nextMove == Time.timeSinceLevelLoad) {
-            MoveCart();
-        }
+	// Use this for initialization
+	void Start () {
+	
 	}
-
-    public void MoveCart() {
-
-        spawner.Spawn(currentPosition);
-        nextMove = Time.timeSinceLevelLoad + moveTimer;
-        //TODO: move cart to a random lane 
-
-    }
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
 }

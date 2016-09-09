@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -9,10 +8,9 @@ public class GameState : MonoBehaviour {
     /// Know the score, which number has to be accessed next etc.
     /// </summary>
 
-    private int lastNumber = 0;
-
     public static GameState _instance;
-    public int playerLives;
+
+    int lastNumber = 20;
 
     List<int> missedNumbers;
     public int missedCorrectNumberTimes = 0;
@@ -37,28 +35,21 @@ public class GameState : MonoBehaviour {
         return lastNumber;
     }
 
-    // Receive a new number the player collected.
-    public void PlayerGotNumber(int newNum)
+    public int GetNextNumber()
     {
-        //Determine if the right number was caught.
-        if (newNum == lastNumber++)
+        if(lastNumber == 100)
         {
-            lastNumber++;
-            if (lastNumber >= 100)
-            {
-                // Loop number-counter back to zero.
-                lastNumber = 0;
-            }
+            return 1;
         }
         else
         {
-            playerLives--;
-            if (playerLives <= 0)
-            {
-                // Game-Over, reload the game.
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
+            return lastNumber + 1;
         }
+    }
+
+    public void PlayerGotNumber(int newNum)
+    {
+        //Code to handle the number the player recieved.
     }
 
     public void NumberMissed(int numberMissed)
