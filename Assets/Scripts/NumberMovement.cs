@@ -9,12 +9,17 @@ public class NumberMovement : MonoBehaviour {
 
     GameState gameState;
     public Rigidbody rigidBody;
-    public float numberSpeed = 1f;
+
+    //should this be updates from the gameState script?
+    //Then every new number will be instantiated with the correct speed,
+    //but number from before the change will not have the correct speed.
+    public float numberSpeed = 1f; 
 
 	// Use this for initialization
 	void Start () {
         rigidBody = GetComponent<Rigidbody>();
         gameState = GameObject.Find("GameState").GetComponent<GameState>();
+        numberSpeed = gameState.numberSpeed;
 	}
 	
 	// Update is called once per frame
