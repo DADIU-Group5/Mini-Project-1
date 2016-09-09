@@ -10,12 +10,18 @@ public class NumberGenerator : MonoBehaviour {
 
     public static NumberGenerator _instance;
 
+    [Range(0, 1)]
+    public float highestChance = 0.4f;
+    [Range(0, 1)]
+    public float lowestChance = 0.1f;
+    public int lastTier = 90;
     [Range(0,1)]
     public float probability = 0.5f;
     public int lowerRange = 5;
     public int upperRange = 3;
 
     List<int> range = new List<int>();
+    int multipleOfTen = 1;
 
     // Use this for initialization
     void Awake()
@@ -67,5 +73,16 @@ public class NumberGenerator : MonoBehaviour {
                 return range[Random.Range(0, range.Count)] + GameState._instance.GetNextNumber();
             }
         }
+    }
+
+    public float GetProbability()
+    {
+        int temp = GameState._instance.GetNextNumber();
+        Debug.Log("before: "+temp);
+        temp -= temp % 10;
+        Debug.Log("after: "+temp);
+        temp = 10;
+        Debug.Log(highestChance - ((temp / lastTier) * (highestChance - lowestChance)));
+        return highestChance - ((temp / lastTier) * (highestChance - lowestChance));
     }
 }
