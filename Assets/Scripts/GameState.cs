@@ -16,8 +16,11 @@ public class GameState : MonoBehaviour {
 
     public int playerLives = 3;
 
+    // Determines the width between the incoming numbers.
+    // This is also used for determining how much the player and car moves.
     public float laneWidth = 1.5f;
     public int missedNumbersThreshold = 5;
+
 
     // Use this for initialization
     void Awake () {
