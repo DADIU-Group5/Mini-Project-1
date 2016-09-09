@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -10,13 +11,19 @@ public class GameState : MonoBehaviour {
 
     public static GameState _instance;
 
-    int lastNumber = 20;
+    private int lastNumber = 0;
+    private int missedNumbers = 0;
 
-    List<int> missedNumbers;
-    public int missedCorrectNumberTimes = 0;
+    public int playerLives = 3;
 
-	// Use this for initialization
-	void Awake () {
+    // Determines the width between the incoming numbers.
+    // This is also used for determining how much the player and car moves.
+    public float laneWidth = 1.5f;
+    public int missedNumbersThreshold = 5;
+
+
+    // Use this for initialization
+    void Awake () {
         if (_instance == null)
         {
             _instance = this;
@@ -26,8 +33,6 @@ public class GameState : MonoBehaviour {
             Debug.LogError("There should not be 2 GameStates, destroys the newly created GameState");
             Destroy(gameObject);
         }
-
-        missedNumbers = new List<int>();
 	}
 
     public int GetNumber()
@@ -37,36 +42,49 @@ public class GameState : MonoBehaviour {
 
     public int GetNextNumber()
     {
-        if(lastNumber == 100)
-        {
-            return 1;
-        }
-        else
-        {
-            return lastNumber + 1;
-        }
+        return lastNumber + 1;
     }
 
     public void PlayerGotNumber(int newNum)
     {
-        //Code to handle the number the player recieved.
-        if (newNum == lastNumber + 1)
+        //Determine if the right number was caught.
+        if (newNum == lastNumber++)
         {
-            //you got the right number! Profit!
-            lastNumber += 1;
-
-        } else if (newNum != lastNumber + 1)
+            lastNumber++;
+            if (lastNumber >= 100)
+            {
+                // Loop number-counter back to zero.
+                lastNumber = 0;
+            }
+        }
+        else
         {
-            //you caught the wrong number! Penalty!
+            LoseLife();
+        }
+    }
 
+    // Makes the player lose a life. Initiates game-over if all lives are lost.
+    public void LoseLife()
+    {
+        playerLives--;
+        // TODO Move cart away as player lose lives.
+        if (playerLives <= 0)
+        {
+            // Game-Over, reload the game.
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
     public void NumberMissed(int numberMissed)
     {
-        missedNumbers.Add(numberMissed); //add to list
-
-        if (numberMissed == lastNumber + 1) //if it was the correct number...
-            missedCorrectNumberTimes += 1; //missed count + 1
+        if (numberMissed == GetNextNumber())
+        {
+            missedNumbers++;
+            if (missedNumbers >= missedNumbersThreshold)
+            {
+                missedNumbers = 0;
+                LoseLife();
+            }
+        }
     }
 }

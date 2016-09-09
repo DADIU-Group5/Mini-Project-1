@@ -20,7 +20,10 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         Transform transform = GetComponent<Transform>();
+        transform.position = middleLane;
         lane = Lane.Middle;
+        leftLane = new Vector3(0f - GameState._instance.laneWidth, 0.5f, -8f);
+        rightLane = new Vector3(0f + GameState._instance.laneWidth, 0.5f, -8f);
     }
 
     // Update is called once per frame
