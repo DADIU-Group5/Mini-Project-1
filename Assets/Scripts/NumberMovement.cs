@@ -8,14 +8,25 @@ using System.Collections;
 public class NumberMovement : MonoBehaviour {
 
     public Rigidbody rigidBody;
-
+    
     //numberspeed is set in the GameState.
     //Every new number will be instantiated with the correct speed,
     //but number from before the change will not have the correct speed.
-    public float numberSpeed = 1f; 
+    public float numberSpeed = 1f;
 
-	// Use this for initialization
-	void Start () {
+    /* //for when we add the ground
+    public Transform road;
+    float gravityForce = 10;
+
+    void FixedUpdate()
+    {
+        Vector3 gravityDirection = (transform.position - road.position).normalized;// normalize;
+        rigidBody.AddForce(gravityDirection* gravityForce);
+    }*/
+
+
+// Use this for initialization
+void Start () {
         rigidBody = GetComponent<Rigidbody>();
         numberSpeed = GameState._instance.GetNumberSpeed();
 	}
