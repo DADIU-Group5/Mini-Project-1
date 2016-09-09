@@ -21,6 +21,7 @@ public class Number : MonoBehaviour {
         ThisNumber = 20;
         string Digits = thisNumber.ToString();
         GetComponent<MeshRenderer>().material = (Material)Resources.Load("number" + Digits[0]);
+        gameObject.transform.Find("NumberText").GetComponent<TextMesh>().text = Digits;
 
         //In the real prototype, we attach the correct model instead...
 
