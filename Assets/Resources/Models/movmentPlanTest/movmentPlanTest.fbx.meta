@@ -1,0 +1,241 @@
+fileFormatVersion: 2
+guid: 1449c8611d9d37441b4244fb01e496a3
+timeCreated: 1473421231
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: caunt20
+    100002: caunt25
+    100004: caunt30
+    100006: Hugo:be_head_01
+    100008: Hugo:be_l_fingers_01
+    100010: Hugo:be_l_toe_01
+    100012: Hugo:be_r_fingers_01
+    100014: Hugo:be_r_toe_01
+    100016: Hugo:bind_chest_01
+    100018: Hugo:bind_head_01
+    100020: Hugo:bind_l_arm_01
+    100022: Hugo:bind_l_fingers_01
+    100024: Hugo:bind_l_foot_01
+    100026: Hugo:bind_l_forearm_01
+    100028: Hugo:bind_l_hand_01
+    100030: Hugo:bind_l_leg_01
+    100032: Hugo:bind_l_shoulder_01
+    100034: Hugo:bind_l_toe_01
+    100036: Hugo:bind_l_upleg_01
+    100038: Hugo:bind_neck_01
+    100040: Hugo:bind_pelvis_01
+    100042: Hugo:bind_r_arm_01
+    100044: Hugo:bind_r_fingers_01
+    100046: Hugo:bind_r_foot_01
+    100048: Hugo:bind_r_forearm_01
+    100050: Hugo:bind_r_hand_01
+    100052: Hugo:bind_r_reg_01
+    100054: Hugo:bind_r_shourder_01
+    100056: Hugo:bind_r_toe_01
+    100058: Hugo:bind_r_upreg_01
+    100060: Hugo:bind_spine_01
+    100062: Hugo:cnt_chest_01
+    100064: Hugo:cnt_head_01
+    100066: Hugo:cnt_l_arm_01
+    100068: Hugo:cnt_l_arm_01 1
+    100070: Hugo:cnt_l_ball_01
+    100072: Hugo:cnt_l_finger_01
+    100074: Hugo:cnt_l_finger_01 1
+    100076: Hugo:cnt_l_foot_01
+    100078: Hugo:cnt_l_forearm_01
+    100080: Hugo:cnt_l_forearm_01 1
+    100082: Hugo:cnt_l_hand_01
+    100084: Hugo:cnt_l_hand_01 1
+    100086: Hugo:cnt_l_heel_01
+    100088: Hugo:cnt_l_knee_01
+    100090: Hugo:cnt_l_shoulder_01
+    100092: Hugo:cnt_l_shoulder_02
+    100094: Hugo:cnt_l_toe_01
+    100096: Hugo:cnt_master_01
+    100098: Hugo:cnt_neck_01
+    100100: Hugo:cnt_pelvis_01
+    100102: Hugo:cnt_r_ball_01
+    100104: Hugo:cnt_r_foot_01
+    100106: Hugo:cnt_r_heel_01
+    100108: Hugo:cnt_r_knee_01
+    100110: Hugo:cnt_r_toe_01
+    100112: Hugo:cnt_spine_01
+    100114: Hugo:grp_control
+    100116: Hugo:grp_geo
+    100118: Hugo:grp_l_ik_foot
+    100120: Hugo:grp_l_Ik_leg
+    100122: Hugo:grp_r_ik_foot
+    100124: Hugo:grp_rig
+    100126: Hugo:Hugo
+    100128: Hugo:Hugo_geo
+    100130: Hugo:ikHandle1
+    100132: Hugo:ikHandle_l_ball_01
+    100134: Hugo:ikHandle_l_foot_01
+    100136: Hugo:ikHandle_l_leg_01
+    100138: Hugo:ikHandle_r_ball_01
+    100140: Hugo:ikHandle_r_foot_01
+    100142: Hugo:ikHandle_r_leg_01
+    100144: Hugo:root_01
+    100146: //RootNode
+    100148: cauntx15
+    100150: cauntx9
+    400000: caunt20
+    400002: caunt25
+    400004: caunt30
+    400006: Hugo:be_head_01
+    400008: Hugo:be_l_fingers_01
+    400010: Hugo:be_l_toe_01
+    400012: Hugo:be_r_fingers_01
+    400014: Hugo:be_r_toe_01
+    400016: Hugo:bind_chest_01
+    400018: Hugo:bind_head_01
+    400020: Hugo:bind_l_arm_01
+    400022: Hugo:bind_l_fingers_01
+    400024: Hugo:bind_l_foot_01
+    400026: Hugo:bind_l_forearm_01
+    400028: Hugo:bind_l_hand_01
+    400030: Hugo:bind_l_leg_01
+    400032: Hugo:bind_l_shoulder_01
+    400034: Hugo:bind_l_toe_01
+    400036: Hugo:bind_l_upleg_01
+    400038: Hugo:bind_neck_01
+    400040: Hugo:bind_pelvis_01
+    400042: Hugo:bind_r_arm_01
+    400044: Hugo:bind_r_fingers_01
+    400046: Hugo:bind_r_foot_01
+    400048: Hugo:bind_r_forearm_01
+    400050: Hugo:bind_r_hand_01
+    400052: Hugo:bind_r_reg_01
+    400054: Hugo:bind_r_shourder_01
+    400056: Hugo:bind_r_toe_01
+    400058: Hugo:bind_r_upreg_01
+    400060: Hugo:bind_spine_01
+    400062: Hugo:cnt_chest_01
+    400064: Hugo:cnt_head_01
+    400066: Hugo:cnt_l_arm_01
+    400068: Hugo:cnt_l_arm_01 1
+    400070: Hugo:cnt_l_ball_01
+    400072: Hugo:cnt_l_finger_01
+    400074: Hugo:cnt_l_finger_01 1
+    400076: Hugo:cnt_l_foot_01
+    400078: Hugo:cnt_l_forearm_01
+    400080: Hugo:cnt_l_forearm_01 1
+    400082: Hugo:cnt_l_hand_01
+    400084: Hugo:cnt_l_hand_01 1
+    400086: Hugo:cnt_l_heel_01
+    400088: Hugo:cnt_l_knee_01
+    400090: Hugo:cnt_l_shoulder_01
+    400092: Hugo:cnt_l_shoulder_02
+    400094: Hugo:cnt_l_toe_01
+    400096: Hugo:cnt_master_01
+    400098: Hugo:cnt_neck_01
+    400100: Hugo:cnt_pelvis_01
+    400102: Hugo:cnt_r_ball_01
+    400104: Hugo:cnt_r_foot_01
+    400106: Hugo:cnt_r_heel_01
+    400108: Hugo:cnt_r_knee_01
+    400110: Hugo:cnt_r_toe_01
+    400112: Hugo:cnt_spine_01
+    400114: Hugo:grp_control
+    400116: Hugo:grp_geo
+    400118: Hugo:grp_l_ik_foot
+    400120: Hugo:grp_l_Ik_leg
+    400122: Hugo:grp_r_ik_foot
+    400124: Hugo:grp_rig
+    400126: Hugo:Hugo
+    400128: Hugo:Hugo_geo
+    400130: Hugo:ikHandle1
+    400132: Hugo:ikHandle_l_ball_01
+    400134: Hugo:ikHandle_l_foot_01
+    400136: Hugo:ikHandle_l_leg_01
+    400138: Hugo:ikHandle_r_ball_01
+    400140: Hugo:ikHandle_r_foot_01
+    400142: Hugo:ikHandle_r_leg_01
+    400144: Hugo:root_01
+    400146: //RootNode
+    400148: cauntx15
+    400150: cauntx9
+    2300000: caunt20
+    2300002: caunt25
+    2300004: caunt30
+    2300006: cauntx15
+    2300008: cauntx9
+    3300000: caunt20
+    3300002: caunt25
+    3300004: caunt30
+    3300006: cauntx15
+    3300008: cauntx9
+    4300000: Hugo:Hugo_geo
+    4300002: caunt25
+    4300004: caunt20
+    4300006: caunt30
+    4300008: cauntx9
+    4300010: cauntx15
+    9500000: //RootNode
+    13700000: Hugo:Hugo_geo
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
