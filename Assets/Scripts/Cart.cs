@@ -10,7 +10,7 @@ public class Cart : MonoBehaviour {
     [Range(0.0f, 10.0f)]
     public float cartMoveTimer = 2.0f;
 
-    public float LaneWidth= 4.0f;
+    float LaneWidth= 4.0f;
 
     private float nextMove;
 
@@ -22,6 +22,7 @@ public class Cart : MonoBehaviour {
     void Start()
     {
         spawner = GetComponent<Spawner>();
+        LaneWidth = GameState._instance.GetLaneWidth();
     }
 
     void Update()
@@ -35,7 +36,6 @@ public class Cart : MonoBehaviour {
 
     public void MoveCart()
     {
-
         spawner.Spawn(currentPosition);
         nextMove += cartMoveTimer;
         if (currentLane == newLane)

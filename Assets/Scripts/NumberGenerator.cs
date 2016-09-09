@@ -52,7 +52,7 @@ public class NumberGenerator : MonoBehaviour {
     {
         if(Random.Range(0f, 1f) <= probability)
         {
-            return GameState._instance.GetNumber();
+            return GameState._instance.GetNextNumber();
         }
         else
         {
