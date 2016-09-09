@@ -9,8 +9,8 @@ public class GameState : MonoBehaviour
     public static GameState _instance;
 
     // editable fields used for balancing game
-    [Range(0, 5)]
-    public float initialSpeed = 3;
+    [Range(0, 10)]
+    public float initialSpeed = 5;
     [Range(0, 1)]
     public float speedMultiplierIncrease = 0.1f;
     [Range(0, 1)]
@@ -25,12 +25,14 @@ public class GameState : MonoBehaviour
     public int missedNumbersThreshold = 5;
 
     // private fields
-    private int lastNumber = 0;
-    private int missedNumbers = 0;
-    private float numberSpeed = 3;
-    private int playerLives = 3;
-    private float speedMultiplier;
-    private float scoreMultiplier;
+    private float score;
+    private int lastNumber;
+    private int missedNumbers;
+    private int numberStreak;
+    private float currentNumberSpeed;
+    private int playerLives;
+    private float currentSpeedMultiplier = 1;
+    private float currentScoreMultiplier = 1;
 
     // Use this for initialization
     void Awake () {
@@ -45,6 +47,12 @@ public class GameState : MonoBehaviour
         }
 	}
 
+    void Start()
+    {
+        currentNumberSpeed = initialSpeed;
+        playerLives = initialLifes;
+    }
+
     public int GetNumber()
     {
         return lastNumber;
@@ -52,12 +60,12 @@ public class GameState : MonoBehaviour
 
     public int GetNextNumber()
     {
-        return lastNumber + 1;
+        return lastNumber == 99 ? 0 : lastNumber + 1;
     }
 
     public float GetNumberSpeed()
     {
-        return numberSpeed;
+        return currentNumberSpeed;
     }
 
     public float GetLaneWidth()
@@ -70,15 +78,16 @@ public class GameState : MonoBehaviour
         //Determine if the right number was caught.
         if (newNum == GetNextNumber())
         {
-            lastNumber++;
-            if (lastNumber >= 100)
-            {
-                // Loop number-counter back to zero.
-                lastNumber = 0;
-            }
+            lastNumber = newNum;
+            // update speed
+            currentNumberSpeed = initialSpeed + (lastNumber / 10) * speedMultiplierIncrease;
+            currentScoreMultiplier = (numberStreak / 10) * scoreMultiplierIncrease;
+            score += currentScoreMultiplier;
+            UIController._instance.UpdateScore((int)score);
         }
         else
         {
+            currentScoreMultiplier = 1;
             LoseLife();
         }
         UIController._instance.UpdateNextNumber(GetNextNumber());
@@ -92,7 +101,16 @@ public class GameState : MonoBehaviour
         // TODO Move cart away as player lose lives.
         if (playerLives <= 0)
         {
-            // Game-Over, reload the game.
+            // game over
+
+            // update highscore if we beat it
+            if (!PlayerPrefs.HasKey("HighScore") || PlayerPrefs.GetInt("HighScore") < score)
+            {
+                PlayerPrefs.SetInt("HighScore", (int)score);
+                PlayerPrefs.Save();
+            }
+
+            // load main menu
             SceneManager.LoadScene(0);
         }
     }
