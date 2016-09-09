@@ -6,9 +6,9 @@ using System.Collections;
 /// </summary>
 public class PlayerMovement : MonoBehaviour
 {
-    private Vector3 leftLane = new Vector3(-3f, 0.5f, -8f);
+    private Vector3 leftLane = new Vector3(-2f, 0.5f, -8f);
     private Vector3 middleLane = new Vector3(0f, 0.5f, -8f);
-    private Vector3 rightLane = new Vector3(3f, 0.5f, -8f);
+    private Vector3 rightLane = new Vector3(2f, 0.5f, -8f);
 
     private Vector2 touchOrigin = -Vector2.one;
 
@@ -27,7 +27,22 @@ public class PlayerMovement : MonoBehaviour
         int horizontal = 0;     //Used to store the horizontal move direction.
         int vertical = 0;       //Used to store the vertical move direction.
 
-            
+        // TODO: Remove in final version.
+        // Keyboard input - only for testing
+        #if UNITY_EDITOR
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            AttemptMove(-1, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            AttemptMove(1, 0);
+        }
+
+        #endif
+
+        // Touch input
         //Check if Input has registered more than zero touches
         if (Input.touchCount > 0)
         {
@@ -87,10 +102,12 @@ public class PlayerMovement : MonoBehaviour
                 if (lane == 1)
                 {
                     transform.position = leftLane;
+                    lane = 0;
                 }
                 else
                 {
                     transform.position = middleLane;
+                    lane = 1;
                 }
             }
         }
@@ -103,10 +120,12 @@ public class PlayerMovement : MonoBehaviour
                 if (lane == 1)
                 {
                     transform.position = rightLane;
+                    lane = 2;
                 }
                 else
                 {
                     transform.position = middleLane;
+                    lane = 1;
                 }
             }
         }
