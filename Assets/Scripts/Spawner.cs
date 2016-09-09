@@ -7,11 +7,9 @@ using System.Collections;
 
 public class Spawner : MonoBehaviour {
 
-    private NumberGenerator numberGenerator;
-
     public void Spawn(Vector3 pos)
     {
-        numberGenerator.GetNumber();
+        NumberGenerator._instance.GetNumber();
     }
 
 }
