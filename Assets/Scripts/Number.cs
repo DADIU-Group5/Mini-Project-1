@@ -31,10 +31,5 @@ public class Number : MonoBehaviour {
         string Digits = thisNumber.ToString();
         GetComponent<MeshRenderer>().material = (Material)Resources.Load("number" + Digits[0]);
         gameObject.transform.Find("NumberText").GetComponent<TextMesh>().text = Digits;
-
-        //In the real prototype, we attach the correct model instead...
-
-        //Tried to flip texture
-        //GetComponent<MeshRenderer>().material.SetTextureScale("_MainTex", new Vector2(1, -1));
     }
 }
