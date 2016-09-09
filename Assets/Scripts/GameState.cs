@@ -9,10 +9,12 @@ public class GameState : MonoBehaviour
     public static GameState _instance;
 
     // editable fields used for balancing game
-    [Range(0, 10)]
-    public float initialSpeed = 5;
+    [Range(0, 50)]
+    public float initialSpeed = 10;
     [Range(0, 1)]
     public float speedMultiplierIncrease = 0.1f;
+    [Range(1, 1000)]
+    public int scorePerNumber = 10;
     [Range(0, 1)]
     public float scoreMultiplierIncrease = 0.1f;
     [Range(1, 10)]
@@ -25,7 +27,7 @@ public class GameState : MonoBehaviour
     public int missedNumbersThreshold = 5;
 
     // private fields
-    private float score;
+    public float score;
     private int lastNumber;
     private int missedNumbers;
     private int numberStreak;
@@ -79,10 +81,11 @@ public class GameState : MonoBehaviour
         if (newNum == GetNextNumber())
         {
             lastNumber = newNum;
+            numberStreak++;
             // update speed
             currentNumberSpeed = initialSpeed + (lastNumber / 10) * speedMultiplierIncrease;
-            currentScoreMultiplier = (numberStreak / 10) * scoreMultiplierIncrease;
-            score += currentScoreMultiplier;
+            currentScoreMultiplier = 1 + (numberStreak / 10) * scoreMultiplierIncrease;
+            score += scorePerNumber * currentScoreMultiplier;
             UIController._instance.UpdateScore((int)score);
         }
         else
