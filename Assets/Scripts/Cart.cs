@@ -7,13 +7,50 @@ using System.Collections;
 
 public class Cart : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    [Range(0.0f, 10.0f)]
+    public float cartMoveTimer = 2.0f;
+
+    public float LaneWidth= 4.0f;
+
+    private float nextMove;
+
+    private Spawner spawner;
+    private Vector3 currentPosition;
+    private int currentLane = 1;
+    private int newLane = 1;
+
+    void Start()
+    {
+        spawner = GetComponent<Spawner>();
+    }
+
+    void Update()
+    {
+        currentPosition = gameObject.transform.position;
+        if (nextMove == Time.timeSinceLevelLoad)
+        {
+            MoveCart();
+        }
+    }
+
+    public void MoveCart()
+    {
+
+        spawner.Spawn(currentPosition);
+        nextMove = Time.timeSinceLevelLoad + cartMoveTimer;
+        if (currentLane == newLane)
+        {
+            int random = Random.Range(1, 3);
+            newLane = (currentLane + random) % 3;
+        }
+        SetPosition(currentLane, newLane);
+        currentLane = newLane;
+    }
+
+    private void SetPosition(int _currentLane, int _newLane)
+    {
+        int laneJumps = _newLane - _currentLane;
+        Vector3 tempPosition = new Vector3(laneJumps * LaneWidth, 0, 0);
+        gameObject.transform.position += tempPosition;
+    }
 }

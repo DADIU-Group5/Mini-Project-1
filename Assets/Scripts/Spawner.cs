@@ -7,13 +7,20 @@ using System.Collections;
 
 public class Spawner : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    [Range(0, 2)]
+    public int minDistance = 0;
+
+    [Range(2,10)]
+    public int maxDistance = 2;
+
+    private float spawnDistance = 0.0f;
+
+    public void Spawn(Vector3 pos)
+    {
+        int newNumber = NumberGenerator._instance.GetNumber();
+        int randomDistance = Random.Range(minDistance, (maxDistance + 1));
+        Vector3 tempPosition = new Vector3(0, randomDistance, 0);
+        pos += tempPosition;
+        //instantiate + set number
+    }
 }

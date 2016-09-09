@@ -6,19 +6,21 @@ using System.Collections;
 /// </summary>
 public class PlayerMovement : MonoBehaviour
 {
-    private Vector3 leftLane = new Vector3(-3f, 0.5f, -8f);
+    enum Lane { Left, Middle, Right };
+    private Vector3 leftLane = new Vector3(-2f, 0.5f, -8f);
     private Vector3 middleLane = new Vector3(0f, 0.5f, -8f);
-    private Vector3 rightLane = new Vector3(3f, 0.5f, -8f);
+    private Vector3 rightLane = new Vector3(2f, 0.5f, -8f);
 
     private Vector2 touchOrigin = -Vector2.one;
 
     // Current lane (0 - left, 1 - middle, 2 - right)
-    private int lane;
+    private Lane lane;
 
     // Use this for initialization
     void Start()
     {
-        lane = 1;
+        Transform transform = GetComponent<Transform>();
+        lane = Lane.Middle;
     }
 
     // Update is called once per frame
@@ -27,7 +29,22 @@ public class PlayerMovement : MonoBehaviour
         int horizontal = 0;     //Used to store the horizontal move direction.
         int vertical = 0;       //Used to store the vertical move direction.
 
-            
+        // TODO: Remove in final version.
+        // Keyboard input - only for testing
+        #if UNITY_EDITOR
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            AttemptMove(-1, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            AttemptMove(1, 0);
+        }
+
+        #endif
+
+        // Touch input
         //Check if Input has registered more than zero touches
         if (Input.touchCount > 0)
         {
@@ -82,15 +99,17 @@ public class PlayerMovement : MonoBehaviour
         if (horizontal < 0)
         {
             // Not in leftmost lane
-            if (lane != 0)
+            if (lane != Lane.Left)
             {
-                if (lane == 1)
+                if (lane == Lane.Middle)
                 {
                     transform.position = leftLane;
+                    lane = Lane.Left;
                 }
                 else
                 {
                     transform.position = middleLane;
+                    lane = Lane.Middle;
                 }
             }
         }
@@ -98,15 +117,17 @@ public class PlayerMovement : MonoBehaviour
         {
 
             // Not in rightmost lane
-            if (lane != 2)
+            if (lane != Lane.Right)
             {
-                if (lane == 1)
+                if (lane == Lane.Middle)
                 {
                     transform.position = rightLane;
+                    lane = Lane.Right;
                 }
                 else
                 {
                     transform.position = middleLane;
+                    lane = Lane.Middle;
                 }
             }
         }

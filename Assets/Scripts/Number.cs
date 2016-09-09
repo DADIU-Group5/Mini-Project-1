@@ -8,23 +8,28 @@ using System.Collections;
 public class Number : MonoBehaviour {
 
     public Texture numberTexture;
-    public int thisNumber;
+    public int thisNumber = 20;
 
-    public int ThisNumber//alternatively, change number from spawn script by public variable.
+    //alternatively, change number from spawn script by public variable.
+
+    public int ThisNumber
+     {
+         get { return thisNumber; }
+         set { thisNumber = value;
+            SetNumber();
+        }
+     }
+
+    void Start()
     {
-        get { return thisNumber; }
-        set { thisNumber = value; }
-    }
+        SetNumber();
+    } 
 
-	// Use this for initialization
-	void Start () {
-        ThisNumber = 20;
+    // Use this for initialization
+   public void SetNumber () {
+        //ThisNumber = 20;
         string Digits = thisNumber.ToString();
         GetComponent<MeshRenderer>().material = (Material)Resources.Load("number" + Digits[0]);
-
-        //In the real prototype, we attach the correct model instead...
-
-        //Tried to flip texture
-        //GetComponent<MeshRenderer>().material.SetTextureScale("_MainTex", new Vector2(1, -1));
+        gameObject.transform.Find("NumberText").GetComponent<TextMesh>().text = Digits;
     }
 }
