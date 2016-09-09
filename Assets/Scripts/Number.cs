@@ -41,7 +41,7 @@ public class Number : MonoBehaviour {
    public void SetNumber () {
         //ThisNumber = 20;
         Digits = thisNumber.ToString();
-        GetComponent<MeshRenderer>().material = (Material)Resources.Load("number" + Digits[0]);
+        //GetComponent<MeshRenderer>().material = (Material)Resources.Load("number" + Digits[0]);
         gameObject.transform.Find("NumberText").GetComponent<TextMesh>().text = Digits;
     }
 }
