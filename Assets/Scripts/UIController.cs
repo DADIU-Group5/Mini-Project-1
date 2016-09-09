@@ -49,7 +49,7 @@ public class UIController : MonoBehaviour {
     /// <param name="nextNum"></param>
     public void UpdateNextNumber(int nextNum)
     {
-        nextNumber.text = "nextNumber: " + nextNum;
+        nextNumber.text = "Next: " + nextNum;
     }
 
     /// <summary>
