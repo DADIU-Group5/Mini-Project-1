@@ -50,6 +50,16 @@ public class GameState : MonoBehaviour {
     public void PlayerGotNumber(int newNum)
     {
         //Code to handle the number the player recieved.
+        if (newNum == lastNumber + 1)
+        {
+            //you got the right number! Profit!
+            lastNumber += 1;
+
+        } else if (newNum != lastNumber + 1)
+        {
+            //you caught the wrong number! Penalty!
+
+        }
     }
 
     public void NumberMissed(int numberMissed)
