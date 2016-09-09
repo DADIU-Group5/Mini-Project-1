@@ -30,10 +30,11 @@ public class Number : MonoBehaviour {
         for (int i = 0; i < Digits.Length; i++)
         {
             GameObject digit = (GameObject)Instantiate(Resources.Load("models/MikeSnakeV001"), transform.position + new Vector3(.25f, 0, 0) + (transform.right * distance * i),transform.rotation);
-            //distance = digit.GetComponent<MeshFilter>().mesh.bounds.size.x;
-            //GameObject digit = (GameObject) Instantiate(Resources.Load("models/Number"+Digits[i]));
+            //GameObject digit = (GameObject) Instantiate(Resources.Load("models/Number"+Digits[i]), transform.position + new Vector3(.25f, 0, 0) + (transform.right * distance * i),transform.rotation);
+
             //Assign the correct positions (how do I take object width into account here?)
             digit.transform.SetParent(gameObject.transform);
+            //distance = digit.GetComponent<MeshFilter>().mesh.bounds.size.x;
         }
     } 
 
