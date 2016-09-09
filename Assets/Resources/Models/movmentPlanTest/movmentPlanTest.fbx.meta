@@ -162,17 +162,20 @@ ModelImporter:
     2300004: caunt30
     2300006: cauntx15
     2300008: cauntx9
+    2300010: //RootNode
     3300000: caunt20
     3300002: caunt25
     3300004: caunt30
     3300006: cauntx15
     3300008: cauntx9
+    3300010: //RootNode
     4300000: Hugo:Hugo_geo
     4300002: caunt25
     4300004: caunt20
     4300006: caunt30
     4300008: cauntx9
     4300010: cauntx15
+    4300012: runningWellSizeX
     9500000: //RootNode
     13700000: Hugo:Hugo_geo
   materials:

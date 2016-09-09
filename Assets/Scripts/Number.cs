@@ -25,7 +25,6 @@ public class Number : MonoBehaviour {
     void Start()
     {
         SetNumber();
-        Debug.Log(Digits.Length);
         // instantiate the correct number-prefabs
         for (int i = 0; i < Digits.Length; i++)
         {
