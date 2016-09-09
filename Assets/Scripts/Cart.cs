@@ -7,7 +7,9 @@ using System.Collections;
 
 public class Cart : MonoBehaviour {
 
-    public float moveTimer = 2.0f;
+    [Range(0.0f, 10.0f)]
+    public float cartMoveTimer = 2.0f;
+
     public float LaneWidth= 4.0f;
 
     private float nextMove;
@@ -35,7 +37,7 @@ public class Cart : MonoBehaviour {
     {
 
         spawner.Spawn(currentPosition);
-        nextMove = Time.timeSinceLevelLoad + moveTimer;
+        nextMove = Time.timeSinceLevelLoad + cartMoveTimer;
         if (currentLane == newLane)
         {
             int random = Random.Range(1, 3);
