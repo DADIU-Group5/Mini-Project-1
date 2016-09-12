@@ -38,6 +38,7 @@ public class GameState : MonoBehaviour
     public int numberToGiveLife = 6;
 
     public Cart cart;
+    public Animator playerAnimator;
 
     // private fields
     private float score = 0;
@@ -137,14 +138,22 @@ public class GameState : MonoBehaviour
     // Makes the player lose a life. Initiates game-over if all lives are lost.
     public void LoseLife()
     {
+        // Animate stumble
+        playerAnimator.SetBool("Stumble", true);
+
+        // Remove one life
         playerLives--;
+
         //Moves the cart further away from the player.
         cart.MoveCartAway(playerLives);
         UIController._instance.UpdateLives(playerLives);
+
        // Move cart away as player lose lives.
         if (playerLives <= 0 && !unbeatable)
         {
             // game over
+            // Animate player falling over
+            playerAnimator.SetBool("Fall", true);
 
             // update highscore if we beat it
             if (!PlayerPrefs.HasKey("HighScore") || PlayerPrefs.GetInt("HighScore") < score)
