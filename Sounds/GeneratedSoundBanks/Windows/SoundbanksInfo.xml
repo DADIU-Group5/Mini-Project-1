@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="118">
+	<RootPaths>
+		<ProjectRoot>/Users/Victor/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/WwiseProjects/musiktest/</ProjectRoot>
+		<SourceFilesRoot>/Users/Victor/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/WwiseProjects/musiktest/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/Victor/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/WwiseProjects/musiktest/GeneratedSoundBanks/Windows/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/Victor/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/WwiseProjects/musiktest/GeneratedSoundBanks/Windows/</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="4072029455" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
+			<ShortName>New_SoundBank</ShortName>
+			<Path>New_SoundBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1078311194" Name="correctNumberPickup" ObjectPath="\Events\Default Work Unit\correctNumberPickup"/>
+				<Event Id="2397454474" Name="jungleAmbience" ObjectPath="\Events\Default Work Unit\jungleAmbience"/>
+				<Event Id="2736691391" Name="menuPressStart" ObjectPath="\Events\Default Work Unit\menuPressStart"/>
+				<Event Id="2531827761" Name="numberDrop" ObjectPath="\Events\Default Work Unit\numberDrop"/>
+				<Event Id="4294099536" Name="truckEngine" ObjectPath="\Events\Default Work Unit\truckEngine"/>
+				<Event Id="1929616820" Name="truckHonk" ObjectPath="\Events\Default Work Unit\truckHonk"/>
+				<Event Id="2318428819" Name="wrongNumberPickup" ObjectPath="\Events\Default Work Unit\wrongNumberPickup"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="6534581" Language="SFX">
+					<ShortName>fugle skrål.wav</ShortName>
+					<Path>SFX/fugle skrål_8F7DB64D.wem</Path>
+				</File>
+				<File Id="16302344" Language="SFX">
+					<ShortName>TruckSound Rattle less flanger.wav</ShortName>
+					<Path>SFX/TruckSound Rattle less flanger_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="19559311" Language="SFX">
+					<ShortName>truck honk.wav</ShortName>
+					<Path>SFX/truck honk_7E05A26D.wem</Path>
+				</File>
+				<File Id="52187491" Language="SFX">
+					<ShortName>tal 8.wav</ShortName>
+					<Path>SFX/tal 8_95CACFB3.wem</Path>
+				</File>
+				<File Id="64853793" Language="SFX">
+					<ShortName>tal multiplyer 1.wav</ShortName>
+					<Path>SFX/tal multiplyer 1_CB56112A.wem</Path>
+				</File>
+				<File Id="81409355" Language="SFX">
+					<ShortName>TruckSound Tone.wav</ShortName>
+					<Path>SFX/TruckSound Tone_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="107995737" Language="SFX">
+					<ShortName>ThunderClap_BW.59747.wav</ShortName>
+					<Path>SFX/ThunderClap_BW.59747_437A7F46.wem</Path>
+				</File>
+				<File Id="138251004" Language="SFX">
+					<ShortName>tal 1.wav</ShortName>
+					<Path>SFX/tal 1_C7672052.wem</Path>
+				</File>
+				<File Id="160522890" Language="SFX">
+					<ShortName>tal 5.wav</ShortName>
+					<Path>SFX/tal 5_D369DD7C.wem</Path>
+				</File>
+				<File Id="186426770" Language="SFX">
+					<ShortName>tal drop.wav</ShortName>
+					<Path>SFX/tal drop_DFC7223B.wem</Path>
+				</File>
+				<File Id="239652858" Language="SFX">
+					<ShortName>tal 3.wav</ShortName>
+					<Path>SFX/tal 3_72611AF2.wem</Path>
+				</File>
+				<File Id="291768993" Language="SFX">
+					<ShortName>ambience with birds 2 noise reduction.wav</ShortName>
+					<Path>SFX/ambience with birds 2 noise reduction_9E69E797.wem</Path>
+				</File>
+				<File Id="301719007" Language="SFX">
+					<ShortName>ambience with birds 1 noise reduction.wav</ShortName>
+					<Path>SFX/ambience with birds 1 noise reduction_9E69E797.wem</Path>
+				</File>
+				<File Id="320522711" Language="SFX">
+					<ShortName>ambience with water 4.wav</ShortName>
+					<Path>SFX/ambience with water 4_9E69E797.wem</Path>
+				</File>
+				<File Id="389132218" Language="SFX">
+					<ShortName>ambience with water 2.wav</ShortName>
+					<Path>SFX/ambience with water 2_9E69E797.wem</Path>
+				</File>
+				<File Id="398709869" Language="SFX">
+					<ShortName>ThunderClap_BW.59744.wav</ShortName>
+					<Path>SFX/ThunderClap_BW.59744_FA052140.wem</Path>
+				</File>
+				<File Id="429626763" Language="SFX">
+					<ShortName>fugle skrål.wav</ShortName>
+					<Path>SFX/fugle skrål_3F72AEA9.wem</Path>
+				</File>
+				<File Id="524445816" Language="SFX">
+					<ShortName>ambience with water 3.wav</ShortName>
+					<Path>SFX/ambience with water 3_9E69E797.wem</Path>
+				</File>
+				<File Id="539194505" Language="SFX">
+					<ShortName>tal 2.wav</ShortName>
+					<Path>SFX/tal 2_90B1ECF1.wem</Path>
+				</File>
+				<File Id="586388034" Language="SFX">
+					<ShortName>fugle skrål.wav</ShortName>
+					<Path>SFX/fugle skrål_A9F44887.wem</Path>
+				</File>
+				<File Id="586994086" Language="SFX">
+					<ShortName>tal 9.wav</ShortName>
+					<Path>SFX/tal 9_738C2DD3.wem</Path>
+				</File>
+				<File Id="634415553" Language="SFX">
+					<ShortName>ambience with water 1.wav</ShortName>
+					<Path>SFX/ambience with water 1_9E69E797.wem</Path>
+				</File>
+				<File Id="722758616" Language="SFX">
+					<ShortName>tal 6.wav</ShortName>
+					<Path>SFX/tal 6_0F4F8B3D.wem</Path>
+				</File>
+				<File Id="723677576" Language="SFX">
+					<ShortName>tal 7.wav</ShortName>
+					<Path>SFX/tal 7_2C12CCD8.wem</Path>
+				</File>
+				<File Id="784100572" Language="SFX">
+					<ShortName>tal 4.wav</ShortName>
+					<Path>SFX/tal 4_6890BA32.wem</Path>
+				</File>
+				<File Id="858981970" Language="SFX">
+					<ShortName> start game.wav</ShortName>
+					<Path>SFX/ start game_DC959F3C.wem</Path>
+				</File>
+				<File Id="920674601" Language="SFX">
+					<ShortName>ambience with birds 3 noise reduction.wav</ShortName>
+					<Path>SFX/ambience with birds 3 noise reduction_9E69E797.wem</Path>
+				</File>
+				<File Id="983140521" Language="SFX">
+					<ShortName>fugle skrål.wav</ShortName>
+					<Path>SFX/fugle skrål_D77D169C.wem</Path>
+				</File>
+				<File Id="1021396976" Language="SFX">
+					<ShortName>ThunderClap_BW.59746.wav</ShortName>
+					<Path>SFX/ThunderClap_BW.59746_AE7AE3F7.wem</Path>
+				</File>
+				<File Id="1032580209" Language="SFX">
+					<ShortName>truck honk.wav</ShortName>
+					<Path>SFX/truck honk_513260FB.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

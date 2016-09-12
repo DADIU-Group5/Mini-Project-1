@@ -5,39 +5,6 @@
 			<ChildrenList>
 				<Folder Name="truck" ID="{5B59E867-1580-4475-9EF7-D0094D0C55D6}" ShortID="1068005749">
 					<ChildrenList>
-						<Sound Name="truck honk" ID="{A25CF9FC-8577-46D6-8A82-8BB3ECD56549}" ShortID="75897607" Type="SoundFX">
-							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{19A9D8B9-7034-4679-823E-14AEACD076A4}">
-												<PropertyList>
-													<Property Name="Max" Type="Real64" Value="10"/>
-													<Property Name="Min" Type="Real64" Value="-10"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="truck honk" ID="{5E6284D4-3894-477F-8907-E052CD77D4CD}" ShortID="19559311">
-									<Language>SFX</Language>
-									<AudioFile>truck honk.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="truck honk" ID="{5E6284D4-3894-477F-8907-E052CD77D4CD}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<RandomSequenceContainer Name="wheels_on_dirt" ID="{947ADCE4-9C19-4FA1-A814-EFC0AA2E88EC}" ShortID="1030145096">
 							<PropertyList>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
@@ -274,6 +241,70 @@
 								</Sound>
 							</ChildrenList>
 						</BlendContainer>
+						<Sound Name="truck honk" ID="{A25CF9FC-8577-46D6-8A82-8BB3ECD56549}" ShortID="75897607" Type="SoundFX">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>15</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{19A9D8B9-7034-4679-823E-14AEACD076A4}">
+												<PropertyList>
+													<Property Name="Max" Type="Real64" Value="10"/>
+													<Property Name="Min" Type="Real64" Value="-10"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="truck honk" ID="{5E6284D4-3894-477F-8907-E052CD77D4CD}" ShortID="19559311">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0328227571115974"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.218818380743983"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>truck honk.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="truck honk" ID="{5E6284D4-3894-477F-8907-E052CD77D4CD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="truck honk_01" ID="{7A56A886-58FC-418B-B163-DC73B0DDA239}" ShortID="710494053" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="truck honk" ID="{DC4DD1D4-74C1-4F13-AF57-F7885B0E978D}" ShortID="1032580209">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0940919037199126"/>
+										<Property Name="FadeOutShape" Type="int16" Value="3"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.509846827133479"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>truck honk.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="truck honk" ID="{DC4DD1D4-74C1-4F13-AF57-F7885B0E978D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="jungle Ambience" ID="{E17C239A-1AD3-4ABE-90A7-3F94054FF6A0}" ShortID="513336606">
@@ -1082,6 +1113,379 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="talLyde" ID="{722B82C0-3A4E-4159-8789-8853D6A4F6FF}" ShortID="320472787">
+					<ChildrenList>
+						<RandomSequenceContainer Name="talPickup" ID="{500221F4-276C-45E1-9F16-0F376457353C}" ShortID="46708063">
+							<PropertyList>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="tal 8" ID="{34124035-5BAD-4A01-9592-B263EA30783D}" ShortID="482566875" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tal 8" ID="{E20D53F2-4047-42F5-986C-221CC0B47EB8}" ShortID="52187491">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00262582056892779"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.635448577680525"/>
+												<Property Name="FadeOutShape" Type="int16" Value="3"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.27877461706783"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>tal 8.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="tal 8" ID="{E20D53F2-4047-42F5-986C-221CC0B47EB8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="tal 7" ID="{BB6587A9-4EA5-415D-B071-92FAA13991D9}" ShortID="362058376" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tal 7" ID="{42923116-AC28-434C-A784-F69766038FE0}" ShortID="723677576">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00196936542669579"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.716849015317287"/>
+												<Property Name="FadeOutShape" Type="int16" Value="3"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.632166301969366"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>tal 7.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="tal 7" ID="{42923116-AC28-434C-A784-F69766038FE0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="tal 6" ID="{6A2AF456-C926-41B9-A608-2FE1385FCC5E}" ShortID="672327667" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tal 6" ID="{04227EFC-DBF7-4483-A7F0-19DD8FDE7A77}" ShortID="722758616">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0019693654266959"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.360393873085339"/>
+												<Property Name="FadeOutShape" Type="int16" Value="3"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.2328227571116"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>tal 6.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="tal 6" ID="{04227EFC-DBF7-4483-A7F0-19DD8FDE7A77}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="tal 5" ID="{3A9556AB-6687-4163-9A1A-B6CC4FCDBA37}" ShortID="272822528" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tal 5" ID="{B3903811-9A41-4A1A-8C59-74CCCE70ED77}" ShortID="160522890">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00262582056892779"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.664332603938731"/>
+												<Property Name="FadeOutShape" Type="int16" Value="3"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.26301969365427"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>tal 5.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="tal 5" ID="{B3903811-9A41-4A1A-8C59-74CCCE70ED77}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="tal 4" ID="{428AF5DF-C29C-45F7-9025-2C58AF12FDFA}" ShortID="723128607" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tal 4" ID="{5AF6391B-AD95-4448-B36B-B1CB90A61A30}" ShortID="784100572">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00525164113785559"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.711597374179431"/>
+												<Property Name="FadeOutShape" Type="int16" Value="3"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.27614879649891"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>tal 4.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="tal 4" ID="{5AF6391B-AD95-4448-B36B-B1CB90A61A30}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="tal 3" ID="{2F2D761D-F9E2-44F1-A2EF-9A975F922152}" ShortID="382299576" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tal 3" ID="{5B37FB8A-57FA-42CD-81A1-56F5FEA63523}" ShortID="239652858">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00525164113785559"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.56980306345733"/>
+												<Property Name="FadeOutShape" Type="int16" Value="3"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.28402625820569"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>tal 3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="tal 3" ID="{5B37FB8A-57FA-42CD-81A1-56F5FEA63523}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="tal 2" ID="{69F763F8-FD7A-46C0-A0BF-4A2A593E53C5}" ShortID="557442689" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tal 2" ID="{1C94F9A9-9AF9-4EB1-A49B-B47981538285}" ShortID="539194505">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0105032822757112"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.56980306345733"/>
+												<Property Name="FadeOutShape" Type="int16" Value="6"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.26827133479212"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>tal 2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="tal 2" ID="{1C94F9A9-9AF9-4EB1-A49B-B47981538285}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="tal 1" ID="{8CD0589E-7755-4BD2-AE04-FA81B251F8EB}" ShortID="127034639" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tal 1" ID="{38743F83-6B0B-4951-8825-E7382187B8A3}" ShortID="138251004">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00787746170678338"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.682713347921225"/>
+												<Property Name="FadeOutShape" Type="int16" Value="3"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.30503282275711"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>tal 1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="tal 1" ID="{38743F83-6B0B-4951-8825-E7382187B8A3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="tal multiplyer 1" ID="{C86EED97-E607-4031-B2AD-47CFA79EDF6F}" ShortID="487224917" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tal multiplyer 1" ID="{AF9F7F2D-94B2-4A4B-B637-4803BE217950}" ShortID="64853793">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0017309445660102"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.373884026258206"/>
+												<Property Name="FadeOutShape" Type="int16" Value="3"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.76957795404814"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>tal multiplyer 1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="tal multiplyer 1" ID="{AF9F7F2D-94B2-4A4B-B637-4803BE217950}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="tal 9" ID="{D9F733A2-D23F-49E0-BE4D-82C78B1CF225}" ShortID="355501716" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tal 9" ID="{966012C9-3C0E-4435-87FB-0A618DB8061B}" ShortID="586994086">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00262582056892779"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.753610503282276"/>
+												<Property Name="FadeOutShape" Type="int16" Value="3"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.25514223194748"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>tal 9.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="tal 9" ID="{966012C9-3C0E-4435-87FB-0A618DB8061B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<Playlist>
+								<ItemRef Name="tal 1" ID="{8CD0589E-7755-4BD2-AE04-FA81B251F8EB}"/>
+								<ItemRef Name="tal 2" ID="{69F763F8-FD7A-46C0-A0BF-4A2A593E53C5}"/>
+								<ItemRef Name="tal 3" ID="{2F2D761D-F9E2-44F1-A2EF-9A975F922152}"/>
+								<ItemRef Name="tal 4" ID="{428AF5DF-C29C-45F7-9025-2C58AF12FDFA}"/>
+								<ItemRef Name="tal 5" ID="{3A9556AB-6687-4163-9A1A-B6CC4FCDBA37}"/>
+								<ItemRef Name="tal 6" ID="{6A2AF456-C926-41B9-A608-2FE1385FCC5E}"/>
+								<ItemRef Name="tal 7" ID="{BB6587A9-4EA5-415D-B071-92FAA13991D9}"/>
+								<ItemRef Name="tal 8" ID="{34124035-5BAD-4A01-9592-B263EA30783D}"/>
+								<ItemRef Name="tal 9" ID="{D9F733A2-D23F-49E0-BE4D-82C78B1CF225}"/>
+								<ItemRef Name="tal multiplyer 1" ID="{C86EED97-E607-4031-B2AD-47CFA79EDF6F}"/>
+							</Playlist>
+						</RandomSequenceContainer>
+						<Sound Name="tal drop" ID="{475E86AF-6B9C-421D-B389-28BB7047C2EE}" ShortID="501547497" Type="SoundFX">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{5E2260BB-9D47-4204-BC46-54C97B5C6ADA}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="30"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{5E7DBA5D-AB43-4F82-AEBF-1FF54A442CFA}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="5"/>
+													<Property Name="Min" Type="Real64" Value="-5"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+								</Reference>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise Delay (Custom)" ID="{112E2C2D-2D90-4D48-B186-7BCFC634169B}" ShortID="402483881" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+											<PropertyList>
+												<Property Name="DelayTime" Type="Real32" Value="0.1"/>
+												<Property Name="Feedback" Type="Real32" Value="23.5"/>
+												<Property Name="WetDryMix" Type="Real32" Value="14.5"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="tal drop" ID="{630D56B1-08E0-4142-8D80-E35926592407}" ShortID="186426770">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.00437636761487964"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.565361860766674"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>tal drop.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="tal drop" ID="{630D56B1-08E0-4142-8D80-E35926592407}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="menu" ID="{5C8D232B-901A-4956-A542-3BC31E1F5403}" ShortID="200582386">
+					<ChildrenList>
+						<Sound Name="start game" ID="{5469C7C8-0874-4603-8B25-D84A1619D49A}" ShortID="163370967" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="start game" ID="{A691F1E0-B11F-42EF-AF9C-DB005AFB5C70}" ShortID="858981970">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0233840946389496"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.28612520514223"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.810648614150255"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile> start game.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="start game" ID="{A691F1E0-B11F-42EF-AF9C-DB005AFB5C70}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
