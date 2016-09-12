@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 
-[RequireComponent(typeof(AkBank))]
 public class GameState : MonoBehaviour
 {
     // singleton
@@ -99,8 +98,7 @@ public class GameState : MonoBehaviour
                 GiveLife();
             }
             numberStreakWithoutMiss = (numberStreakWithoutMiss + 1) % numberToGiveLife;
-
-            AkSoundEngine.PostEvent("correctNumberPickup", this.gameObject);
+            
 
             lastNumber = newNum;
             numberStreak++;
@@ -121,9 +119,6 @@ public class GameState : MonoBehaviour
         {
             numberStreak = 0;
             currentScoreMultiplier = 1;
-
-            AkSoundEngine.PostEvent("wrongNumberPickup", this.gameObject);
-
             UIController._instance.UpdateMultiplier(currentScoreMultiplier);
             LoseLife();
         }
