@@ -57,6 +57,9 @@ public class GameState : MonoBehaviour
         {
             _instance = this;
             Init();
+
+            //Play footstep sound
+            AkSoundEngine.PostEvent("footstep", this.gameObject);
         }
         else
         {
@@ -101,8 +104,10 @@ public class GameState : MonoBehaviour
                 GiveLife();
             }
             numberStreakWithoutMiss = (numberStreakWithoutMiss + 1) % numberToGiveLife;
-            
 
+            //Play pick up sound
+            AkSoundEngine.PostEvent("correctNumberPickup", this.gameObject);
+            
             lastNumber = newNum;
             numberStreak++;
             //Reset the amount of missed correct numbers.
@@ -122,6 +127,10 @@ public class GameState : MonoBehaviour
         {
             numberStreak = 0;
             currentScoreMultiplier = 1;
+
+            //Play pick up sound
+            AkSoundEngine.PostEvent("wrongNumberPickup", this.gameObject);
+
             UIController._instance.UpdateMultiplier(currentScoreMultiplier);
             LoseLife();
         }
