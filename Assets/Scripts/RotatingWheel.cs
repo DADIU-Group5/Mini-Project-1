@@ -5,7 +5,7 @@ public class RotatingWheel : MonoBehaviour {
 
     public static RotatingWheel _instance;
 
-    float speed = 20;
+    float speed = 3.5f;
 
     void Awake()
     {
