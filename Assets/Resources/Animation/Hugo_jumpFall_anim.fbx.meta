@@ -1,0 +1,141 @@
+fileFormatVersion: 2
+guid: 3ca7f4829e2e6164198c52035e12a07a
+timeCreated: 1473686840
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: be_head_01
+    100002: be_l_fingers_01
+    100004: be_l_toe_01
+    100006: be_r_fingers_01
+    100008: be_r_toe_01
+    100010: bind_chest_01
+    100012: bind_head_01
+    100014: bind_l_arm_01
+    100016: bind_l_fingers_01
+    100018: bind_l_foot_01
+    100020: bind_l_forearm_01
+    100022: bind_l_hand_01
+    100024: bind_l_leg_01
+    100026: bind_l_shoulder_01
+    100028: bind_l_toe_01
+    100030: bind_l_upleg_01
+    100032: bind_neck_01
+    100034: bind_pelvis_01
+    100036: bind_r_arm_01
+    100038: bind_r_fingers_01
+    100040: bind_r_foot_01
+    100042: bind_r_forearm_01
+    100044: bind_r_hand_01
+    100046: bind_r_reg_01
+    100048: bind_r_shourder_01
+    100050: bind_r_toe_01
+    100052: bind_r_upreg_01
+    100054: bind_spine_01
+    100056: grp_geo
+    100058: Hugo
+    100060: Hugo_geo
+    100062: //RootNode
+    100064: root_01
+    400000: be_head_01
+    400002: be_l_fingers_01
+    400004: be_l_toe_01
+    400006: be_r_fingers_01
+    400008: be_r_toe_01
+    400010: bind_chest_01
+    400012: bind_head_01
+    400014: bind_l_arm_01
+    400016: bind_l_fingers_01
+    400018: bind_l_foot_01
+    400020: bind_l_forearm_01
+    400022: bind_l_hand_01
+    400024: bind_l_leg_01
+    400026: bind_l_shoulder_01
+    400028: bind_l_toe_01
+    400030: bind_l_upleg_01
+    400032: bind_neck_01
+    400034: bind_pelvis_01
+    400036: bind_r_arm_01
+    400038: bind_r_fingers_01
+    400040: bind_r_foot_01
+    400042: bind_r_forearm_01
+    400044: bind_r_hand_01
+    400046: bind_r_reg_01
+    400048: bind_r_shourder_01
+    400050: bind_r_toe_01
+    400052: bind_r_upreg_01
+    400054: bind_spine_01
+    400056: grp_geo
+    400058: Hugo
+    400060: Hugo_geo
+    400062: //RootNode
+    400064: root_01
+    4300000: Hugo_geo
+    7400000: Hugo_jumpFallv001
+    9500000: //RootNode
+    13700000: Hugo_geo
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
