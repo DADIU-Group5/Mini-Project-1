@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: f20fe23b4205fb44c80e46c912b71399
-timeCreated: 1473666966
+guid: 9e03c01aa2f386e4ba81564a3454289b
+timeCreated: 1473429879
 licenseType: Pro
 TrueTypeFontImporter:
   serializedVersion: 4
@@ -12,7 +12,7 @@ TrueTypeFontImporter:
   fontNames:
   - Mayton
   fallbackFontReferences:
-  - {fileID: 12800000, guid: 3a5378d9a439bb74f98689d6cd647e44, type: 3}
+  - {fileID: 12800000, guid: 3131b9f49292a1745a167223820917c3, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
