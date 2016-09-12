@@ -7,22 +7,42 @@ using System.Collections;
 
 public class Spawner : MonoBehaviour {
 
-    [Range(0, 2)]
-    public int minDistance = 1;
+    public Number numberPrefab;
 
-    [Range(2,10)]
-    public int maxDistance = 2;
+    [Header("Throwing Animation")]
+    [Range(0, 15)]
+    public float spawnZ = 11;
 
-    public GameObject numberPrefab;
+    [Range(0.1f, 5)]
+    public float throwTime = 0.2f;
+
+    [Range(0, 20)]
+    public float throwHeight = 1;
+
+    //[Range(0, 2)]
+    //public int minDistance = 1;
+
+    //[Range(2,10)]
+    //public int maxDistance = 2;
+
 
     public void Spawn(Vector3 pos)
     {
         int newNumber = NumberGenerator._instance.GetNumber();
-        int randomDistance = Random.Range(minDistance, (maxDistance + 1));
-        Vector3 numberPos = pos;
-        numberPos.y = randomDistance;
+        //int randomDistance = Random.Range(minDistance, (maxDistance + 1));
+        //Vector3 numberPos = pos;
+        //numberPos.y = randomDistance;
+        //numberPos.y = 1;
+        //numberPos.z = spawnZ;
+
         //instantiate + set number
-        GameObject number = Instantiate(numberPrefab, numberPos, Quaternion.identity) as GameObject;
-        number.GetComponent<Number>().ThisNumber = newNumber;
+        Number number = Instantiate(numberPrefab);
+        number.ThisNumber = newNumber;
+        number.throwEndTime = Time.timeSinceLevelLoad + throwTime;
+        number.throwHeight = throwHeight;
+        number.throwStartPos = new Vector3(pos.x, 0.5f, pos.z);
+        number.throwEndPos = new Vector3(pos.x, 0.5f, spawnZ);
+        number.transform.position = number.throwStartPos;
+        number.transform.localScale = new Vector3(0, 0, 0);
     }
 }

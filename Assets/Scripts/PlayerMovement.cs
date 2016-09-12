@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 touchOrigin = -Vector2.one;
 
+    private Animator hugoAnimator;
+
     // Current lane (0 - left, 1 - middle, 2 - right)
     private Lane lane;
 
@@ -24,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         lane = Lane.Middle;
         leftLane = new Vector3(0f - GameState._instance.laneWidth, 0.5f, -8f);
         rightLane = new Vector3(0f + GameState._instance.laneWidth, 0.5f, -8f);
+        hugoAnimator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
