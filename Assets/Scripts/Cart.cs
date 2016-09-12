@@ -9,7 +9,12 @@ public class Cart : MonoBehaviour {
 
     [Range(0.0f, 10.0f)]
     public float cartMoveTimer = 2.0f;
+    //Spots the cart can move to.
     public Vector3[] spots;
+    //Curve the cart follows when moving in the z-axis.
+    public AnimationCurve curve;
+    //Time it takes to move between the spots.
+    public float movementTime = 1f;
 
     float LaneWidth= 4.0f;
 
@@ -19,6 +24,13 @@ public class Cart : MonoBehaviour {
     private Vector3 currentPosition;
     private int currentLane = 1;
     private int newLane = 1;
+
+    //Used to move the cart.
+    private bool movingZ = false;
+    private Vector3 targetZ;
+    private Vector3 startZ;
+    private float timer;
+    private bool finalMove = false;
 
     void Start()
     {
@@ -33,27 +45,68 @@ public class Cart : MonoBehaviour {
         {
             MoveCart();
         }
+        //If moving on Z axis, towards or away from player.
+        if (movingZ == true)
+        {
+            timer += Time.deltaTime;
+            if (timer >= movementTime)
+            {
+                movingZ = false;
+            }
+            else
+            {
+                Vector3 temp = Vector3.Lerp(startZ, targetZ, curve.Evaluate(timer / movementTime));
+                temp.x = transform.position.x;
+                transform.position = temp;
+            }
+        }
+        //The final move, the cart moves into the horizon.
+        if(finalMove == true)
+        {
+            timer += Time.deltaTime;
+            if (timer >= movementTime)
+            {
+                finalMove = false;
+                this.enabled = false;
+            }
+            else
+            {
+                Vector3 temp = Vector3.Lerp(startZ, targetZ, curve.Evaluate(timer / movementTime));
+                temp.x = transform.position.x;
+                transform.position = temp;
+            }
+        }
     }
+
 
     public void MoveCartAway(int slot)
     {
-        slot--;
-        if(slot >= 0)
+        //Moving between spots.
+        if(slot >= 1)
         {
-            Vector3 temp = transform.position;
-            temp.y = spots[slot].y;
-            temp.z = spots[slot].z;
-            transform.position = temp;
+            targetZ = spots[slot];
+            startZ = transform.position;
+            timer = 0;
+            movingZ = true;
         }
+        //Player died.
         else
         {
-            this.enabled = false;
-            //Run you lose animation for the cart.
+            targetZ = spots[slot];
+            startZ = transform.position;
+            timer = 0;
+            finalMove = true;
+            //double the movement time, for better animation, as it is longer.
+            movementTime *= 2;
         }
     }
 
     public void MoveCart()
     {
+        if(finalMove == true)
+        {
+            return;
+        }
         spawner.Spawn(currentPosition);
         nextMove += cartMoveTimer;
         if (currentLane == newLane)
