@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 7c4122f64b77932499d1edabe02ba02f
-timeCreated: 1473682505
+timeCreated: 1473688121
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
@@ -646,7 +646,7 @@ ModelImporter:
       transformModified: 1
     - name: bind_l_arm_01
       position: {x: -0.047915537, y: 1.4210854e-16, z: 6.6174445e-25}
-      rotation: {x: 0.0007290934, y: 0.010806695, z: -0.2035857, w: 0.9789973}
+      rotation: {x: 0.0007290933, y: 0.010806695, z: -0.20358567, w: 0.9789973}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: bind_l_forearm_01
@@ -691,7 +691,7 @@ ModelImporter:
       transformModified: 1
     - name: bind_r_arm_01
       position: {x: 0.047915433, y: -0.00000017078499, z: -4.7831345e-15}
-      rotation: {x: 0.00072912214, y: 0.010806434, z: -0.20358871, w: 0.9789966}
+      rotation: {x: 0.0007291222, y: 0.010806435, z: -0.20358872, w: 0.97899663}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: bind_r_forearm_01
