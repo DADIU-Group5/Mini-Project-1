@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: f20fe23b4205fb44c80e46c912b71399
+timeCreated: 1473666966
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Mayton
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3a5378d9a439bb74f98689d6cd647e44, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
