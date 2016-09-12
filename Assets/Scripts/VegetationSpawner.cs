@@ -9,7 +9,7 @@ public class VegetationSpawner : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
-        wheel = GameObject.Find("round");
+        wheel = GameObject.Find("Wheel");
         Vegetation();
     }
 

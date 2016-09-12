@@ -10,8 +10,7 @@ public class Despawner : MonoBehaviour {
         startPos = gameObject.transform.position;
     }
 
-    //spawn rate based on size
-    //lasttimespawned
+   
 
     void Update()
     {
