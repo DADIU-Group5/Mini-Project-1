@@ -5,6 +5,7 @@ using System.Collections;
 /// Should be used to move the cart. The spawner should use that position to know in which lane to spawn the number in.
 /// </summary>
 
+[RequireComponent(typeof(AkBank))]
 public class Cart : MonoBehaviour {
 
     [Range(0.0f, 10.0f)]
@@ -107,7 +108,10 @@ public class Cart : MonoBehaviour {
         {
             return;
         }
+
         spawner.Spawn(currentPosition);
+        AkSoundEngine.PostEvent("numberDrop", this.gameObject);
+
         nextMove += cartMoveTimer;
         if (currentLane == newLane)
         {
