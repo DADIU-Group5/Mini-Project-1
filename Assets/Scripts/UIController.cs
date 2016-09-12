@@ -73,6 +73,7 @@ public class UIController : MonoBehaviour {
         countTo = countTo.AddSeconds(countdown);
         countingDown = true;
     }
+
     void Update()
     {
         if (countingDown)
