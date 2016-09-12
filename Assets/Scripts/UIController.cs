@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System;
 
@@ -14,7 +15,8 @@ public class UIController : MonoBehaviour {
     public Text nextNumber;
     public Text lives;
     public Text unpauseCountdown;
-    public Text Multiplier;
+    public Text multiplier;
+    public GameObject losePanel;
 
     public PlayerMovement playerMove;
 
@@ -71,7 +73,7 @@ public class UIController : MonoBehaviour {
     /// <param name="newMultiplier"></param>
     public void UpdateMultiplier(float newMultiplier)
     {
-        Multiplier.text = "Multiplier: " + newMultiplier;
+        multiplier.text = "Multiplier: " + newMultiplier;
     }
 
     /// <summary>
@@ -91,6 +93,18 @@ public class UIController : MonoBehaviour {
         countTo = DateTime.Now;
         countTo = countTo.AddSeconds(countdown);
         countingDown = true;
+    }
+
+    public void DisplayLossScreen()
+    {
+        //WIP
+        //losePanel.gameObject.SetActive(true);
+        playerMove.enabled = false;
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
     /// <summary>
