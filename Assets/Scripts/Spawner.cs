@@ -40,7 +40,7 @@ public class Spawner : MonoBehaviour {
         number.ThisNumber = newNumber;
         number.throwEndTime = Time.timeSinceLevelLoad + throwTime;
         number.throwHeight = throwHeight;
-        number.throwStartPos = new Vector3(pos.x, 0.5f, pos.z);
+        number.throwStartPos = new Vector3(pos.x, 2.5f, pos.z);
         number.throwEndPos = new Vector3(pos.x, 0.5f, spawnZ);
         number.transform.position = number.throwStartPos;
         number.transform.localScale = new Vector3(0, 0, 0);

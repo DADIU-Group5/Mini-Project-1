@@ -5,6 +5,7 @@ using System.Collections;
 /// The player should chandle collision data.
 /// </summary>
 
+[RequireComponent(typeof(AkBank))]
 public class Player : MonoBehaviour {
 
     GameState gameState;
@@ -25,6 +26,7 @@ public class Player : MonoBehaviour {
             int caughtNumber = collision.gameObject.GetComponent<Number>().thisNumber;
             //send number info to GameState
             gameState.PlayerGotNumber(caughtNumber);
+            AkSoundEngine.PostEvent("correctNumberPickup", this.gameObject);
             Destroy(collision.gameObject);
         }
     }
