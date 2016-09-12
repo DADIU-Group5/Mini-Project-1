@@ -92,6 +92,8 @@ public class GameState : MonoBehaviour
         {
             lastNumber = newNum;
             numberStreak++;
+            //Reset the amount of missed correct numbers.
+            missedNumbers = 0;
 
             // update speed
             int speedLevel = (lastNumber / numbersPerSpeedIncrease);
