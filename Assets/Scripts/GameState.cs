@@ -101,6 +101,7 @@ public class GameState : MonoBehaviour
             currentScoreMultiplier = 1 + (numberStreak / numbersPerScoreIncrease) * scoreMultiplierIncrease;
             score += scorePerNumber * currentScoreMultiplier;
             UIController._instance.UpdateScore((int)score);
+            UIController._instance.UpdateMultiplier(currentScoreMultiplier);
         }
         else
         {

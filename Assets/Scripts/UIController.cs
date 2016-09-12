@@ -14,6 +14,7 @@ public class UIController : MonoBehaviour {
     public Text nextNumber;
     public Text lives;
     public Text unpauseCountdown;
+    public Text Multiplier;
 
     public PlayerMovement playerMove;
 
@@ -21,6 +22,9 @@ public class UIController : MonoBehaviour {
     private float countdown = 3;
     private DateTime countTo;
 
+    /// <summary>
+    /// Makes it a singleton.
+    /// </summary>
     void Awake()
     {
         if (_instance == null)
@@ -61,26 +65,49 @@ public class UIController : MonoBehaviour {
         lives.text = "Lives: " + newLives;
     }
 
+    /// <summary>
+    /// Updates the multiplier in the UI.
+    /// </summary>
+    /// <param name="newMultiplier"></param>
+    public void UpdateMultiplier(float newMultiplier)
+    {
+        Multiplier.text = "Multiplier: " + newMultiplier;
+    }
+
+    /// <summary>
+    /// Pauses the game, disables the playermovement script.
+    /// </summary>
     public void Pause()
     {
         Time.timeScale = 0;
         playerMove.enabled = false;
     }
 
+    /// <summary>
+    /// Unpause Button handler.
+    /// </summary>
     public void Unpuase()
     {
         countTo = DateTime.Now;
         countTo = countTo.AddSeconds(countdown);
         countingDown = true;
     }
+
+    /// <summary>
+    /// Only used when counting down.
+    /// </summary>
     void Update()
     {
         if (countingDown)
         {
+            //Gets the current time.
             DateTime now = DateTime.Now;
+            //Updates the visual text.
             unpauseCountdown.text = "Resuming in:\n"+(int)((countTo - now).TotalSeconds+1) + "!";
+            //No longer puased
             if (countTo.CompareTo(now) < 0)
             {
+                //Unpause functionality.
                 Time.timeScale = 1;
                 countingDown = false;
                 unpauseCountdown.gameObject.SetActive(false);
