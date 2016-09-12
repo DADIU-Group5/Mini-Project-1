@@ -78,6 +78,7 @@ ModelImporter:
     4300000: truck5
     7400000: truckRiggAccelerate001
     9500000: //RootNode
+    11100000: //RootNode
     13700000: truck5
   materials:
     importMaterials: 1
@@ -93,7 +94,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -134,7 +135,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    rootMotionBoneName: 
+    rootMotionBoneName: root_01
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2

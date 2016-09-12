@@ -78,6 +78,7 @@ ModelImporter:
     4300000: truck5
     7400000: truckRigg002
     9500000: //RootNode
+    11100000: //RootNode
     13700000: truck5
   materials:
     importMaterials: 1
@@ -93,13 +94,120 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: truckRigg002
+      takeName: truckRigg002
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root_01
+        weight: 1
+      - path: root_01/bind_pelvis_01
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_chest_01
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_chest_01/bind_back_01
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_a_01
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_a_01/bind_animal_a_01
+          1
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_b_01
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_b_01/bind_animal_b_01
+          1
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_c_01
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_c_01/bind_animal_c_01
+          1
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_d_01
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_d_01/bind_animal_d_01
+          1
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_e_01
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_e_01/bind_animal_e_01
+          1
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_f_01
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_f_01/bind_animal_f_01
+          1
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_g_01
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_g_01/bind_animal_g_01
+          1
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_h_01
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_h_01/bind_animal_h_01
+          1
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_i_01
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_i_01/bind_animal_i_01
+          1
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_hip_a_01
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_hip_a_01/bind_l_leg_a_01
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_hip_a_01/bind_l_leg_a_01/bind_l_hand_a_01
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_hip_a_01/bind_r_reg_a_01
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_hip_a_01/bind_r_reg_a_01/bind_r_hand_a_01
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_hip_b_01
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_hip_b_01/bind_l_leg_b_01
+        weight: 1
+      - path: root_01/bind_pelvis_01/bind_hip_b_01/bind_r_reg_b_01
+        weight: 1
+      - path: truck1
+        weight: 1
+      - path: truck1/grp_geo
+        weight: 1
+      - path: truck1/grp_geo/truck5
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -134,9 +242,10 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    rootMotionBoneName: 
+    rootMotionBoneName: root_01
     hasTranslationDoF: 0
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 62db3f999ae782b4584c5451aa146124,
+    type: 3}
   animationType: 2
   humanoidOversampling: 1
   additionalBone: 0

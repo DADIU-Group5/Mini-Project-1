@@ -78,6 +78,7 @@ ModelImporter:
     4300000: truck5
     7400000: truckRiggLand001
     9500000: //RootNode
+    11100000: //RootNode
     13700000: truck5
   materials:
     importMaterials: 1
@@ -123,7 +124,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
   importAnimation: 1
-  copyAvatar: 0
+  copyAvatar: 1
   humanDescription:
     human: []
     skeleton: []
@@ -137,7 +138,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
