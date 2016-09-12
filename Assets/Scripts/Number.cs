@@ -12,6 +12,11 @@ public class Number : MonoBehaviour {
     public string Digits;
     float distance = -0.75f;
 
+    // Throw animation
+    private float spawnTime;
+    public float throwEndTime, throwHeight;
+    public Vector3 throwStartPos, throwEndPos;
+
     //alternatively, change number from spawn script by public variable.
 
     public int ThisNumber
@@ -21,6 +26,13 @@ public class Number : MonoBehaviour {
             SetNumber();
         }
      }
+
+    private void Awake()
+    {
+        spawnTime = Time.timeSinceLevelLoad;
+        Rigidbody body = GetComponent<Rigidbody>();
+        body.isKinematic = true;
+    }
 
     void Start()
     {
@@ -38,10 +50,35 @@ public class Number : MonoBehaviour {
     } 
 
     // Use this for initialization
-   public void SetNumber () {
+    public void SetNumber ()
+    {
         //ThisNumber = 20;
         Digits = thisNumber.ToString();
         //GetComponent<MeshRenderer>().material = (Material)Resources.Load("number" + Digits[0]);
         gameObject.transform.Find("NumberText").GetComponent<TextMesh>().text = Digits;
+    }
+
+    public void Update ()
+    {
+        // Check if we are doing the throwing animation.
+        if (Time.timeSinceLevelLoad < throwEndTime)
+        {
+            float fraction = (throwEndTime - Time.timeSinceLevelLoad) / (throwEndTime - spawnTime);
+
+            float newX = Mathf.Lerp(throwStartPos.x, throwEndPos.x, 1 - fraction);
+
+            float newZ = Mathf.Lerp(throwStartPos.z, throwEndPos.z, 1 - fraction);
+
+            float newY = (fraction - fraction * fraction) * 4 * throwHeight + throwEndPos.y;
+
+            transform.position = new Vector3(newX, newY, newZ);
+
+            transform.localScale = new Vector3(1 - fraction, 1 - fraction, 1 - fraction);
+        }
+        else
+        {
+            GetComponent<Rigidbody>().isKinematic = false;
+            transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 }
