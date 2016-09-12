@@ -1,38 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{B717B861-3C69-4859-898E-FF25CFC90875}" SchemaVersion="72">
+<WwiseDocument Type="WorkUnit" ID="{516F9723-DC42-481F-9E91-8952C09F5A3D}" SchemaVersion="72">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{B717B861-3C69-4859-898E-FF25CFC90875}" PersistMode="Standalone">
+		<WorkUnit Name="Default Work Unit" ID="{516F9723-DC42-481F-9E91-8952C09F5A3D}" PersistMode="Standalone">
 			<ChildrenList>
-				<Effect Name="New_Wwise_Parametric_EQ" ID="{0C710395-D9AE-4AD1-8790-0B8AC9A67466}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
-					<PropertyList>
-						<Property Name="FrequencyBand2" Type="Real32" Value="20"/>
-						<Property Name="GainBand2" Type="Real32" Value="12"/>
-						<Property Name="QFactorBand2" Type="Real32" Value="100"/>
-					</PropertyList>
-				</Effect>
-				<Effect Name="New_Wwise_Parametric_EQ_01" ID="{362573FA-D37A-47FF-9A59-E0AE850E0D70}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3"/>
-				<Effect Name="New_Wwise_Parametric_EQ_02" ID="{CF9D8D51-EF90-4EE3-AC3B-BD8BD1DE9200}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
-					<PropertyList>
-						<Property Name="FrequencyBand3" Type="Real32" Value="821"/>
-						<Property Name="GainBand3" Type="Real32" Value="-5.5"/>
-					</PropertyList>
-				</Effect>
-				<Effect Name="jungleambiens" ID="{A3159349-44A6-49D4-A2B1-BFB21916F402}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+				<Effect Name="comb" ID="{993047DB-3995-4606-BD7A-752E19D16E97}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 					<PropertyList>
 						<Property Name="FilterTypeBand1" Type="int32" Value="6"/>
 						<Property Name="FilterTypeBand3" Type="int32" Value="6"/>
-						<Property Name="FrequencyBand1" Type="Real32" Value="935"/>
-						<Property Name="FrequencyBand2" Type="Real32" Value="2077"/>
-						<Property Name="GainBand1" Type="Real32" Value="-24"/>
-						<Property Name="GainBand2" Type="Real32" Value="5.5"/>
-						<Property Name="GainBand3" Type="Real32" Value="-24"/>
-					</PropertyList>
-				</Effect>
-				<Effect Name="New_Wwise_Compressor" ID="{4D006A19-9278-423B-944C-1E51E0743284}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
-					<PropertyList>
-						<Property Name="AttackTime" Type="Real32" Value="0.48"/>
-						<Property Name="Ratio" Type="Real32" Value="2.5"/>
-						<Property Name="Threshold" Type="Real32" Value="-34.5"/>
+						<Property Name="FrequencyBand1" Type="Real32" Value="1200"/>
+						<Property Name="FrequencyBand2" Type="Real32" Value="600"/>
+						<Property Name="FrequencyBand3" Type="Real32" Value="1600"/>
+						<Property Name="GainBand1" Type="Real32" Value="10"/>
+						<Property Name="GainBand2" Type="Real32" Value="10"/>
+						<Property Name="GainBand3" Type="Real32" Value="20"/>
+						<Property Name="QFactorBand1" Type="Real32" Value="100"/>
+						<Property Name="QFactorBand2" Type="Real32" Value="100"/>
+						<Property Name="QFactorBand3" Type="Real32" Value="100"/>
 					</PropertyList>
 				</Effect>
 			</ChildrenList>
