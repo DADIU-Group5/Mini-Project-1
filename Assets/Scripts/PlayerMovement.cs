@@ -7,9 +7,9 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour
 {
     enum Lane { Left, Middle, Right };
-    private Vector3 leftLane = new Vector3(-2f, 0.5f, -8f);
-    private Vector3 middleLane = new Vector3(0f, 0.5f, -8f);
-    private Vector3 rightLane = new Vector3(2f, 0.5f, -8f);
+    private Vector3 leftLane = new Vector3(-2f, 0, -8f);
+    private Vector3 middleLane = new Vector3(0f, 0, -8f);
+    private Vector3 rightLane = new Vector3(2f, 0, -8f);
 
     private Vector2 touchOrigin = -Vector2.one;
 
@@ -24,8 +24,8 @@ public class PlayerMovement : MonoBehaviour
         Transform transform = GetComponent<Transform>();
         transform.position = middleLane;
         lane = Lane.Middle;
-        leftLane = new Vector3(0f - GameState._instance.laneWidth, 0.5f, -8f);
-        rightLane = new Vector3(0f + GameState._instance.laneWidth, 0.5f, -8f);
+        leftLane = new Vector3(0f - GameState._instance.laneWidth, 0, -8f);
+        rightLane = new Vector3(0f + GameState._instance.laneWidth, 0, -8f);
         hugoAnimator = GetComponentInChildren<Animator>();
     }
 
