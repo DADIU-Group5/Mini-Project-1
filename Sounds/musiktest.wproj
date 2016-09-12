@@ -25,7 +25,7 @@
 				</Property>
 				<Property Name="SoundBankGenerateHeaderFile" Type="bool" Value="True" />
 				<Property Name="SoundBankGenerateMaxAttenuationInfo" Type="bool" Value="True" />
-				<Property Name="SoundBankHeaderFilePath" Type="string" Value="C:\Users\dadiu\Documents\Mini-Project-1\Assets\StreamingAssets\Audio\GeneratedSoundBanks" />
+				<Property Name="SoundBankHeaderFilePath" Type="string" Value="Z:/Users/Victor/Downloads/wwise test gruppe 4/Assets/StreamingAssets/Audio/GeneratedSoundBanks" />
 				<Property Name="SoundBankPaths" Type="string">
 					<ValueList>
 						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>

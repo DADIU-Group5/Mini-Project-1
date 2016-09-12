@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SoundBanksInfo Platform="Android" BasePlatform="Android" SchemaVersion="11" SoundbankVersion="118">
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="118">
 	<RootPaths>
 		<ProjectRoot>/Users/Victor/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/WwiseProjects/musiktest/</ProjectRoot>
-		<SourceFilesRoot>/Users/Victor/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/WwiseProjects/musiktest/.cache/Android/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/Victor/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/WwiseProjects/musiktest/GeneratedSoundBanks/Android/</SoundBanksRoot>
+		<SourceFilesRoot>/Users/Victor/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/WwiseProjects/musiktest/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/Victor/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/WwiseProjects/musiktest/GeneratedSoundBanks/Windows/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/Victor/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/WwiseProjects/musiktest/GeneratedSoundBanks/Android/</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/Victor/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/WwiseProjects/musiktest/GeneratedSoundBanks/Windows/</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>

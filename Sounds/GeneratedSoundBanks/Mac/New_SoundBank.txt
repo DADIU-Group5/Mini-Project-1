@@ -1,0 +1,66 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1078311194	correctNumberPickup			\Default Work Unit\correctNumberPickup	
+	1929616820	truckHonk			\Default Work Unit\truckHonk	
+	2318428819	wrongNumberPickup			\Default Work Unit\wrongNumberPickup	
+	2397454474	jungleAmbience			\Default Work Unit\jungleAmbience	
+	2531827761	numberDrop			\Default Work Unit\numberDrop	
+	2736691391	menuPressStart			\Default Work Unit\menuPressStart	
+	4294099536	truckEngine			\Default Work Unit\truckEngine	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	825409407	truckSpeed			\Default Work Unit\truckSpeed	
+
+Modulator LFO	ID	Name			Wwise Object Path	Notes
+	18808235	New Modulator LFO_01			\Default Work Unit\New Modulator LFO_01	
+	926443815	New Modulator LFO			\Default Work Unit\New Modulator LFO	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	805203703	Master Secondary Bus			\Default Work Unit\Master Secondary Bus	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	695384145	rvb			\Default Work Unit\Master Audio Bus\rvb	
+
+Effect plug-ins	ID	Name	Type				Notes
+	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
+	402483881	Wwise Delay (Custom)	Wwise Delay			
+	487576762	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
+	850869277	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
+	866218909	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
+	1169110113	New_Wwise_Compressor	Wwise Compressor			
+	2652646462	Dialog_Leveler_Soft	Wwise Compressor			
+	2689776682	New_Wwise_Parametric_EQ_02	Wwise Parametric EQ			
+	3142372517	jungleambiens	Wwise Parametric EQ			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	6534581	fugle skrål_02	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\fugle skrål_8F7DB64D.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\monkey\fugle skrål_02		1663784
+	16302344	TruckSound Rattle less flanger	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\TruckSound Rattle less flanger_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\truck\truck_engine\TruckSound Rattle less flanger		1190544
+	19559311	truck honk	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\truck honk_7E05A26D.wem		\Actor-Mixer Hierarchy\Default Work Unit\truck\truck honk		42076
+	52187491	tal 8	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\tal 8_95CACFB3.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal 8		215340
+	64853793	tal multiplyer 1	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\tal multiplyer 1_CB56112A.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal multiplyer 1		125688
+	81409355	TruckSound Tone	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\TruckSound Tone_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\truck\truck_engine\TruckSound Tone		1776064
+	107995737	ThunderClap_BW_59747	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\ThunderClap_BW.59747_437A7F46.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\thunder\ThunderClap_BW_59747		4528188
+	138251004	tal 1	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\tal 1_C7672052.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal 1		210296
+	160522890	tal 5	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\tal 5_D369DD7C.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal 5		218364
+	186426770	tal drop	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\tal drop_DFC7223B.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\tal drop		275516
+	239652858	tal 3	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\tal 3_72611AF2.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal 3		214332
+	291768993	ambience with birds 2 noise reduction	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\ambience with birds 2 noise reduction_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\birds\ambience with birds 2 noise reduction		2112068
+	301719007	ambience with birds 1 noise reduction	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\ambience with birds 1 noise reduction_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\birds\ambience with birds 1 noise reduction		4992068
+	320522711	ambience with water 4	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\ambience with water 4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\water\ambience with water 4		960068
+	389132218	ambience with water 2	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\ambience with water 2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\water\ambience with water 2		768068
+	398709869	ThunderClap_BW_59744	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\ThunderClap_BW.59744_FA052140.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\thunder\ThunderClap_BW_59744		3546172
+	429626763	fugle skrål_01	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\fugle skrål_3F72AEA9.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\monkey\fugle skrål_01		1228952
+	524445816	ambience with water 3	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\ambience with water 3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\water\ambience with water 3		1152068
+	539194505	tal 2	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\tal 2_90B1ECF1.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal 2		217356
+	586388034	fugle skrål	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\fugle skrål_A9F44887.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\monkey\fugle skrål		3380444
+	586994086	tal 9	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\tal 9_738C2DD3.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal 9		219876
+	634415553	ambience with water 1	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\ambience with water 1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\water\ambience with water 1		1008068
+	722758616	tal 6	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\tal 6_0F4F8B3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal 6		108964
+	723677576	tal 7	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\tal 7_2C12CCD8.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal 7		224288
+	784100572	tal 4	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\tal 4_6890BA32.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal 4		215844
+	858981970	start game	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\ start game_DC959F3C.wem		\Actor-Mixer Hierarchy\Default Work Unit\menu\start game		1212296
+	920674601	ambience with birds 3 noise reduction	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\ambience with birds 3 noise reduction_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\birds\ambience with birds 3 noise reduction		5376068
+	983140521	fugle skrål_03	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\fugle skrål_D77D169C.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\monkey\fugle skrål_03		642868
+	1021396976	ThunderClap_BW_59746	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\ThunderClap_BW.59746_AE7AE3F7.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\thunder\ThunderClap_BW_59746		5092412
+	1032580209	truck honk_01	Y:\Documents\WwiseProjects\musiktest\.cache\Mac\SFX\truck honk_513260FB.wem		\Actor-Mixer Hierarchy\Default Work Unit\truck\truck honk_01		97956
+

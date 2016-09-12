@@ -25,8 +25,8 @@ public class NumberMovement : MonoBehaviour {
     }*/
 
 
-// Use this for initialization
-void Start () {
+    // Use this for initialization
+    void Start () {
         rigidBody = GetComponent<Rigidbody>();
         numberSpeed = GameState._instance.GetNumberSpeed();
 	}
@@ -35,6 +35,12 @@ void Start () {
 	void Update () {
         //set a constant velocity in the z-direction
         rigidBody.velocity = new Vector3(rigidBody.velocity.x, rigidBody.velocity.y, -1f * numberSpeed);
+    }
+
+    public void Stop()
+    {
+        rigidBody.velocity = Vector3.zero;
+        this.enabled = false;
     }
 
     void OnCollisionEnter(Collision collision)

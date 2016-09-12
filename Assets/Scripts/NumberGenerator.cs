@@ -14,7 +14,7 @@ public class NumberGenerator : MonoBehaviour {
     public float highestChance = 0.4f;
     [Range(0, 1)]
     public float lowestChance = 0.1f;
-    public int lastTier = 90;
+    public float lastTier = 90;
     [Range(0,1)]
     public float probability = 0.5f;
     public int lowerRange = 5;
@@ -56,7 +56,11 @@ public class NumberGenerator : MonoBehaviour {
     /// <returns>Number to spawn</returns>
     public int GetNumber()
     {
-        if(Random.Range(0f, 1f) <= probability)
+        if(GameState._instance.GetNextNumber() == 1)
+        {
+            return 1;
+        }
+        if(Random.Range(0f, 1f) <= GetProbability())
         {
             return GameState._instance.GetNextNumber();
         }
@@ -66,7 +70,14 @@ public class NumberGenerator : MonoBehaviour {
             int minNum = GameState._instance.GetNextNumber() - lowerRange;
             if (minNum < 1)
             {
-                return range[Random.Range(-minNum, range.Count)] + GameState._instance.GetNextNumber();
+                //Needs to fix so it cannot spawn 0.
+                int temp = range[Random.Range(-minNum, range.Count)] + GameState._instance.GetNextNumber();
+                if(temp == 0)
+                {
+                    temp = 1;
+                }
+                return temp;
+                //return range[Random.Range(-minNum, range.Count)] + GameState._instance.GetNextNumber();
             }
             else
             {
@@ -77,12 +88,8 @@ public class NumberGenerator : MonoBehaviour {
 
     public float GetProbability()
     {
-        int temp = GameState._instance.GetNextNumber();
-        Debug.Log("before: "+temp);
-        temp -= temp % 10;
-        Debug.Log("after: "+temp);
-        temp = 10;
-        Debug.Log(highestChance - ((temp / lastTier) * (highestChance - lowestChance)));
-        return highestChance - ((temp / lastTier) * (highestChance - lowestChance));
+        int multipleOfTen = GameState._instance.GetNextNumber();
+        multipleOfTen -= multipleOfTen % 10;
+        return highestChance - ((multipleOfTen / lastTier) * (highestChance - lowestChance));
     }
 }

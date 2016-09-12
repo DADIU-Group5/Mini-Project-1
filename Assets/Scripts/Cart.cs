@@ -9,6 +9,7 @@ public class Cart : MonoBehaviour {
 
     [Range(0.0f, 10.0f)]
     public float cartMoveTimer = 2.0f;
+    public Vector3[] spots;
 
     float LaneWidth= 4.0f;
 
@@ -31,6 +32,23 @@ public class Cart : MonoBehaviour {
         if (nextMove <= Time.timeSinceLevelLoad)
         {
             MoveCart();
+        }
+    }
+
+    public void MoveCartAway(int slot)
+    {
+        slot--;
+        if(slot >= 0)
+        {
+            Vector3 temp = transform.position;
+            temp.y = spots[slot].y;
+            temp.z = spots[slot].z;
+            transform.position = temp;
+        }
+        else
+        {
+            this.enabled = false;
+            //Run you lose animation for the cart.
         }
     }
 

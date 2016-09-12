@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System;
 
@@ -14,6 +15,9 @@ public class UIController : MonoBehaviour {
     public Text nextNumber;
     public Text lives;
     public Text unpauseCountdown;
+    public Text multiplier;
+    public GameObject losePanel;
+    public Text loseScreenStats;
 
     public PlayerMovement playerMove;
 
@@ -21,6 +25,9 @@ public class UIController : MonoBehaviour {
     private float countdown = 3;
     private DateTime countTo;
 
+    /// <summary>
+    /// Makes it a singleton.
+    /// </summary>
     void Awake()
     {
         if (_instance == null)
@@ -40,7 +47,7 @@ public class UIController : MonoBehaviour {
     /// <param name="newScore"></param>
     public void UpdateScore(int newScore)
     {
-        score.text = "score: " + newScore;
+        score.text = "Score: " + newScore;
     }
 
     /// <summary>
@@ -49,7 +56,7 @@ public class UIController : MonoBehaviour {
     /// <param name="nextNum"></param>
     public void UpdateNextNumber(int nextNum)
     {
-        nextNumber.text = "nextNumber: " + nextNum;
+        nextNumber.text = "Next: " + nextNum;
     }
 
     /// <summary>
@@ -61,31 +68,77 @@ public class UIController : MonoBehaviour {
         lives.text = "Lives: " + newLives;
     }
 
+    /// <summary>
+    /// Updates the multiplier in the UI.
+    /// </summary>
+    /// <param name="newMultiplier"></param>
+    public void UpdateMultiplier(float newMultiplier)
+    {
+        multiplier.text = "Multiplier: " + newMultiplier;
+    }
+
+    /// <summary>
+    /// Pauses the game, disables the playermovement script.
+    /// </summary>
     public void Pause()
     {
         Time.timeScale = 0;
         playerMove.enabled = false;
     }
 
+    /// <summary>
+    /// Unpause Button handler.
+    /// </summary>
     public void Unpuase()
     {
         countTo = DateTime.Now;
         countTo = countTo.AddSeconds(countdown);
         countingDown = true;
     }
+
+    public void DisplayLossScreen()
+    {
+        losePanel.gameObject.SetActive(true);
+        playerMove.enabled = false;
+        RotatingWheel._instance.StopRotate();
+        GameObject[] numbers = GameObject.FindGameObjectsWithTag("Number");
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            numbers[i].GetComponent<NumberMovement>().Stop();
+        }
+        loseScreenStats.text = "Highscore: " + PlayerPrefs.GetInt("HighScore") + "\n" + score.text + "\nHighest number: " + GameState._instance.GetNumber();
+    }
+
+    /// <summary>
+    /// Only used when counting down.
+    /// </summary>
     void Update()
     {
         if (countingDown)
         {
+            //Gets the current time.
             DateTime now = DateTime.Now;
+            //Updates the visual text.
             unpauseCountdown.text = "Resuming in:\n"+(int)((countTo - now).TotalSeconds+1) + "!";
+            //No longer puased
             if (countTo.CompareTo(now) < 0)
             {
+                //Unpause functionality.
                 Time.timeScale = 1;
                 countingDown = false;
                 unpauseCountdown.gameObject.SetActive(false);
                 playerMove.enabled = true;
             }
         }
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
