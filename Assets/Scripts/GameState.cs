@@ -151,7 +151,7 @@ public class GameState : MonoBehaviour
 
     public void GiveLife()
     {
-        playerLives = Mathf.Min(maxLifes, playerLives + 1);
+        playerLives++;
         //TODO Moves the cart closer to the player.
         cart.MoveCartAway(playerLives);
         UIController._instance.UpdateLives(playerLives);
