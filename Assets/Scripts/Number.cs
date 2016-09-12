@@ -40,29 +40,22 @@ public class Number : MonoBehaviour {
         // instantiate the correct number-prefabs
         for (int i = 0; i < Digits.Length; i++)
         {
-            float addValue = 0;
-            if (Digits.Length > 1 && i == 0)
-            {
-                addValue = distance/2;
-            }
-
-            GameObject digit = (GameObject)Instantiate(Resources.Load("Textures/numbers_" + Digits[i]), transform.position + new Vector3(.25f, 0, 0) + (-transform.right * distance/2 * i) + (transform.right * addValue), transform.rotation);
+            GameObject digit = (GameObject)Instantiate(Resources.Load("models/MikeSnakeV001"), transform.position + new Vector3(.25f, 0, 0) + (transform.right * distance * i),transform.rotation);
             //GameObject digit = (GameObject) Instantiate(Resources.Load("models/Number"+Digits[i]), transform.position + new Vector3(.25f, 0, 0) + (transform.right * distance * i),transform.rotation);
 
-            digit.transform.SetParent(gameObject.transform);
-
             //Assign the correct positions (how do I take object width into account here?)
-            //RectTransform rt = (RectTransform)digit.transform;
-            //distance = rt.rect.width;//digit.GetComponent<MeshFilter>().mesh.bounds.size.x;
-
-            //number1.transform.localScale = new Vector3(2, 2, 2); //considering as animation...
+            digit.transform.SetParent(gameObject.transform);
+            //distance = digit.GetComponent<MeshFilter>().mesh.bounds.size.x;
         }
     } 
 
     // Use this for initialization
     public void SetNumber ()
     {
+        //ThisNumber = 20;
         Digits = thisNumber.ToString();
+        //GetComponent<MeshRenderer>().material = (Material)Resources.Load("number" + Digits[0]);
+        gameObject.transform.Find("NumberText").GetComponent<TextMesh>().text = Digits;
     }
 
     public void Update ()

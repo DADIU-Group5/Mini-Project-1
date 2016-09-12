@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
+[RequireComponent(typeof(AkBank))]
 public class GameState : MonoBehaviour
 {
     // singleton
@@ -114,12 +115,19 @@ public class GameState : MonoBehaviour
             score += scorePerNumber * currentScoreMultiplier;
             UIController._instance.UpdateScore((int)score);
             UIController._instance.UpdateMultiplier(currentScoreMultiplier);
+
+            // play correct number sound
+            AkSoundEngine.PostEvent("correctNumberPickup", this.gameObject);
         }
         else
         {
             numberStreak = 0;
             currentScoreMultiplier = 1;
             UIController._instance.UpdateMultiplier(currentScoreMultiplier);
+
+            // play wrong number sound
+            AkSoundEngine.PostEvent("wrongNumberPickup", this.gameObject);
+
             LoseLife();
         }
         UIController._instance.UpdateNextNumber(GetNextNumber());

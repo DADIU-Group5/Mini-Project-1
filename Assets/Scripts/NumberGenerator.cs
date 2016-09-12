@@ -15,6 +15,8 @@ public class NumberGenerator : MonoBehaviour {
     [Range(0, 1)]
     public float lowestChance = 0.1f;
     public float lastTier = 90;
+    [Range(0,1)]
+    public float probability = 0.5f;
     public int lowerRange = 5;
     public int upperRange = 3;
 
