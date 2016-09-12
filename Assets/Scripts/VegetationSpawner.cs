@@ -10,6 +10,10 @@ public class VegetationSpawner : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         wheel = GameObject.Find("Wheel");
+        /*int randnum = Random.Range(0, wheel.GetComponent<Mesh>().vertexCount);
+        Vector3 randPos = wheel.GetComponent<Mesh>().vertices[randnum];
+        randPos = transform.TransformPoint(randPos);
+        Instantiate(bushes[0], randPos, wheel.GetComponent<Mesh>().normals[randnum]);*/
         Vegetation();
     }
 

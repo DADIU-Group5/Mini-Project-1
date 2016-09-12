@@ -28,11 +28,12 @@ public class GameState : MonoBehaviour
     [Header("Other")]
     public bool unbeatable;
     [Range(1, 10)]
-    public int initialLifes = 3;
+    public int maxLifes = 3;
     [Range(1, 5)]
     public float laneWidth = 1.5f;
     [Range(1f, 3f)]
     public int missedNumbersThreshold = 5;
+    public int numberToGiveLife = 6;
 
     public Cart cart;
 
@@ -45,6 +46,7 @@ public class GameState : MonoBehaviour
     private int playerLives;
     private float currentSpeedMultiplier = 1;
     private float currentScoreMultiplier = 1;
+    private int numberStreakWithoutMiss = 0;
 
     // Use this for initialization
     void Awake () {
@@ -63,7 +65,7 @@ public class GameState : MonoBehaviour
     private void Init()
     {
         currentNumberSpeed = initialSpeed;
-        playerLives = initialLifes;
+        playerLives = maxLifes;
     }
 
     public int GetNumber()
@@ -91,6 +93,13 @@ public class GameState : MonoBehaviour
         //Determine if the right number was caught.
         if (newNum == GetNextNumber())
         {
+            if (numberStreak == numberToGiveLife - 1 && playerLives < maxLifes)
+            {
+                GiveLife();
+            }
+            numberStreakWithoutMiss = (numberStreakWithoutMiss + 1) % numberToGiveLife;
+            
+
             lastNumber = newNum;
             numberStreak++;
             //Reset the amount of missed correct numbers.
@@ -108,6 +117,7 @@ public class GameState : MonoBehaviour
         }
         else
         {
+            numberStreak = 0;
             currentScoreMultiplier = 1;
             LoseLife();
         }
@@ -121,7 +131,7 @@ public class GameState : MonoBehaviour
         //Moves the cart further away from the player.
         cart.MoveCartAway(playerLives);
         UIController._instance.UpdateLives(playerLives);
-        // TODO Move cart away as player lose lives.
+       // Move cart away as player lose lives.
         if (playerLives <= 0 && !unbeatable)
         {
             // game over
@@ -137,6 +147,14 @@ public class GameState : MonoBehaviour
             //SceneManager.LoadScene(0);
             UIController._instance.DisplayLossScreen();
         }
+    }
+
+    public void GiveLife()
+    {
+        playerLives = Mathf.Min(maxLifes, playerLives + 1);
+        //TODO Moves the cart closer to the player.
+        cart.MoveCartAway(playerLives);
+        UIController._instance.UpdateLives(playerLives);
     }
 
     public void NumberMissed(int numberMissed)
