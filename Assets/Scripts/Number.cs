@@ -46,16 +46,8 @@ public class Number : MonoBehaviour {
                 addValue = distance;
             }
 
-            GameObject digit = (GameObject)Instantiate(Resources.Load("Textures/numbers_" + Digits[i]), transform.position + new Vector3(.25f, 0, 0) +/* (-transform.right * distance/2 * i) +*/ (transform.right * addValue), transform.rotation);
-            //GameObject digit = (GameObject) Instantiate(Resources.Load("models/Number"+Digits[i]), transform.position + new Vector3(.25f, 0, 0) + (transform.right * distance * i),transform.rotation);
-
+            GameObject digit = (GameObject)Instantiate(Resources.Load("Textures/numbers_" + Digits[i]), transform.position + new Vector3(.25f, 0, 0) +(transform.right * addValue), transform.rotation);
             digit.transform.SetParent(gameObject.transform);
-
-            //Assign the correct positions (how do I take object width into account here?)
-            //RectTransform rt = (RectTransform)digit.transform;
-            //distance = rt.rect.width;//digit.GetComponent<MeshFilter>().mesh.bounds.size.x;
-
-            //number1.transform.localScale = new Vector3(2, 2, 2); //considering as animation...
         }
     } 
 

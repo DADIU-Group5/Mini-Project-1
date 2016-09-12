@@ -35,12 +35,12 @@ public class GameState : MonoBehaviour
     [Range(1f, 3f)]
     public int missedNumbersThreshold = 5;
     public int numberToGiveLife = 6;
+    public int lastNumber;
 
     public Cart cart;
 
     // private fields
     private float score;
-    private int lastNumber;
     private int missedNumbers;
     private int numberStreak;
     private float currentNumberSpeed;

@@ -16,6 +16,8 @@ public class Cart : MonoBehaviour {
     public AnimationCurve curve;
     //Time it takes to move between the spots.
     public float movementTime = 1f;
+    //number object to show next number.
+    public GameObject numberObject;
 
     float LaneWidth= 4.0f;
 
@@ -32,11 +34,15 @@ public class Cart : MonoBehaviour {
     private Vector3 startZ;
     private float timer;
     private bool finalMove = false;
+    private int lastNumber = -1;
+    private GameObject[] numbers;
 
     void Start()
     {
         spawner = GetComponent<Spawner>();
         LaneWidth = GameState._instance.GetLaneWidth();
+        gameObject.transform.Find("CartNumber");
+        numbers = new GameObject[1]; 
     }
 
     void Update()
@@ -76,6 +82,35 @@ public class Cart : MonoBehaviour {
                 temp.x = transform.position.x;
                 transform.position = temp;
             }
+        }
+
+        //update the next number.
+        if (GameState._instance.lastNumber != lastNumber)
+        {
+            lastNumber = GameState._instance.lastNumber;
+            /*foreach (GameObject gm in numbers)
+            {
+                DestroyImmediate(gm, true);
+            }
+
+            string Digits = (lastNumber + 1).ToString();
+
+            numbers = new GameObject[Digits.Length];
+            
+            float distance = -0.75f;
+
+            for (int i = 0; i < Digits.Length; i++)
+            {
+                float addValue = 0;
+                if (Digits.Length > 1 && i == 0)
+                {
+                    addValue = distance;
+                }
+
+                GameObject digit = (GameObject)Instantiate(Resources.Load("Textures/numbers_" + Digits[i]), transform.position + new Vector3(.25f, 0, 0) + (transform.right * addValue), transform.rotation);
+                digit.transform.SetParent(gameObject.transform);
+            }
+            */
         }
     }
 
