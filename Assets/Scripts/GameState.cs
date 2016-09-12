@@ -119,6 +119,7 @@ public class GameState : MonoBehaviour
         {
             numberStreak = 0;
             currentScoreMultiplier = 1;
+            UIController._instance.UpdateMultiplier(currentScoreMultiplier);
             LoseLife();
         }
         UIController._instance.UpdateNextNumber(GetNextNumber());
@@ -163,8 +164,13 @@ public class GameState : MonoBehaviour
         {
             numberStreak = 0;
             missedNumbers++;
+            // reduce the score multiplier
             currentScoreMultiplier -= scoreMultiplierIncrease;
-            
+            if (currentScoreMultiplier < 1)
+                currentScoreMultiplier = 1;
+            UIController._instance.UpdateMultiplier(currentScoreMultiplier);
+
+
             if (missedNumbers >= missedNumbersThreshold)
             {
                 missedNumbers = 0;
