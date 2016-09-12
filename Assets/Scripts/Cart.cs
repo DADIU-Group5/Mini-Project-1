@@ -47,6 +47,7 @@ public class Cart : MonoBehaviour {
         }
         else
         {
+            this.enabled = false;
             //Run you lose animation for the cart.
         }
     }

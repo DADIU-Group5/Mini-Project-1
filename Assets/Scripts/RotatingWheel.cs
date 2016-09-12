@@ -28,4 +28,9 @@ public class RotatingWheel : MonoBehaviour {
     {
         speed = newSpeed;
     }
+
+    public void StopRotate()
+    {
+        speed = 0;
+    }
 }

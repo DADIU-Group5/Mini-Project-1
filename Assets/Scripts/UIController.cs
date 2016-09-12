@@ -17,6 +17,7 @@ public class UIController : MonoBehaviour {
     public Text unpauseCountdown;
     public Text multiplier;
     public GameObject losePanel;
+    public Text loseScreenStats;
 
     public PlayerMovement playerMove;
 
@@ -46,7 +47,7 @@ public class UIController : MonoBehaviour {
     /// <param name="newScore"></param>
     public void UpdateScore(int newScore)
     {
-        score.text = "score: " + newScore;
+        score.text = "Score: " + newScore;
     }
 
     /// <summary>
@@ -97,14 +98,15 @@ public class UIController : MonoBehaviour {
 
     public void DisplayLossScreen()
     {
-        //WIP
-        //losePanel.gameObject.SetActive(true);
+        losePanel.gameObject.SetActive(true);
         playerMove.enabled = false;
-    }
-
-    public void GoToMainMenu()
-    {
-        SceneManager.LoadScene(0);
+        RotatingWheel._instance.StopRotate();
+        GameObject[] numbers = GameObject.FindGameObjectsWithTag("Number");
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            numbers[i].GetComponent<NumberMovement>().Stop();
+        }
+        loseScreenStats.text = "Highscore: " + PlayerPrefs.GetInt("HighScore") + "\n" + score.text + "\nHighest number: " + GameState._instance.GetNumber();
     }
 
     /// <summary>
@@ -128,5 +130,15 @@ public class UIController : MonoBehaviour {
                 playerMove.enabled = true;
             }
         }
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

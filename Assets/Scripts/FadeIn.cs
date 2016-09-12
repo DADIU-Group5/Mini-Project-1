@@ -3,12 +3,14 @@ using System.Collections;
 
 public class FadeIn : MonoBehaviour {
 
-    UnityEngine.UI.ColorBlock buttonCol;
-    Color col;
-    public UnityEngine.UI.Button button;
+    public UnityEngine.UI.Image panel;
     public Color start;
     public Color end;
     public float fadeTime = 3;
+
+    public GameObject holder;
+
+    Color col;
     float timer;
 
     // Update is called once per frame
@@ -16,10 +18,12 @@ public class FadeIn : MonoBehaviour {
         timer += Time.deltaTime;
         if (timer < fadeTime) {
             col = Color.Lerp(start, end, (timer / fadeTime));
-            buttonCol.normalColor = col;
-            buttonCol.highlightedColor = col;
-            buttonCol.pressedColor = col;
-            button.colors = buttonCol;
+            panel.color = col;
+        }
+        else
+        {
+            holder.SetActive(true);
+            this.enabled = false;
         }
     }
 }
