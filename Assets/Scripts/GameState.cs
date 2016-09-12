@@ -36,6 +36,8 @@ public class GameState : MonoBehaviour
     public int numberToGiveLife = 6;
 
     public Cart cart;
+
+    // For changing the player animation
     public Animator playerAnimator;
 
     // private fields
@@ -160,6 +162,8 @@ public class GameState : MonoBehaviour
 
     public void GiveLife()
     {
+        // Animate player speeding up to go nearer the cart
+        playerAnimator.SetBool("Sprint", true);
         playerLives++;
         //TODO Moves the cart closer to the player.
         cart.MoveCartAway(playerLives);
