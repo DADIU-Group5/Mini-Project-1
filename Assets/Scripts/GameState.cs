@@ -161,7 +161,10 @@ public class GameState : MonoBehaviour
     {
         if (numberMissed == GetNextNumber())
         {
+            numberStreak = 0;
             missedNumbers++;
+            currentScoreMultiplier -= scoreMultiplierIncrease;
+            
             if (missedNumbers >= missedNumbersThreshold)
             {
                 missedNumbers = 0;
