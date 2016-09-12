@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -34,6 +33,8 @@ public class GameState : MonoBehaviour
     public float laneWidth = 1.5f;
     [Range(1f, 3f)]
     public int missedNumbersThreshold = 5;
+
+    public Cart cart;
 
     // private fields
     private float score;
@@ -92,6 +93,8 @@ public class GameState : MonoBehaviour
         {
             lastNumber = newNum;
             numberStreak++;
+            //Reset the amount of missed correct numbers.
+            missedNumbers = 0;
 
             // update speed
             int speedLevel = (lastNumber / numbersPerSpeedIncrease);
@@ -101,6 +104,7 @@ public class GameState : MonoBehaviour
             currentScoreMultiplier = 1 + (numberStreak / numbersPerScoreIncrease) * scoreMultiplierIncrease;
             score += scorePerNumber * currentScoreMultiplier;
             UIController._instance.UpdateScore((int)score);
+            UIController._instance.UpdateMultiplier(currentScoreMultiplier);
         }
         else
         {
@@ -114,6 +118,8 @@ public class GameState : MonoBehaviour
     public void LoseLife()
     {
         playerLives--;
+        //Moves the cart further away from the player.
+        cart.MoveCartAway(playerLives);
         UIController._instance.UpdateLives(playerLives);
         // TODO Move cart away as player lose lives.
         if (playerLives <= 0 && !unbeatable)
@@ -128,7 +134,8 @@ public class GameState : MonoBehaviour
             }
 
             // load main menu
-            SceneManager.LoadScene(0);
+            //SceneManager.LoadScene(0);
+            UIController._instance.DisplayLossScreen();
         }
     }
 
