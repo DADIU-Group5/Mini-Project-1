@@ -16,6 +16,7 @@ public class GameState : MonoBehaviour
     public int numbersPerSpeedIncrease = 10;
     [Range(0, 1)]
     public float speedMultiplierIncrease = 0.1f;
+
     // score
     [Header("Score")]
     [Range(1, 1000)]
@@ -24,6 +25,7 @@ public class GameState : MonoBehaviour
     public int numbersPerScoreIncrease = 10;
     [Range(0, 1)]
     public float scoreMultiplierIncrease = 0.1f;
+
     // other
     [Header("Other")]
     public bool unbeatable;
@@ -38,7 +40,7 @@ public class GameState : MonoBehaviour
     public Cart cart;
 
     // private fields
-    private float score;
+    private float score = 0;
     private int lastNumber;
     private int missedNumbers;
     private int numberStreak;
@@ -88,6 +90,13 @@ public class GameState : MonoBehaviour
         return laneWidth;
     }
 
+    public void Update()
+    {
+        // Add score every tick depending on time and speed.
+        score += Time.deltaTime * currentNumberSpeed;
+        UIController._instance.UpdateScore((int)score);
+    }
+
     public void PlayerGotNumber(int newNum)
     {
         //Determine if the right number was caught.
@@ -110,8 +119,8 @@ public class GameState : MonoBehaviour
             currentNumberSpeed = initialSpeed + initialSpeed * (speedLevel * speedMultiplierIncrease);
 
             //update score
-            currentScoreMultiplier = 1 + (numberStreak / numbersPerScoreIncrease) * scoreMultiplierIncrease;
             score += scorePerNumber * currentScoreMultiplier;
+            currentScoreMultiplier = 1 + (numberStreak / numbersPerScoreIncrease) * scoreMultiplierIncrease;
             UIController._instance.UpdateScore((int)score);
             UIController._instance.UpdateMultiplier(currentScoreMultiplier);
         }
