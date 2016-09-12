@@ -5,7 +5,7 @@ public class RotatingWheel : MonoBehaviour {
 
     public static RotatingWheel _instance;
 
-    float speed = 3.5f;
+    float speed = 3.5f; // counts for 10f in number speed
 
     void Awake()
     {
@@ -27,5 +27,10 @@ public class RotatingWheel : MonoBehaviour {
     public void ChangeWheelSpeed(float newSpeed)
     {
         speed = newSpeed;
+    }
+
+    public void StopRotate()
+    {
+        speed = 0;
     }
 }

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 8b6531f99c56f4e43ada868be42358ac
-timeCreated: 1473670838
+guid: 5abf81137e471134bb4578f59a8cd0ff
+timeCreated: 1473677959
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
@@ -33,11 +33,8 @@ ModelImporter:
     100050: bind_r_toe_01
     100052: bind_r_upreg_01
     100054: bind_spine_01
-    100056: grp_geo
-    100058: Hugo
-    100060: Hugo_geo
-    100062: //RootNode
-    100064: root_01
+    100056: root_01
+    100058: //RootNode
     400000: be_head_01
     400002: be_l_fingers_01
     400004: be_l_toe_01
@@ -66,16 +63,10 @@ ModelImporter:
     400050: bind_r_toe_01
     400052: bind_r_upreg_01
     400054: bind_spine_01
-    400056: grp_geo
-    400058: Hugo
-    400060: Hugo_geo
-    400062: //RootNode
-    400064: root_01
-    4300000: Hugo_geo
-    7400000: Take 001
-    7400002: Hugo_stumple
+    400056: root_01
+    400058: //RootNode
+    7400000: Hugo_runv003
     9500000: //RootNode
-    13700000: Hugo_geo
   materials:
     importMaterials: 1
     materialName: 0

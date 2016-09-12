@@ -32,6 +32,7 @@ sysinfo.txt
 
 # ignored folder
 /Assets/Ignored/
+/Assets/Wwise/
 
 # Sound (Victor)
 /Sounds/
