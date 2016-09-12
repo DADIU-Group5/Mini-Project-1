@@ -26,7 +26,7 @@ public class Player : MonoBehaviour {
             int caughtNumber = collision.gameObject.GetComponent<Number>().thisNumber;
             //send number info to GameState
             gameState.PlayerGotNumber(caughtNumber);
-            AkSoundEngine.PostEvent("correctNumberPickup", this.gameObject);
+            
             Destroy(collision.gameObject);
         }
     }
