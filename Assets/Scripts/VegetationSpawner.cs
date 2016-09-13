@@ -39,9 +39,6 @@ public class VegetationSpawner : MonoBehaviour {
             vegetation = bushes[1]; //favours bushes[1] by request
         }
 
-        if (playTime == 30 || playTime == 60)
-            Debug.Log("playtime is: " + playTime);
-
         float xCoord = Random.Range(7, 16); // less than 16?
         if (Random.Range(0,2) == 1)
         {
