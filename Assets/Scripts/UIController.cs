@@ -145,7 +145,7 @@ public class UIController : MonoBehaviour {
             //Gets the current time.
             DateTime now = DateTime.Now;
             //Updates the visual text.
-            unpauseCountdown.text = "Resuming in:\n"+(int)((countTo - now).TotalSeconds+1) + "!";
+            unpauseCountdown.text = (int)((countTo - now).TotalSeconds+1)+"";
             //No longer puased
             if (countTo.CompareTo(now) < 0)
             {
