@@ -59,14 +59,17 @@ public class VegetationSpawner : MonoBehaviour {
     }
 
     public void StartVegetation()
-    {
-        /*int x = (int)Mathf.Round(wheel.transform.position.y + wheel.transform.rad )
+    {/*
+       // int x = (int)Mathf.Round(wheel.transform.position.y + 93.37-gameObject.transform.position.z * Mathf.Cos(360 )
         int numberOfPoints = 10;
         Vector3[] points = new Vector3[10];
         int i = 0;
+
+        Vector3[] meshVertices = GameObject.Find("grund").gameObject.transform.GetComponent<MeshFilter>().mesh.vertices;
+
         while (i < numberOfPoints)
         {
-            Vector3 test = GameObject.Find("grund").gameObject.transform.GetComponent<Mesh>().vertices[Random.Range(0, wheel.GetComponent<Mesh>().vertices.Length)];
+            Vector3 test = meshVertices[Random.Range(0, meshVertices.Length)];
             if (test.z < 85 && test.z > -10 && test.y < 216 && test.y > 210)
             {
                 points[i] = test;
@@ -83,9 +86,9 @@ public class VegetationSpawner : MonoBehaviour {
             // make a child of the road
             vegetation.transform.SetParent(wheel.gameObject.transform);
         }
-        */
+        
         //Vector3 test = wheel.GetComponent<Mesh>().vertices[0];
-
+        */
     }
 
     public void Vegetation()

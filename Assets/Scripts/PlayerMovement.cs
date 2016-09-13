@@ -34,6 +34,11 @@ public class PlayerMovement : MonoBehaviour
     Vector3 jumpStartPos, jumpEndPos;
     private bool canMove = true;
 
+    // Sprinting animation
+    private float timeToEndSprint;
+    [Range(1.0f, 10.0f)]
+    public float sprintDuration = 4.0f;
+
     // Use this for initialization
     void Start()
     {
@@ -117,6 +122,11 @@ public class PlayerMovement : MonoBehaviour
         {
             canMove = true;
         }
+
+        if (hugoAnimator.GetBool("Sprint") && Time.timeSinceLevelLoad >= timeToEndSprint)
+        {
+            hugoAnimator.SetBool("Sprint", false);
+        }
     }
 
     void AttemptMove(int horizontal)
@@ -177,5 +187,11 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void startSprint()
+    {
+        hugoAnimator.SetBool("Sprint", true);
+        timeToEndSprint = Time.timeSinceLevelLoad + sprintDuration;
     }
 }
