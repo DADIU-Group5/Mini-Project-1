@@ -29,7 +29,8 @@ public class Number : MonoBehaviour {
 
     private void Awake()
     {
-        spawnTime = Time.timeSinceLevelLoad;
+        //spawnTime = Time.timeSinceLevelLoad;
+        spawnTime = GameState._instance.GetTimeSinceGameStarted();
         Rigidbody body = GetComponent<Rigidbody>();
         body.isKinematic = true;
     }
@@ -68,9 +69,11 @@ public class Number : MonoBehaviour {
     public void Update ()
     {
         // Check if we are doing the throwing animation.
-        if (Time.timeSinceLevelLoad < throwEndTime)
+        //if (Time.timeSinceLevelLoad < throwEndTime)
+        if (GameState._instance.GetTimeSinceGameStarted() < throwEndTime)
         {
-            float fraction = (throwEndTime - Time.timeSinceLevelLoad) / (throwEndTime - spawnTime);
+            //float fraction = (throwEndTime - Time.timeSinceLevelLoad) / (throwEndTime - spawnTime);
+            float fraction = (throwEndTime - GameState._instance.GetTimeSinceGameStarted()) / (throwEndTime - spawnTime);
 
             float newX = Mathf.Lerp(throwStartPos.x, throwEndPos.x, 1 - fraction);
 
