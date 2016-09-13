@@ -43,8 +43,8 @@ public class Cart : MonoBehaviour {
         spawner = GetComponent<Spawner>();
         LaneWidth = GameState._instance.GetLaneWidth();
 
-        AkSoundEngine.PostEvent("jungleAmbience", this.gameObject);
-        AkSoundEngine.PostEvent("truckEngine", this.gameObject);
+    //    AkSoundEngine.PostEvent("jungleAmbience", this.gameObject);
+      //  AkSoundEngine.PostEvent("truckEngine", this.gameObject);
 
         System.Random random = new System.Random();
         double rnd = random.NextDouble();
@@ -65,7 +65,7 @@ public class Cart : MonoBehaviour {
 
             nextHorn = Time.timeSinceLevelLoad + rnd;
 
-            AkSoundEngine.PostEvent("truckHonk", this.gameObject);
+          //  AkSoundEngine.PostEvent("truckHonk", this.gameObject);
         }
 
         if (nextCheer <= Time.timeSinceLevelLoad)
@@ -75,7 +75,7 @@ public class Cart : MonoBehaviour {
 
             nextCheer = Time.timeSinceLevelLoad + rnd;
 
-            AkSoundEngine.PostEvent("partyAnimals", this.gameObject);
+          //  AkSoundEngine.PostEvent("partyAnimals", this.gameObject);
         }
         
         currentPosition = gameObject.transform.position;
@@ -147,7 +147,7 @@ public class Cart : MonoBehaviour {
         }
 
         spawner.Spawn(currentPosition);
-        AkSoundEngine.PostEvent("numberDrop", this.gameObject);
+        //AkSoundEngine.PostEvent("numberDrop", this.gameObject);
 
         nextMove += cartMoveTimer;
         if (currentLane == newLane)
