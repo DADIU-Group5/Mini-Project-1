@@ -59,7 +59,7 @@ public class VegetationSpawner : MonoBehaviour {
     }
 
     public void StartVegetation()
-    {
+    {/*
        // int x = (int)Mathf.Round(wheel.transform.position.y + 93.37-gameObject.transform.position.z * Mathf.Cos(360 )
         int numberOfPoints = 10;
         Vector3[] points = new Vector3[10];
@@ -88,7 +88,7 @@ public class VegetationSpawner : MonoBehaviour {
         }
         
         //Vector3 test = wheel.GetComponent<Mesh>().vertices[0];
-
+        */
     }
 
     public void Vegetation()
