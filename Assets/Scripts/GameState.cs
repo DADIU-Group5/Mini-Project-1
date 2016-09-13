@@ -77,6 +77,13 @@ public class GameState : MonoBehaviour
         playerLives = maxLifes;
     }
 
+    private void Update()
+    {
+        // Update score every tick by the number-speed.
+        score += Time.deltaTime * currentNumberSpeed;
+        UIController._instance.UpdateScore((int)score);
+    }
+
     public int GetNumber()
     {
         return lastNumber;
@@ -124,8 +131,8 @@ public class GameState : MonoBehaviour
             RotatingWheel._instance.ChangeWheelSpeed(currentNumberSpeed);
 
             // Update score.
-            currentScoreMultiplier = 1 + (numberStreak / numbersPerScoreIncrease) * scoreMultiplierIncrease;
             score += scorePerNumber * currentScoreMultiplier;
+            currentScoreMultiplier = 1 + (numberStreak / numbersPerScoreIncrease) * scoreMultiplierIncrease;
             UIController._instance.UpdateScore((int)score);
             UIController._instance.UpdateMultiplierUp(currentScoreMultiplier);
         }
