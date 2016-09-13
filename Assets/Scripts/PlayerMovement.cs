@@ -7,9 +7,9 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour
 {
     enum Lane { Left, Middle, Right };
-    private Vector3 leftLane = new Vector3(-2f, 0.5f, -8f);
-    private Vector3 middleLane = new Vector3(0f, 0.5f, -8f);
-    private Vector3 rightLane = new Vector3(2f, 0.5f, -8f);
+    private Vector3 leftLane = new Vector3(-2f, 0.5f, -14.5f);
+    private Vector3 middleLane = new Vector3(0f, 0.5f, -14.5f);
+    private Vector3 rightLane = new Vector3(2f, 0.5f, -14.5f);
 
     private Vector2 touchOrigin = -Vector2.one;
 
