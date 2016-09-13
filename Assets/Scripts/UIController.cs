@@ -74,7 +74,8 @@ public class UIController : MonoBehaviour {
     /// <param name="newMultiplier"></param>
     public void UpdateMultiplier(float newMultiplier)
     {
-        multiplier.text = "Multiplier: " + newMultiplier;
+        multiplier.gameObject.SetActive(true);   
+        multiplier.text = "X " + newMultiplier;
     }
 
     /// <summary>
