@@ -5,6 +5,7 @@ public class RotatingWheel : MonoBehaviour {
 
     public static RotatingWheel _instance;
 
+    public float radius = 217.5f; // Approximate radius of the wheel.
     public float speed = 4.5f; // 3.5f seems to fit a speed of 12, 4.5 seems to fit a speed of 17.
 
     void Awake()
@@ -24,9 +25,15 @@ public class RotatingWheel : MonoBehaviour {
         transform.Rotate(-Time.deltaTime * speed, 0, 0);
 	}
 
+    // The wheel matches its rotational speed to a given surface-velocity
     public void ChangeWheelSpeed(float newSpeed)
     {
-        speed = newSpeed;
+        //speed = newSpeed;
+
+        // Circumference
+        float c = 2 * Mathf.PI * radius;
+
+        speed = newSpeed / (c / 360);
     }
 
     public void StopRotate()
