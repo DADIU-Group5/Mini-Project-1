@@ -18,12 +18,15 @@ public class UIController : MonoBehaviour {
     public Text multiplier;
     public GameObject losePanel;
     public Text loseScreenStats;
+    public Disco rightLight;
+    public Disco leftLight;
 
     public PlayerMovement playerMove;
 
     private bool countingDown = false;
     private float countdown = 3;
     private DateTime countTo;
+    private Animator multiplierAnim;
 
     /// <summary>
     /// Makes it a singleton.
@@ -39,6 +42,7 @@ public class UIController : MonoBehaviour {
             Debug.LogError("There should not be 2 UIControllers, destroys the newly created UIController");
             Destroy(gameObject);
         }
+        multiplierAnim = multiplier.GetComponent<Animator>();
     }
 
     /// <summary>
@@ -74,7 +78,21 @@ public class UIController : MonoBehaviour {
     /// <param name="newMultiplier"></param>
     public void UpdateMultiplier(float newMultiplier)
     {
-        multiplier.gameObject.SetActive(true);   
+        Debug.Log("should not happen");
+        multiplier.gameObject.SetActive(true);
+        multiplierAnim.SetTrigger("Bigger");
+        multiplier.text = "X " + newMultiplier;
+    }
+
+    public void UpdateMultiplierUp(float newMultiplier)
+    {
+        multiplierAnim.SetTrigger("Bigger");
+        multiplier.text = "X " + newMultiplier;
+    }
+
+    public void UpdateMultiplierDown(float newMultiplier)
+    {
+        multiplierAnim.SetTrigger("Smaller");
         multiplier.text = "X " + newMultiplier;
     }
 
@@ -86,6 +104,8 @@ public class UIController : MonoBehaviour {
         Time.timeScale = 0;
         playerMove.enabled = false;
         AkSoundEngine.Suspend(true);
+        leftLight.Stop();
+        rightLight.Stop();
     }
 
     /// <summary>
@@ -111,6 +131,8 @@ public class UIController : MonoBehaviour {
             numbers[i].GetComponent<NumberMovement>().Stop();
         }
         loseScreenStats.text = "Highscore: " + PlayerPrefs.GetInt("HighScore") + "\n" + score.text + "\nHighest number: " + GameState._instance.GetNumber();
+        leftLight.Stop();
+        rightLight.Stop();
     }
 
     /// <summary>
@@ -135,6 +157,9 @@ public class UIController : MonoBehaviour {
 
                 // resume sound
                 AkSoundEngine.WakeupFromSuspend();
+
+                leftLight.Resume();
+                rightLight.Resume();
             }
         }
     }

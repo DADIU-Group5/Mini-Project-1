@@ -109,6 +109,11 @@ public class GameState : MonoBehaviour
         return laneWidth;
     }
 
+    public float GetMultiplier()
+    {
+        return currentScoreMultiplier;
+    }
+
     public void PlayerGotNumber(int newNum)
     {
         // Determine if the right number was caught.
@@ -139,7 +144,7 @@ public class GameState : MonoBehaviour
             score += scorePerNumber * currentScoreMultiplier;
             currentScoreMultiplier = 1 + (numberStreak / numbersPerScoreIncrease) * scoreMultiplierIncrease;
             UIController._instance.UpdateScore((int)score);
-            UIController._instance.UpdateMultiplier(currentScoreMultiplier);
+            UIController._instance.UpdateMultiplierUp(currentScoreMultiplier);
         }
         else
         {
@@ -149,7 +154,7 @@ public class GameState : MonoBehaviour
             // Play pick up sound.
             AkSoundEngine.PostEvent("wrongNumberPickup", this.gameObject);
 
-            UIController._instance.UpdateMultiplier(currentScoreMultiplier);
+            UIController._instance.UpdateMultiplierDown(currentScoreMultiplier);
             LoseLife();
         }
         UIController._instance.UpdateNextNumber(GetNextNumber());
@@ -207,7 +212,7 @@ public class GameState : MonoBehaviour
             currentScoreMultiplier -= scoreMultiplierIncrease;
             if (currentScoreMultiplier < 1)
                 currentScoreMultiplier = 1;
-            UIController._instance.UpdateMultiplier(currentScoreMultiplier);
+            UIController._instance.UpdateMultiplierDown(currentScoreMultiplier);
 
 
             if (missedNumbers >= missedNumbersThreshold)

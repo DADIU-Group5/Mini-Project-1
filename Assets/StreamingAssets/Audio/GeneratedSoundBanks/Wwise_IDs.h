@@ -177,6 +177,7 @@ namespace AK
     namespace AUX_BUSSES
     {
         static const AkUniqueID RVB = 695384145U;
+        static const AkUniqueID RVBMUSIC = 4004586026U;
     } // namespace AUX_BUSSES
 
 }// namespace AK
