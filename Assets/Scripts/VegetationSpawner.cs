@@ -7,9 +7,11 @@ public class VegetationSpawner : MonoBehaviour {
     public GameObject[] bushes;
     public float spawnTime = 0.5f;
     private float numberSpeed = 1f;
+    public float firstVegetationChange = 30f;
+    public float secondVegetationChange = 60f;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         wheel = GameObject.Find("Wheel");
         numberSpeed = GameState._instance.GetNumberSpeed();
         StartVegetation();
@@ -28,8 +30,8 @@ public class VegetationSpawner : MonoBehaviour {
         GameObject vegetation;
 
         if (Random.Range(0, 8) < 1 || 
-            playTime > 30f && Random.Range(0, 8) <= 5 ||
-            playTime > 60f && Random.Range(0, 10) <= 9)
+            playTime > firstVegetationChange && Random.Range(0, 8) <= 5 ||
+            playTime > secondVegetationChange && Random.Range(0, 10) <= 9)
         {
             vegetation = bushes[0]; //Tree
         } else 
