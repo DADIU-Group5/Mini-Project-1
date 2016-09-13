@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     // editable fields
     [Range(0, 10000)]
-    public int pixelForSwipe = 400;
+    public int pixelForSwipe = 200;
 
 
     private Vector3 leftLane = new Vector3(-2f, 0f, -14.5f);
