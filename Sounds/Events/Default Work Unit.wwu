@@ -132,6 +132,13 @@
 								</Element>
 							</ElementList>
 						</Action>
+						<Action Name="Post Event" ID="{959DC3A3-0EE4-4404-9709-3D6C83ACB1CD}" ShortID="114889281" Type="PlayEvent" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{80447BA2-65CA-415F-9F62-8209DBACBE57}" Global="false">
+									<ObjectRef Name="music" ID="{4D4CDD20-B01C-447A-A973-CEBF8D51D83D}" WorkUnitID="{92825D5E-2113-418A-B63E-F7D06BB3BE8E}"/>
+								</Element>
+							</ElementList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="truckStartTurn" ID="{49C20D97-C95F-4BFF-830F-99337F7A1137}">
@@ -256,6 +263,117 @@
 							<ElementList>
 								<Element ID="{F8237E58-7EFB-4ED1-AD14-928C7C7D9471}" Global="false">
 									<ObjectRef Name="impact" ID="{CB3949E6-E89D-4A2C-8927-92FBB677E6CD}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="music" ID="{4D4CDD20-B01C-447A-A973-CEBF8D51D83D}">
+					<ChildrenList>
+						<Action Name="Play" ID="{342765B6-597B-4217-9306-A380EC604B54}" ShortID="919255586" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{63122179-86C8-407F-A0B3-1C3F6BFE3007}" Global="false">
+									<ObjectRef Name="bongo" ID="{F33C16C0-E371-4C75-BC9A-1BEBCD148E67}" WorkUnitID="{518FA576-15CF-465D-8682-7C7718B45365}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{098F4F3C-6973-457E-B2FF-CB833DFD381F}" ShortID="432889130" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{AB95D6E6-945D-4B1E-B756-C6550D1DB74E}" Global="false">
+									<ObjectRef Name="bongo2" ID="{459BAA12-0E7A-4A5F-8865-703F9EE9E67B}" WorkUnitID="{518FA576-15CF-465D-8682-7C7718B45365}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{D66FD8BE-1C38-4FB4-A0EF-49FA658FF8EF}" ShortID="624050038" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{1B48B240-24E0-435D-B7E3-7428D091C153}" Global="false">
+									<ObjectRef Name="Guitar1" ID="{E95C0C0C-EB8F-417D-9320-7DF347A2EEA9}" WorkUnitID="{518FA576-15CF-465D-8682-7C7718B45365}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{5848CFDA-672E-467D-B472-86DFC06474B9}" ShortID="117354512" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{EAA547AB-6A62-402D-98BE-5CFFE3E0B0F5}" Global="false">
+									<ObjectRef Name="Guitar2" ID="{BF149549-8AE5-464F-9603-C8CC03A2CADF}" WorkUnitID="{518FA576-15CF-465D-8682-7C7718B45365}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{52BA53E7-20B5-4748-9B34-4ECDFAA50A69}" ShortID="823422335" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{AA9B5DD7-2CE1-4303-8D1A-503489DD5662}" Global="false">
+									<ObjectRef Name="trommer" ID="{A20E6B6C-58D1-42EC-B761-FB11DBDA5F16}" WorkUnitID="{518FA576-15CF-465D-8682-7C7718B45365}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{ACF0C8E4-A550-4D05-A45A-58B9E918ACA5}" ShortID="376899096" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{10FB7866-6B19-4E32-B1CC-CCE6F2425D9A}" Global="false">
+									<ObjectRef Name="bongoMain" ID="{979470B7-CF88-4179-900D-C96685990186}" WorkUnitID="{518FA576-15CF-465D-8682-7C7718B45365}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{62337A81-0292-4EB2-B511-9E473AC9E277}" ShortID="448627712" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{0A42F93F-3C1A-48A0-81E9-0D1DAFEA5424}" Global="false">
+									<ObjectRef Name="bas" ID="{C4EA4B8A-F7F0-4AE2-BC7A-C78B34CD6D55}" WorkUnitID="{518FA576-15CF-465D-8682-7C7718B45365}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{83F7F80A-2481-4881-A1D1-D73F46D1FBED}" ShortID="609047422" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{B56ABEDA-EFD5-44F8-A83E-4541E2493A8E}" Global="false">
+									<ObjectRef Name="blæser2" ID="{7F42A47E-1EB0-4885-A633-7EA9E891051D}" WorkUnitID="{518FA576-15CF-465D-8682-7C7718B45365}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{19CC90B0-E6F3-4656-BE2D-C84CB8E42536}" ShortID="252127412" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{9CAE3FFD-8CDF-4E65-8C31-71619D06E052}" Global="false">
+									<ObjectRef Name="blæser3" ID="{BEB27ABC-E39B-4E2A-BC31-1F9653EBAA8E}" WorkUnitID="{518FA576-15CF-465D-8682-7C7718B45365}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{6522F674-2894-468F-8BD8-3E4E2ED39C17}" ShortID="281715431" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{9B3DBE7B-61D2-41C6-93C7-28E8E175198E}" Global="false">
+									<ObjectRef Name="blæserakkorder" ID="{B20F00BD-61D5-4401-80A0-EAD00ED5557E}" WorkUnitID="{518FA576-15CF-465D-8682-7C7718B45365}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{89FC76ED-5F97-4AC3-B671-FEE9B06E72C1}" ShortID="141076495" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{12575884-BDFA-40DB-9E38-BD0067D68144}" Global="false">
+									<ObjectRef Name="Shaker" ID="{365B5335-1515-4937-A5FC-3C600835C24D}" WorkUnitID="{518FA576-15CF-465D-8682-7C7718B45365}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pause" ID="{9B4F69D9-1159-46EC-9F28-8DCBCDB07267}">
+					<ChildrenList>
+						<Action Name="Pause All" ID="{1515F1D2-747B-4CEC-B627-B0993C666AA1}" ShortID="673458663" Type="Pause" Scope="All" Global="false"/>
+					</ChildrenList>
+				</Event>
+				<Event Name="resume" ID="{D17EC086-9FEA-46E8-AE0E-ACB745461458}">
+					<ChildrenList>
+						<Action Name="Resume All" ID="{4F027B57-FE1A-402A-BB76-DE0ED17FCBA5}" ShortID="274232042" Type="Resume" Scope="All" Global="false"/>
+					</ChildrenList>
+				</Event>
+				<Event Name="gameOver" ID="{84F981CD-FEF0-46D9-A3BC-85A54174FB99}">
+					<ChildrenList>
+						<Action Name="Stop All Except" ID="{AC95E78D-13FC-48C1-BED7-E38E71B98400}" ShortID="951509542" Type="Stop" Scope="AllExcept" Global="false">
+							<ElementList>
+								<Element ID="{C6ECE3F0-757C-4C64-A165-658C12052A38}" Global="false">
+									<ObjectRef Name="birds" ID="{E2CB9914-6565-4220-BE66-B50C094608A3}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
+								</Element>
+								<Element ID="{6BBE0859-7A55-4CF4-86C5-F9130D449288}" Global="false">
+									<ObjectRef Name="monkey" ID="{D8CF6147-D98C-48E7-BA03-54BF7D6D06CF}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
+								</Element>
+								<Element ID="{7E7F25CE-5280-466E-B36D-D14E84F72B7F}" Global="false">
+									<ObjectRef Name="thunder" ID="{4A2C69E4-641E-4C9C-B311-4A1F8563875A}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
+								</Element>
+								<Element ID="{F0F5C068-A192-4C3A-B4BC-F665D3CBB22B}" Global="false">
+									<ObjectRef Name="water" ID="{F189D9FB-8B39-44D4-B0F1-B12CDE502977}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
 								</Element>
 							</ElementList>
 						</Action>
