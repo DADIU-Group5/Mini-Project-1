@@ -6,10 +6,12 @@ public class VegetationSpawner : MonoBehaviour {
     GameObject wheel;
     public GameObject[] bushes;
     public float spawnTime = 0.5f;
+    private float numberSpeed = 1f;
 
 	// Use this for initialization
 	void Start () {
         wheel = GameObject.Find("Wheel");
+        numberSpeed = GameState._instance.GetNumberSpeed();
         Vegetation();
     }
 
@@ -29,8 +31,28 @@ public class VegetationSpawner : MonoBehaviour {
         vegetation.transform.SetParent(wheel.gameObject.transform);  
     }
 
+    void Update()
+    {
+        if (GameState._instance.GetNumberSpeed() == 0f)
+        {
+            CancelInvoke();
+        }
+        else if (numberSpeed != GameState._instance.GetNumberSpeed())
+        {
+            CancelInvoke();
+            numberSpeed = GameState._instance.GetNumberSpeed();
+            Vegetation();
+        }
+    }
+
     public void Vegetation()
     {
+        spawnTime = spawnTime / numberSpeed;
+        if (spawnTime < 0.5f)
+        {
+            spawnTime = 0.5f;
+        }
+        Debug.Log("spawntime: " + spawnTime);
         InvokeRepeating("SpawnObject", 0f, spawnTime);
     }
 }
