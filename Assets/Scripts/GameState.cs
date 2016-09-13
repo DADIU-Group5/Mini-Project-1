@@ -225,8 +225,7 @@ public class GameState : MonoBehaviour
 
     public float GetTimeSinceGameStarted()
     {
-        //return Time.timeSinceLevelLoad - timeSinceGameStarted;
-        return timeSinceGameStarted;
+        return Time.timeSinceLevelLoad - timeSinceGameStarted;
     }
 
     public void ResetTimeSinceGameStarted()
