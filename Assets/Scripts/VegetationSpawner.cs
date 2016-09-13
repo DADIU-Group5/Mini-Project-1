@@ -39,7 +39,7 @@ public class VegetationSpawner : MonoBehaviour {
             vegetation = bushes[1]; //favours bushes[1] by request
         }
 
-        float xCoord = Random.Range(7, 16); // less than 16?
+        float xCoord = Random.Range(7, 10); // less than 16?
         if (Random.Range(0,2) == 1)
         {
             xCoord = -xCoord;

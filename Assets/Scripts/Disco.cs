@@ -16,6 +16,7 @@ public class Disco : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        stopped = true;
         startCol = imageCol.color;
 	}
 	

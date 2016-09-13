@@ -73,7 +73,7 @@ public class GameState : MonoBehaviour
     private void Init()
     {
         ResetTimeSinceGameStarted();
-        gameOver = false;
+        gameOver = true;
         currentNumberSpeed = initialSpeed;
         RotatingWheel._instance.ChangeWheelSpeed(currentNumberSpeed);
         playerLives = maxLifes;
@@ -233,7 +233,21 @@ public class GameState : MonoBehaviour
 
     public float GetTimeSinceGameStarted()
     {
+        if (gameOver)
+        {
+            return 0;
+        }
         return Time.timeSinceLevelLoad - timeSinceGameStarted;
+    }
+
+    public void SetGameOver(bool b)
+    {
+        gameOver = b;
+    }
+
+    public bool GetGameOver()
+    {
+        return gameOver;
     }
 
     public void ResetTimeSinceGameStarted()

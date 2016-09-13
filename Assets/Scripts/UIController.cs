@@ -20,6 +20,7 @@ public class UIController : MonoBehaviour {
     public Text loseScreenStats;
     public Disco rightLight;
     public Disco leftLight;
+    public Image pauseButtonImage;
 
     public PlayerMovement playerMove;
 
@@ -27,6 +28,9 @@ public class UIController : MonoBehaviour {
     private float countdown = 3;
     private DateTime countTo;
     private Animator multiplierAnim;
+    private bool fadingIn = false;
+    public float fadeInTime = 2f;
+    float timer;
 
     /// <summary>
     /// Makes it a singleton.
@@ -118,6 +122,13 @@ public class UIController : MonoBehaviour {
         countingDown = true;
     }
 
+    public void InitialStart()
+    {
+        Unpuase();
+        timer = -1;
+        fadingIn = true;
+    }
+
     public void DisplayLossScreen()
     {
         // stop all sounds
@@ -160,6 +171,21 @@ public class UIController : MonoBehaviour {
 
                 leftLight.Resume();
                 rightLight.Resume();
+            }
+        }
+        if (fadingIn)
+        {
+            timer += Time.deltaTime;
+            Color temp = Color.Lerp(Color.clear, Color.white, timer / fadeInTime);
+            multiplier.color = temp;
+            score.color = temp;
+            pauseButtonImage.color = temp;
+            if(timer >= fadeInTime)
+            {
+                fadingIn = false;
+                GameState._instance.ResetTimeSinceGameStarted();
+                GameState._instance.SetGameOver(false);
+                playerMove.enabled = true;
             }
         }
     }

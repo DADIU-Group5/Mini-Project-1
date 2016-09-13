@@ -17,6 +17,17 @@ Event	ID	Name			Wwise Object Path	Notes
 	4158285989	gameOver			\Default Work Unit\gameOver	
 	4294099536	truckEngine			\Default Work Unit\truckEngine	
 
+State Group	ID	Name			Wwise Object Path	Notes
+	3092587493	pause			\Default Work Unit\pause	
+
+State	ID	Name	State Group			Notes
+	748895195	None	pause			
+	3092587493	pause	pause			
+	3730495584	resumed	pause			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	990562102	pause	pause	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	825409407	truckSpeed			\Default Work Unit\truckSpeed	
 

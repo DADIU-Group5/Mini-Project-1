@@ -35,6 +35,24 @@
 							</ReferenceList>
 						</AuxBus>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="pause" ID="{8B7D9DB4-138C-4E2D-8A60-3DA419606F3B}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="pause" ID="{992E269F-543D-484B-A535-1CCB91AEB5B8}"/>
+								<State Name="Custom State" ID="{A03C39C1-13B4-459F-B268-8622E847031E}" ShortID="990562102">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64" Value="-20"/>
+										<Property Name="Lowpass" Type="int16" Value="50"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 				</Bus>
 				<Bus Name="Master Secondary Bus" ID="{D2E0BC7E-7B3F-4FFE-A670-FAE02761B631}"/>
 				<MotionBus Name="Master Motion Bus" ID="{20A630BA-3398-4676-B927-1004DFE41FD8}"/>
