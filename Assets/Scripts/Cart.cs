@@ -41,8 +41,21 @@ public class Cart : MonoBehaviour {
     private GameObject cartNumber;
     private int lastNumber = -1;
 
+    // Cart jumping animation
+    private Animator cartAnimator;
+    [Range(0.1f, 1.0f)]
+    public float jumpDuration = 0.17f;
+    [Range(0.1f, 3.0f)]
+    public float jumpHeight = 1.0f;
+    private float jumpEndTime;
+    private float jumpEndPos;
+    private Vector2 jumpStartPos;
+
     void Start()
     {
+        cartAnimator = gameObject.GetComponent<Animator>();
+        nextMove = cartMoveTimer;
+
         spawner = GetComponent<Spawner>();
         LaneWidth = GameState._instance.GetLaneWidth();
 
@@ -95,6 +108,8 @@ public class Cart : MonoBehaviour {
             timer += Time.deltaTime;
             if (timer >= movementTime)
             {
+                cartAnimator.SetBool("Brake", false);
+                cartAnimator.SetBool("Accelerate", false);
                 movingZ = false;
             }
             else
@@ -153,14 +168,33 @@ public class Cart : MonoBehaviour {
             }
 
         }
+
+        if (Time.timeSinceLevelLoad < jumpEndTime)
+        {
+            float fraction = (jumpEndTime - Time.timeSinceLevelLoad) / (jumpEndTime - (jumpEndTime - jumpDuration));
+
+            float newX = Mathf.Lerp(jumpStartPos.x, jumpEndPos, 1 - fraction);
+
+            float newY = (fraction - fraction * fraction) * 4 * jumpHeight + spots[GameState._instance.getPlayerLives()].y;
+
+            transform.position = new Vector3(newX, newY, transform.position.z);
+        }
     }
 
 
-    public void MoveCartAway(int slot)
+    public void MoveCartAway(int slot, bool movingAway)
     {
         //Moving between spots.
         if(slot >= 1)
         {
+            if (movingAway)
+            {
+                cartAnimator.SetBool("Accelerate", true);
+            }
+            else
+            {
+                cartAnimator.SetBool("Brake", true);
+            }
             targetZ = spots[slot];
             startZ = transform.position;
             timer = 0;
@@ -200,8 +234,12 @@ public class Cart : MonoBehaviour {
 
     private void SetPosition(int _currentLane, int _newLane)
     {
+        jumpEndTime = Time.timeSinceLevelLoad + jumpDuration;
+        jumpStartPos = new Vector2(transform.position.x, transform.position.y);
+
         int laneJumps = _newLane - _currentLane;
         Vector3 tempPosition = new Vector3(laneJumps * LaneWidth, 0, 0);
-        gameObject.transform.position += tempPosition;
+
+        jumpEndPos = transform.position.x + tempPosition.x;
     }
 }
