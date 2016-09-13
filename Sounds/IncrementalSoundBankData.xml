@@ -1,41 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<IncrementalBankBuild Version="6" Flags="601859981">
-	<Platform GUID="{6F3548F4-27D6-4545-AB7C-8A1C0388B0A9}">
+<IncrementalBankBuild Version="6" Flags="240381544">
+	<Platform GUID="{F4E9462F-387D-400C-BA5B-76CC56C09956}">
 		<Banks>
 			<Language ID="0">
-				<File Name="Init" Hash="241033660" Timestamp="131178996070000000"/>
-				<File Name="New_SoundBank" Hash="2342026579" Timestamp="131178996070000000"/>
+				<File Name="Init" Hash="3282756272" Timestamp="131181666840000000"/>
+				<File Name="New_SoundBank" Hash="977820410" Timestamp="131181666840000000"/>
+				<File Name="soundBank" Hash="1575282140" Timestamp="131178104900000000"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2330246058" Timestamp="131178996070000000"/>
+				<File Name="" Hash="462705177" Timestamp="131181666840000000"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
-	<Platform GUID="{B647F9C5-31DE-471F-93A5-09BE7F6DD0C4}">
+	<Platform GUID="{02CC52FA-B436-4EF5-9106-52847B4C2C86}">
 		<Banks>
 			<Language ID="0">
-				<File Name="Init" Hash="2415833380" Timestamp="131178996060000000"/>
-				<File Name="New_SoundBank" Hash="4219099201" Timestamp="131178996060000000"/>
+				<File Name="Init" Hash="337496734" Timestamp="131181666830000000"/>
+				<File Name="New_SoundBank" Hash="977820410" Timestamp="131181666830000000"/>
+				<File Name="soundBank" Hash="1575282140" Timestamp="131178104880000000"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1518856043" Timestamp="131178996060000000"/>
+				<File Name="" Hash="4079821621" Timestamp="131181666830000000"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
-	<Platform GUID="{DF200D26-6BCD-4907-B4CA-5207BB625A6A}">
+	<Platform GUID="{DEFA2D33-92DB-4FAE-88CA-B020693D674B}">
 		<Banks>
 			<Language ID="0">
-				<File Name="Init" Hash="3609490766" Timestamp="131178996070000000"/>
-				<File Name="New_SoundBank" Hash="2342026579" Timestamp="131178996070000000"/>
+				<File Name="Init" Hash="1761055390" Timestamp="131181666850000000"/>
+				<File Name="New_SoundBank" Hash="2195352061" Timestamp="131181666850000000"/>
+				<File Name="soundBank" Hash="1575282140" Timestamp="131178104920000000"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1386612884" Timestamp="131178996070000000"/>
+				<File Name="" Hash="245344626" Timestamp="131181666850000000"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
