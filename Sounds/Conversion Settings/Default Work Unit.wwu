@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}" SchemaVersion="72">
+<WwiseDocument Type="WorkUnit" ID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}" SchemaVersion="72">
 	<Conversions>
-		<WorkUnit Name="Default Work Unit" ID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}" PersistMode="Standalone">
+		<WorkUnit Name="Default Work Unit" ID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}" PersistMode="Standalone">
 			<ChildrenList>
 				<Conversion Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}">
 					<PropertyList>
 						<Property Name="Channels" Type="int32">
 							<ValueList>
-								<Value Platform="Windows">4</Value>
-								<Value Platform="Android">4</Value>
 								<Value Platform="Mac">4</Value>
+								<Value Platform="Android">4</Value>
+								<Value Platform="Windows">4</Value>
 							</ValueList>
 						</Property>
 						<Property Name="LRMix" Type="Real64">
 							<ValueList>
-								<Value Platform="Windows">0</Value>
-								<Value Platform="Android">0</Value>
 								<Value Platform="Mac">0</Value>
+								<Value Platform="Android">0</Value>
+								<Value Platform="Windows">0</Value>
 							</ValueList>
 						</Property>
 						<Property Name="MaxSampleRate" Type="int32">
 							<ValueList>
-								<Value Platform="Windows">0</Value>
-								<Value Platform="Android">0</Value>
 								<Value Platform="Mac">0</Value>
+								<Value Platform="Android">0</Value>
+								<Value Platform="Windows">0</Value>
 							</ValueList>
 						</Property>
 						<Property Name="MinSampleRate" Type="int32">
 							<ValueList>
-								<Value Platform="Windows">0</Value>
-								<Value Platform="Android">0</Value>
 								<Value Platform="Mac">0</Value>
+								<Value Platform="Android">0</Value>
+								<Value Platform="Windows">0</Value>
 							</ValueList>
 						</Property>
 						<Property Name="SampleRate" Type="int32">
 							<ValueList>
-								<Value Platform="Windows">0</Value>
-								<Value Platform="Android">0</Value>
 								<Value Platform="Mac">0</Value>
+								<Value Platform="Android">0</Value>
+								<Value Platform="Windows">0</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
 					<ConversionPluginInfoList>
-						<ConversionPluginInfo Platform="Windows">
-							<ConversionPlugin Name="" ID="{8920E681-8B91-4DD6-A154-2C1D719AFD15}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+						<ConversionPluginInfo Platform="Mac">
+							<ConversionPlugin Name="" ID="{067B71F7-9716-432A-999C-4D8B78D14E0A}" PluginName="PCM" CompanyID="0" PluginID="1"/>
 						</ConversionPluginInfo>
 						<ConversionPluginInfo Platform="Android">
-							<ConversionPlugin Name="" ID="{28B9BFEC-2446-4F88-9EB2-0F4BF0BDB1EF}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+							<ConversionPlugin Name="" ID="{986566A5-A1C8-4FC7-9E2E-DDF7D0F0FB8E}" PluginName="PCM" CompanyID="0" PluginID="1"/>
 						</ConversionPluginInfo>
-						<ConversionPluginInfo Platform="Mac">
-							<ConversionPlugin Name="" ID="{056194D4-70DD-4A95-8668-A09BC4244B60}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+						<ConversionPluginInfo Platform="Windows">
+							<ConversionPlugin Name="" ID="{541EFCD8-78F5-4573-A1B6-3137609351BA}" PluginName="PCM" CompanyID="0" PluginID="1"/>
 						</ConversionPluginInfo>
 					</ConversionPluginInfoList>
 				</Conversion>

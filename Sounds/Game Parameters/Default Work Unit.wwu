@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{ECC34A3F-10AF-4BD5-B24F-D7D449482991}" SchemaVersion="72">
+<WwiseDocument Type="WorkUnit" ID="{1B579089-84F2-4998-872F-529479CE73FE}" SchemaVersion="72">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{ECC34A3F-10AF-4BD5-B24F-D7D449482991}" PersistMode="Standalone">
+		<WorkUnit Name="Default Work Unit" ID="{1B579089-84F2-4998-872F-529479CE73FE}" PersistMode="Standalone">
 			<ChildrenList>
-				<GameParameter Name="footstepVelocity" ID="{8BC81394-FA36-4D7E-A59C-733EB8F83E32}"/>
-				<GameParameter Name="ambiensHiPass" ID="{74DA9855-9FD3-4102-BA56-34205B22B715}"/>
-				<GameParameter Name="ymerVelocity" ID="{29A9ECF6-476B-464F-A2F0-A90EACC515FB}"/>
-				<GameParameter Name="ymerProcent" ID="{A6057CC9-F36D-4543-B4A4-D8C09F1D0C07}"/>
+				<GameParameter Name="truckSpeed" ID="{CA8E297C-61FD-4BC6-9436-EEF4FCBC0653}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>
