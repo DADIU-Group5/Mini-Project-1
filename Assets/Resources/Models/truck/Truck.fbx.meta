@@ -66,6 +66,7 @@ ModelImporter:
     100116: root_01
     100118: //RootNode
     100120: truck5
+    100122: truck
     400000: bind_animal_a_01
     400002: bind_animal_a_01 1
     400004: bind_animal_b_01
@@ -127,10 +128,13 @@ ModelImporter:
     400116: root_01
     400118: //RootNode
     400120: truck5
+    400122: truck
     4300000: truck5
+    4300002: truck
     9500000: //RootNode
     11100000: //RootNode
     13700000: truck5
+    13700002: truck
   materials:
     importMaterials: 1
     materialName: 0
