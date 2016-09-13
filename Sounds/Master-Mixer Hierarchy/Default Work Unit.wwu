@@ -22,8 +22,8 @@
 						</AuxBus>
 						<Bus Name="music" ID="{D633E8FC-DABE-4373-8126-2C66453001AF}">
 							<ReferenceList>
-								<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
-									<ObjectRef Name="master" ID="{8839B34A-8DCE-42B3-BD01-C986DD7B2C7A}" WorkUnitID="{B717B861-3C69-4859-898E-FF25CFC90875}"/>
+								<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
+									<ObjectRef Name="Pumping_and_Breathing_1" ID="{87BE3270-3D27-45BB-9E46-7F2D9380F523}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 							</ReferenceList>
 						</Bus>
