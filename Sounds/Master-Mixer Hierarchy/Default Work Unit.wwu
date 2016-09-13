@@ -20,7 +20,20 @@
 								</Reference>
 							</ReferenceList>
 						</AuxBus>
-						<Bus Name="music" ID="{D633E8FC-DABE-4373-8126-2C66453001AF}"/>
+						<Bus Name="music" ID="{D633E8FC-DABE-4373-8126-2C66453001AF}">
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+									<ObjectRef Name="master" ID="{8839B34A-8DCE-42B3-BD01-C986DD7B2C7A}" WorkUnitID="{B717B861-3C69-4859-898E-FF25CFC90875}"/>
+								</Reference>
+							</ReferenceList>
+						</Bus>
+						<AuxBus Name="rvbMusic" ID="{E3C4283C-7FD0-4EE4-A5D5-71997514C372}">
+							<ReferenceList>
+								<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
+									<ObjectRef Name="Small_Wooden_Room1" ID="{F7CBE859-36A8-4174-B553-AE32A7FE95FA}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+							</ReferenceList>
+						</AuxBus>
 					</ChildrenList>
 				</Bus>
 				<Bus Name="Master Secondary Bus" ID="{D2E0BC7E-7B3F-4FFE-A670-FAE02761B631}"/>
