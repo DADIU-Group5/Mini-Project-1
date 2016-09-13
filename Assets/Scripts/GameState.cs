@@ -99,20 +99,21 @@ public class GameState : MonoBehaviour
         //Determine if the right number was caught.
         if (newNum == GetNextNumber())
         {
-            if (numberStreak == numberToGiveLife - 1 && playerLives < maxLifes)
-            {
-                GiveLife();
-            }
-            numberStreakWithoutMiss = (numberStreakWithoutMiss + 1) % numberToGiveLife;
-
-            //Play pick up sound
-            AkSoundEngine.PostEvent("correctNumberPickup", this.gameObject);
-            
             lastNumber = newNum;
             numberStreak++;
             //Reset the amount of missed correct numbers.
             missedNumbers = 0;
 
+            if (numberStreak >= numberToGiveLife && playerLives < maxLifes)
+            {
+                GiveLife();
+                numberStreak = 0;
+            }
+
+            //Play pick up sound
+            AkSoundEngine.PostEvent("correctNumberPickup", this.gameObject);
+            
+            
             // update speed
             int speedLevel = (lastNumber / numbersPerSpeedIncrease);
             currentNumberSpeed = initialSpeed + initialSpeed * (speedLevel * speedMultiplierIncrease);
@@ -172,7 +173,7 @@ public class GameState : MonoBehaviour
     public void GiveLife()
     {
         // Animate player speeding up to go nearer the cart
-        playerAnimator.SetBool("Sprint", true);
+        GameObject.Find("Hugo").GetComponent<PlayerMovement>().startSprint();
         playerLives++;
         cart.MoveCartAway(playerLives);
         UIController._instance.UpdateLives(playerLives);
