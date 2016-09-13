@@ -36,12 +36,13 @@ public class Cart : MonoBehaviour {
     private bool finalMove = false;
     private int lastNumber = -1;
     private GameObject[] numbers;
+    private GameObject cartNumber;
 
     void Start()
     {
         spawner = GetComponent<Spawner>();
         LaneWidth = GameState._instance.GetLaneWidth();
-        gameObject.transform.Find("CartNumber");
+        cartNumber = gameObject.transform.Find("CartNumber").gameObject;
         numbers = new GameObject[1]; 
     }
 
@@ -88,7 +89,7 @@ public class Cart : MonoBehaviour {
         if (GameState._instance.lastNumber != lastNumber)
         {
             lastNumber = GameState._instance.lastNumber;
-            /*foreach (GameObject gm in numbers)
+            foreach (GameObject gm in numbers)
             {
                 DestroyImmediate(gm, true);
             }
@@ -108,9 +109,9 @@ public class Cart : MonoBehaviour {
                 }
 
                 GameObject digit = (GameObject)Instantiate(Resources.Load("Textures/numbers_" + Digits[i]), transform.position + new Vector3(.25f, 0, 0) + (transform.right * addValue), transform.rotation);
-                digit.transform.SetParent(gameObject.transform);
+                digit.transform.SetParent(cartNumber.transform);
             }
-            */
+            
         }
     }
 
