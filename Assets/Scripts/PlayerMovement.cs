@@ -7,9 +7,9 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour
 {
     enum Lane { Left, Middle, Right };
-    private Vector3 leftLane = new Vector3(-2f, 0.5f, -8f);
-    private Vector3 middleLane = new Vector3(0f, 0.5f, -8f);
-    private Vector3 rightLane = new Vector3(2f, 0.5f, -8f);
+    private Vector3 leftLane = new Vector3(-2f, 0.5f, -14.5f);
+    private Vector3 middleLane = new Vector3(0f, 0.5f, -14.5f);
+    private Vector3 rightLane = new Vector3(2f, 0.5f, -14.5f);
 
     private Vector2 touchOrigin = -Vector2.one;
 
@@ -18,14 +18,20 @@ public class PlayerMovement : MonoBehaviour
     // Current lane (0 - left, 1 - middle, 2 - right)
     private Lane lane;
 
+    // Jumping animation
+    public float jumpTime = 1.0f;
+    public float jumpHeight = 1.0f;
+    private float jumpEndTime;
+    Vector3 jumpStartPos, jumpEndPos;
+
     // Use this for initialization
     void Start()
     {
         Transform transform = GetComponent<Transform>();
         transform.position = middleLane;
         lane = Lane.Middle;
-        leftLane = new Vector3(0f - GameState._instance.laneWidth, 0.5f, -8f);
-        rightLane = new Vector3(0f + GameState._instance.laneWidth, 0.5f, -8f);
+        leftLane = new Vector3(0f - GameState._instance.laneWidth, 0.5f, -14.5f);
+        rightLane = new Vector3(0f + GameState._instance.laneWidth, 0.5f, -14.5f);
         hugoAnimator = GetComponentInChildren<Animator>();
     }
 
@@ -96,6 +102,26 @@ public class PlayerMovement : MonoBehaviour
             //Pass in horizontal and vertical as parameters to specify the direction to move Player in.
             AttemptMove(horizontal, vertical);
         }
+
+
+        // Check if we are doing the jumping animation.
+        if (Time.timeSinceLevelLoad < jumpEndTime)
+        {
+            float fraction = (jumpEndTime - Time.timeSinceLevelLoad) / (jumpEndTime - (jumpEndTime - jumpTime));
+
+            float newX = Mathf.Lerp(jumpStartPos.x, jumpEndPos.x, 1 - fraction);
+
+            float newZ = Mathf.Lerp(jumpStartPos.z, jumpEndPos.z, 1 - fraction);
+
+            float newY = (fraction - fraction * fraction) * 4 * jumpHeight + jumpEndPos.y;
+
+            transform.position = new Vector3(newX, newY, newZ);
+        }
+        else
+        {
+            GetComponent<Rigidbody>().isKinematic = false;
+            transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 
     void AttemptMove(int horizontal, int vertical)
@@ -111,11 +137,17 @@ public class PlayerMovement : MonoBehaviour
                 {
                     transform.position = leftLane;
                     lane = Lane.Left;
+                    jumpEndTime = Time.timeSinceLevelLoad + jumpTime;
+                    jumpStartPos = middleLane;
+                    jumpEndPos = leftLane;
                 }
                 else
                 {
                     transform.position = middleLane;
                     lane = Lane.Middle;
+                    jumpEndTime = Time.timeSinceLevelLoad + jumpTime;
+                    jumpStartPos = rightLane;
+                    jumpEndPos = middleLane;
                 }
             }
         }
@@ -129,11 +161,17 @@ public class PlayerMovement : MonoBehaviour
                 {
                     transform.position = rightLane;
                     lane = Lane.Right;
+                    jumpEndTime = Time.timeSinceLevelLoad + jumpTime;
+                    jumpStartPos = middleLane;
+                    jumpEndPos = rightLane;
                 }
                 else
                 {
                     transform.position = middleLane;
                     lane = Lane.Middle;
+                    jumpEndTime = Time.timeSinceLevelLoad + jumpTime;
+                    jumpStartPos = leftLane;
+                    jumpEndPos = middleLane;
                 }
             }
         }
