@@ -12,6 +12,7 @@ public class VegetationSpawner : MonoBehaviour {
 	void Start () {
         wheel = GameObject.Find("Wheel");
         numberSpeed = GameState._instance.GetNumberSpeed();
+        StartVegetation();
         Vegetation();
     }
 
@@ -32,6 +33,13 @@ public class VegetationSpawner : MonoBehaviour {
         // spawn
         vegetation = (GameObject)Instantiate(vegetation, transform.position + new Vector3(xCoord, -21.74f, 93.37f) + (transform.right), Quaternion.Euler(24.3f,0,0 ));
 
+        if (xCoord > 0)
+        {
+            Quaternion theRot = vegetation.transform.rotation;
+            theRot.y = 180;
+            vegetation.transform.rotation = theRot;
+        }
+
         // make a child of the road
         vegetation.transform.SetParent(wheel.gameObject.transform);  
     }
@@ -48,6 +56,39 @@ public class VegetationSpawner : MonoBehaviour {
             numberSpeed = GameState._instance.GetNumberSpeed();
             Vegetation();
         }
+    }
+
+    public void StartVegetation()
+    {/*
+       // int x = (int)Mathf.Round(wheel.transform.position.y + 93.37-gameObject.transform.position.z * Mathf.Cos(360 )
+        int numberOfPoints = 10;
+        Vector3[] points = new Vector3[10];
+        int i = 0;
+
+        Vector3[] meshVertices = GameObject.Find("grund").gameObject.transform.GetComponent<MeshFilter>().mesh.vertices;
+
+        while (i < numberOfPoints)
+        {
+            Vector3 test = meshVertices[Random.Range(0, meshVertices.Length)];
+            if (test.z < 85 && test.z > -10 && test.y < 216 && test.y > 210)
+            {
+                points[i] = test;
+                i++;
+            }
+        }
+
+        for (int k = 0; k < numberOfPoints; k++)
+        {
+
+            GameObject vegetation = bushes[0];
+            vegetation = (GameObject)Instantiate(vegetation, transform.position + points[k] + (transform.right), Quaternion.Euler(24.3f, 0, 0));
+
+            // make a child of the road
+            vegetation.transform.SetParent(wheel.gameObject.transform);
+        }
+        
+        //Vector3 test = wheel.GetComponent<Mesh>().vertices[0];
+        */
     }
 
     public void Vegetation()

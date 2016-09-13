@@ -4,6 +4,14 @@
 		<WorkUnit Name="Default Work Unit" ID="{09334258-2406-4696-8D12-290EF45A6647}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<ReferenceList>
+						<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+							<ObjectRef Name="master" ID="{8839B34A-8DCE-42B3-BD01-C986DD7B2C7A}" WorkUnitID="{B717B861-3C69-4859-898E-FF25CFC90875}"/>
+						</Reference>
+						<Reference Name="Effect1" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+							<ObjectRef Name="Brick_Wall_Minus_1dB_Peak_Fast_Release" ID="{2144284E-7ADD-4341-86A4-4E468BEC9A2D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+					</ReferenceList>
 					<ChildrenList>
 						<AuxBus Name="rvb" ID="{A63B8887-9308-4A99-888D-403FB2D01C02}">
 							<ReferenceList>
@@ -12,6 +20,7 @@
 								</Reference>
 							</ReferenceList>
 						</AuxBus>
+						<Bus Name="music" ID="{D633E8FC-DABE-4373-8126-2C66453001AF}"/>
 					</ChildrenList>
 				</Bus>
 				<Bus Name="Master Secondary Bus" ID="{D2E0BC7E-7B3F-4FFE-A670-FAE02761B631}"/>

@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 public class GameState : MonoBehaviour
 {
-    // singleton
+    // Singleton.
     public static GameState _instance;
 
-    // editable fields used for balancing game
-    // speed
+    // Editable fields used for balancing game.
+    // Speed.
     [Header("Speed")]
     [Range(0, 50)]
     public float initialSpeed = 10;
@@ -16,7 +16,8 @@ public class GameState : MonoBehaviour
     public int numbersPerSpeedIncrease = 10;
     [Range(0, 1)]
     public float speedMultiplierIncrease = 0.1f;
-    // score
+
+    // Score.
     [Header("Score")]
     [Range(1, 1000)]
     public int scorePerNumber = 10;
@@ -24,7 +25,8 @@ public class GameState : MonoBehaviour
     public int numbersPerScoreIncrease = 10;
     [Range(0, 1)]
     public float scoreMultiplierIncrease = 0.1f;
-    // other
+
+    // Other.
     [Header("Other")]
     public bool unbeatable;
     [Range(1, 10)]
@@ -38,10 +40,10 @@ public class GameState : MonoBehaviour
 
     public Cart cart;
 
-    // For changing the player animation
+    // For changing the player animation.
     public Animator playerAnimator;
 
-    // private fields
+    // Private fields.
     private float score;
     private int missedNumbers;
     private int numberStreak;
@@ -53,7 +55,7 @@ public class GameState : MonoBehaviour
 
     private float timeSinceGameStarted;
 
-    // Use this for initialization
+    // Use this for initialization.
     void Awake () {
         if (_instance == null)
         {
@@ -71,7 +73,15 @@ public class GameState : MonoBehaviour
     {
         timeSinceGameStarted = Time.time;
         currentNumberSpeed = initialSpeed;
+        RotatingWheel._instance.ChangeWheelSpeed(currentNumberSpeed);
         playerLives = maxLifes;
+    }
+
+    private void Update()
+    {
+        // Update score every tick by the number-speed.
+        score += Time.deltaTime * currentNumberSpeed;
+        UIController._instance.UpdateScore((int)score);
     }
 
     public int GetNumber()
@@ -96,30 +106,33 @@ public class GameState : MonoBehaviour
 
     public void PlayerGotNumber(int newNum)
     {
-        //Determine if the right number was caught.
+        // Determine if the right number was caught.
         if (newNum == GetNextNumber())
         {
-            if (numberStreak == numberToGiveLife - 1 && playerLives < maxLifes)
-            {
-                GiveLife();
-            }
-            numberStreakWithoutMiss = (numberStreakWithoutMiss + 1) % numberToGiveLife;
-
-            //Play pick up sound
-            AkSoundEngine.PostEvent("correctNumberPickup", this.gameObject);
-            
             lastNumber = newNum;
             numberStreak++;
-            //Reset the amount of missed correct numbers.
+            // Reset the amount of missed correct numbers.
             missedNumbers = 0;
 
-            // update speed
+            if (numberStreak >= numberToGiveLife && playerLives < maxLifes)
+            {
+                GiveLife();
+                numberStreak = 0;
+            }
+
+            // Play pick up sound.
+            AkSoundEngine.PostEvent("correctNumberPickup", this.gameObject);
+            
+            // Update speed.
             int speedLevel = (lastNumber / numbersPerSpeedIncrease);
             currentNumberSpeed = initialSpeed + initialSpeed * (speedLevel * speedMultiplierIncrease);
 
-            //update score
-            currentScoreMultiplier = 1 + (numberStreak / numbersPerScoreIncrease) * scoreMultiplierIncrease;
+            // Update wheel-speed.
+            RotatingWheel._instance.ChangeWheelSpeed(currentNumberSpeed);
+
+            // Update score.
             score += scorePerNumber * currentScoreMultiplier;
+            currentScoreMultiplier = 1 + (numberStreak / numbersPerScoreIncrease) * scoreMultiplierIncrease;
             UIController._instance.UpdateScore((int)score);
             UIController._instance.UpdateMultiplier(currentScoreMultiplier);
         }
@@ -128,7 +141,7 @@ public class GameState : MonoBehaviour
             numberStreak = 0;
             currentScoreMultiplier = 1;
 
-            //Play pick up sound
+            // Play pick up sound.
             AkSoundEngine.PostEvent("wrongNumberPickup", this.gameObject);
 
             UIController._instance.UpdateMultiplier(currentScoreMultiplier);
@@ -142,28 +155,28 @@ public class GameState : MonoBehaviour
     {
         playerLives--;
 
-        // Animate stumble
+        // Animate stumble.
         playerAnimator.SetTrigger("Stumble");
 
-        //Moves the cart further away from the player.
+        // Moves the cart further away from the player.
         cart.MoveCartAway(playerLives);
         UIController._instance.UpdateLives(playerLives);
        // Move cart away as player lose lives.
         if (playerLives <= 0 && !unbeatable)
         {
-            // game over
+            // Game over.
 
-            // Animate fall
+            // Animate fall.
             playerAnimator.SetBool("Fall", true);
 
-            // update highscore if we beat it
+            // Update highscore if we beat it.
             if (!PlayerPrefs.HasKey("HighScore") || PlayerPrefs.GetInt("HighScore") < score)
             {
                 PlayerPrefs.SetInt("HighScore", (int)score);
                 PlayerPrefs.Save();
             }
 
-            // load main menu
+            // Load main menu.
             //SceneManager.LoadScene(0);
             UIController._instance.DisplayLossScreen();
         }
@@ -171,8 +184,8 @@ public class GameState : MonoBehaviour
 
     public void GiveLife()
     {
-        // Animate player speeding up to go nearer the cart
-        playerAnimator.SetBool("Sprint", true);
+        // Animate player speeding up to go nearer the cart.
+        GameObject.Find("Hugo").GetComponent<PlayerMovement>().startSprint();
         playerLives++;
         cart.MoveCartAway(playerLives);
         UIController._instance.UpdateLives(playerLives);
@@ -184,7 +197,7 @@ public class GameState : MonoBehaviour
         {
             numberStreak = 0;
             missedNumbers++;
-            // reduce the score multiplier
+            // Reduce the score multiplier.
             currentScoreMultiplier -= scoreMultiplierIncrease;
             if (currentScoreMultiplier < 1)
                 currentScoreMultiplier = 1;

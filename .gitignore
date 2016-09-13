@@ -35,5 +35,5 @@ sysinfo.txt
 /Assets/Wwise/
 
 # Sound (Victor)
-/Sounds/
-/Assets/StreamingAssets/Audio/
+#/Sounds/
+#/Assets/StreamingAssets/Audio/
