@@ -33,6 +33,13 @@ public class VegetationSpawner : MonoBehaviour {
         // spawn
         vegetation = (GameObject)Instantiate(vegetation, transform.position + new Vector3(xCoord, -21.74f, 93.37f) + (transform.right), Quaternion.Euler(24.3f,0,0 ));
 
+        if (xCoord > 0)
+        {
+            Quaternion theRot = vegetation.transform.rotation;
+            theRot.y = 180;
+            vegetation.transform.rotation = theRot;
+        }
+
         // make a child of the road
         vegetation.transform.SetParent(wheel.gameObject.transform);  
     }
