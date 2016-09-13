@@ -63,7 +63,7 @@ public class VegetationSpawner : MonoBehaviour {
             {
                 points[i] = test;
                 i++;
-            }*/
+            }
         }
 
         for (int k = 0; k < numberOfPoints; k++)
@@ -75,7 +75,7 @@ public class VegetationSpawner : MonoBehaviour {
             // make a child of the road
             vegetation.transform.SetParent(wheel.gameObject.transform);
         }
-
+        */
         //Vector3 test = wheel.GetComponent<Mesh>().vertices[0];
 
     }
