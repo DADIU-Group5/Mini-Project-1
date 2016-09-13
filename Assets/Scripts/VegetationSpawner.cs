@@ -17,7 +17,12 @@ public class VegetationSpawner : MonoBehaviour {
 
     public void SpawnObject()
     {
-        GameObject vegetation = bushes[Random.Range(0, bushes.Length)];
+        GameObject vegetation;
+        if (Random.Range(0,4) < 1)
+        {
+           vegetation = bushes[0];
+        } else
+            vegetation = bushes[1];
 
         float xCoord = Random.Range(7, 16);
         if (Random.Range(0,2) == 1)
@@ -33,17 +38,26 @@ public class VegetationSpawner : MonoBehaviour {
 
     void Update()
     {
-        if (numberSpeed != GameState._instance.GetNumberSpeed())
+        if (GameState._instance.GetNumberSpeed() == 0f)
+        {
+            CancelInvoke();
+        }
+        else if (numberSpeed != GameState._instance.GetNumberSpeed())
         {
             CancelInvoke();
             numberSpeed = GameState._instance.GetNumberSpeed();
             Vegetation();
-        } 
+        }
     }
 
     public void Vegetation()
     {
         spawnTime = spawnTime / numberSpeed;
+        if (spawnTime < 0.5f)
+        {
+            spawnTime = 0.5f;
+        }
+        Debug.Log("spawntime: " + spawnTime);
         InvokeRepeating("SpawnObject", 0f, spawnTime);
     }
 }
