@@ -18,14 +18,11 @@ public class IntroScreen : MonoBehaviour {
         button.interactable = false;
         started = false;
         UIController._instance.InitialStart();
-        if(PlayerPrefs.GetInt("HighScore") == 0)
-        {
-            swipe.SetActive(true);
-        }
-        else
-        {
-            PlayerPrefs.DeleteAll();
-        }
+        /*  if(PlayerPrefs.GetInt("HighScore") == 0)
+          {
+              swipe.SetActive(true);
+          }*/
+        swipe.SetActive(true);
     }
 
     void Update()

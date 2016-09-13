@@ -127,6 +127,7 @@ public class UIController : MonoBehaviour {
         Unpuase();
         timer = -1;
         fadingIn = true;
+        playerMove.enabled = true;
     }
 
     public void DisplayLossScreen()
@@ -185,7 +186,6 @@ public class UIController : MonoBehaviour {
                 fadingIn = false;
                 GameState._instance.ResetTimeSinceGameStarted();
                 GameState._instance.SetGameOver(false);
-                playerMove.enabled = true;
             }
         }
     }
@@ -193,7 +193,7 @@ public class UIController : MonoBehaviour {
     public void Restart()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
     public void GoToMainMenu()
