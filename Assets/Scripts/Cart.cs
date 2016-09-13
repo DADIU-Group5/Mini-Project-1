@@ -65,11 +65,11 @@ public class Cart : MonoBehaviour {
         System.Random random = new System.Random();
         double rnd = random.NextDouble();
 
-        nextHorn = Time.timeSinceLevelLoad + rnd;
+        nextHorn = GameState._instance.GetTimeSinceGameStarted() + rnd;
 
         rnd = random.NextDouble();
 
-        nextCheer = Time.timeSinceLevelLoad + rnd;
+        nextCheer = GameState._instance.GetTimeSinceGameStarted() + rnd;
 
         cartNumber = gameObject.transform.Find("CartNumber").gameObject;
         numbers = new GameObject[1];
@@ -77,28 +77,28 @@ public class Cart : MonoBehaviour {
 
     void Update()
     {
-        if (nextHorn <= Time.timeSinceLevelLoad)
+        if (nextHorn <= GameState._instance.GetTimeSinceGameStarted())
         {
             System.Random random = new System.Random();
             double rnd = random.NextDouble() * 16;
 
-            nextHorn = Time.timeSinceLevelLoad + rnd;
+            nextHorn = GameState._instance.GetTimeSinceGameStarted() + rnd;
 
             AkSoundEngine.PostEvent("truckHonk", this.gameObject);
         }
 
-        if (nextCheer <= Time.timeSinceLevelLoad)
+        if (nextCheer <= GameState._instance.GetTimeSinceGameStarted())
         {
             System.Random random = new System.Random();
             double rnd = random.NextDouble() * 15;
 
-            nextCheer = Time.timeSinceLevelLoad + rnd;
+            nextCheer = GameState._instance.GetTimeSinceGameStarted() + rnd;
 
             AkSoundEngine.PostEvent("partyAnimals", this.gameObject);
         }
         
         currentPosition = gameObject.transform.position;
-        if (nextMove <= Time.timeSinceLevelLoad)
+        if (nextMove <= GameState._instance.GetTimeSinceGameStarted())
         {
             MoveCart();
         }
@@ -169,9 +169,9 @@ public class Cart : MonoBehaviour {
 
         }
 
-        if (Time.timeSinceLevelLoad < jumpEndTime)
+        if (GameState._instance.GetTimeSinceGameStarted() < jumpEndTime)
         {
-            float fraction = (jumpEndTime - Time.timeSinceLevelLoad) / (jumpEndTime - (jumpEndTime - jumpDuration));
+            float fraction = (jumpEndTime - GameState._instance.GetTimeSinceGameStarted()) / (jumpEndTime - (jumpEndTime - jumpDuration));
 
             float newX = Mathf.Lerp(jumpStartPos.x, jumpEndPos, 1 - fraction);
 
@@ -234,7 +234,7 @@ public class Cart : MonoBehaviour {
 
     private void SetPosition(int _currentLane, int _newLane)
     {
-        jumpEndTime = Time.timeSinceLevelLoad + jumpDuration;
+        jumpEndTime = GameState._instance.GetTimeSinceGameStarted() + jumpDuration;
         jumpStartPos = new Vector2(transform.position.x, transform.position.y);
 
         int laneJumps = _newLane - _currentLane;
