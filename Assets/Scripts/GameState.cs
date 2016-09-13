@@ -51,15 +51,14 @@ public class GameState : MonoBehaviour
     private float currentScoreMultiplier = 1;
     private int numberStreakWithoutMiss = 0;
 
+    private System.DateTime timeSinceGameStarted;
+
     // Use this for initialization
     void Awake () {
         if (_instance == null)
         {
             _instance = this;
             Init();
-
-            //Play footstep sound
-           // AkSoundEngine.PostEvent("footstep", this.gameObject);
         }
         else
         {
@@ -70,6 +69,7 @@ public class GameState : MonoBehaviour
 
     private void Init()
     {
+        timeSinceGameStarted = System.DateTime.Now;
         currentNumberSpeed = initialSpeed;
         playerLives = maxLifes;
     }
@@ -106,7 +106,7 @@ public class GameState : MonoBehaviour
             numberStreakWithoutMiss = (numberStreakWithoutMiss + 1) % numberToGiveLife;
 
             //Play pick up sound
-           // AkSoundEngine.PostEvent("correctNumberPickup", this.gameObject);
+            AkSoundEngine.PostEvent("correctNumberPickup", this.gameObject);
             
             lastNumber = newNum;
             numberStreak++;
@@ -129,7 +129,7 @@ public class GameState : MonoBehaviour
             currentScoreMultiplier = 1;
 
             //Play pick up sound
-          //  AkSoundEngine.PostEvent("wrongNumberPickup", this.gameObject);
+            AkSoundEngine.PostEvent("wrongNumberPickup", this.gameObject);
 
             UIController._instance.UpdateMultiplier(currentScoreMultiplier);
             LoseLife();
@@ -197,5 +197,15 @@ public class GameState : MonoBehaviour
                 LoseLife();
             }
         }
+    }
+
+    public int GetTimeSinceGameStarted()
+    {
+        return timeSinceGameStarted.CompareTo(System.DateTime.Now); 
+    }
+
+    public void ResetTimeSinceGameStarted()
+    {
+        timeSinceGameStarted = System.DateTime.Now;
     }
 }
