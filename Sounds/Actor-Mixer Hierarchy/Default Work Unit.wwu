@@ -1272,7 +1272,13 @@
 					<ChildrenList>
 						<RandomSequenceContainer Name="talPickup" ID="{500221F4-276C-45E1-9F16-0F376457353C}" ShortID="46708063">
 							<PropertyList>
+								<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
