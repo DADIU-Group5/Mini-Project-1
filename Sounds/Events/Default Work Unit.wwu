@@ -133,6 +133,9 @@
 							</ElementList>
 						</Action>
 						<Action Name="Post Event" ID="{959DC3A3-0EE4-4404-9709-3D6C83ACB1CD}" ShortID="114889281" Type="PlayEvent" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2.35"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{80447BA2-65CA-415F-9F62-8209DBACBE57}" Global="false">
 									<ObjectRef Name="music" ID="{4D4CDD20-B01C-447A-A973-CEBF8D51D83D}" WorkUnitID="{92825D5E-2113-418A-B63E-F7D06BB3BE8E}"/>
@@ -356,7 +359,18 @@
 				</Event>
 				<Event Name="resume" ID="{D17EC086-9FEA-46E8-AE0E-ACB745461458}">
 					<ChildrenList>
-						<Action Name="Resume All" ID="{4F027B57-FE1A-402A-BB76-DE0ED17FCBA5}" ShortID="274232042" Type="Resume" Scope="All" Global="false"/>
+						<Action Name="Play" ID="{5E3E5542-6EC1-4A85-BEC4-3F5529CD8FE0}" ShortID="638159651" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{808F148F-7F6B-4D5B-B06C-16CE3DB9BD4D}" Global="false">
+									<ObjectRef Name="start game" ID="{5469C7C8-0874-4603-8B25-D84A1619D49A}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Resume All" ID="{EB2F0972-9924-4BA6-9827-10E3DF9B0680}" ShortID="192042925" Type="Resume" Scope="All" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2.35"/>
+							</PropertyList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="gameOver" ID="{84F981CD-FEF0-46D9-A3BC-85A54174FB99}">
@@ -374,6 +388,28 @@
 								</Element>
 								<Element ID="{F0F5C068-A192-4C3A-B4BC-F665D3CBB22B}" Global="false">
 									<ObjectRef Name="water" ID="{F189D9FB-8B39-44D4-B0F1-B12CDE502977}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="jump" ID="{1C07A3DB-7DD6-4CFD-9621-2623116876FB}">
+					<ChildrenList>
+						<Action Name="Play" ID="{79353381-6B17-4493-91C9-4E89965A98CF}" ShortID="564936142" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{DDADEE72-882D-46D7-AF57-DC83AACE09AF}" Global="false">
+									<ObjectRef Name="jump" ID="{B3F2715F-F49B-4B84-8F77-648ACA4B6998}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="truckJump" ID="{5E987885-D942-4BCD-B785-581D612A2FA2}">
+					<ChildrenList>
+						<Action Name="Play" ID="{83E7CE6F-4E8A-4998-B399-5A742A47C0E2}" ShortID="279144645" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{3FE81AF9-421F-4C22-8C19-7EB2A604DDB4}" Global="false">
+									<ObjectRef Name="truck jump" ID="{4ACD776E-E101-4B45-8A7E-BA54FC7402D6}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
 								</Element>
 							</ElementList>
 						</Action>

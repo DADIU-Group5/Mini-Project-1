@@ -64,10 +64,10 @@
 						<Effect Name="Pumping_and_Breathing_1" ID="{87BE3270-3D27-45BB-9E46-7F2D9380F523}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
 							<PropertyList>
 								<Property Name="AttackTime" Type="Real32" Value="0.111"/>
-								<Property Name="OutputGain" Type="Real32" Value="3"/>
-								<Property Name="Ratio" Type="Real32" Value="20"/>
+								<Property Name="OutputGain" Type="Real32" Value="7"/>
+								<Property Name="Ratio" Type="Real32" Value="12"/>
 								<Property Name="ReleaseTime" Type="Real32" Value="0.021"/>
-								<Property Name="Threshold" Type="Real32" Value="-37"/>
+								<Property Name="Threshold" Type="Real32" Value="-12"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="All_Buttons_IN" ID="{E5FFEBA7-4F6F-421E-ABB7-286C011BD0C8}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
@@ -1969,7 +1969,13 @@
 							<ChildrenList>
 								<Effect Name="Chipmunk" ID="{54F9F04F-0D14-46AB-B38B-21CFD2EB46F6}" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
 									<PropertyList>
+										<Property Name="DelayTime" Type="Real32" Value="30"/>
+										<Property Name="DryLevel" Type="Real32" Value="-6"/>
+										<Property Name="FilterFrequency" Type="Real32" Value="950"/>
+										<Property Name="FilterGain" Type="Real32" Value="-10"/>
+										<Property Name="FilterType" Type="int32" Value="3"/>
 										<Property Name="Pitch" Type="Real32" Value="1200"/>
+										<Property Name="WetLevel" Type="Real32" Value="-6"/>
 									</PropertyList>
 								</Effect>
 								<Effect Name="Monsterize" ID="{99F80B38-1C45-42CE-9BCD-E94F3885DCAA}" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">

@@ -169,7 +169,7 @@ public class GameState : MonoBehaviour
         playerAnimator.SetTrigger("Stumble");
 
         // Moves the cart further away from the player.
-        cart.MoveCartAway(playerLives);
+        cart.MoveCartAway(playerLives, true);
         UIController._instance.UpdateLives(playerLives);
        // Move cart away as player lose lives.
         if (playerLives <= 0 && !unbeatable)
@@ -193,12 +193,17 @@ public class GameState : MonoBehaviour
         }
     }
 
+    public int getPlayerLives()
+    {
+        return playerLives;
+    }
+
     public void GiveLife()
     {
         // Animate player speeding up to go nearer the cart.
         GameObject.Find("Hugo").GetComponent<PlayerMovement>().startSprint();
         playerLives++;
-        cart.MoveCartAway(playerLives);
+        cart.MoveCartAway(playerLives, false);
         UIController._instance.UpdateLives(playerLives);
     }
 

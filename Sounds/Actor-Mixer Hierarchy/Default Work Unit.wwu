@@ -463,6 +463,64 @@
 								</Sound>
 							</ChildrenList>
 						</ActorMixer>
+						<Sound Name="truck jump" ID="{4ACD776E-E101-4B45-8A7E-BA54FC7402D6}" ShortID="807573764" Type="SoundFX">
+							<PropertyList>
+								<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>800</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{9E410816-2C4B-45B1-AACB-4AF21897B313}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="800"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+									<ObjectRef Name="High_Impact" ID="{2AFD6FB0-C906-4683-A377-FEEEF72967B0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+								<Reference Name="Effect1" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
+									<ObjectRef Name="Chipmunk" ID="{54F9F04F-0D14-46AB-B38B-21CFD2EB46F6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="rvb" ID="{A63B8887-9308-4A99-888D-403FB2D01C02}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="truck jump" ID="{239624CA-07F9-48BD-B929-5199A8B0B51F}" ShortID="1050211302">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0159584245076587"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.861754923413567"/>
+										<Property Name="FadeOutShape" Type="int16" Value="3"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0957505470459519"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.12778993435449"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>truck jump.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="truck jump" ID="{239624CA-07F9-48BD-B929-5199A8B0B51F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="jungle Ambience" ID="{E17C239A-1AD3-4ABE-90A7-3F94054FF6A0}" ShortID="513336606">
@@ -471,7 +529,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>3</Value>
+										<Value>6</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1873,7 +1931,7 @@
 									<PropertyList>
 										<Property Name="FadeInDuration" Type="Real64" Value="0.0233840946389496"/>
 										<Property Name="FadeOutDuration" Type="Real64" Value="1.28612520514223"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.810648614150255"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.866077579220358"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile> start game.wav</AudioFile>
@@ -3059,6 +3117,178 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="impact22" ID="{06F5CD40-3ADE-414B-9EB7-ADB75FD72DEE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="jump" ID="{883B7AD4-84F5-4CF7-8601-05089F101B35}" ShortID="9395597">
+					<ChildrenList>
+						<RandomSequenceContainer Name="jump" ID="{B3F2715F-F49B-4B84-8F77-648ACA4B6998}" ShortID="748559398">
+							<PropertyList>
+								<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+								<Property Name="Highpass" Type="int16">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{28C99443-FA3F-4297-B73C-92ABA69BCE7A}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="20"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C8D53105-CEC0-483B-9CC6-708C5959BF1C}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="20"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{8D183EFF-8A7D-40EF-AF1A-7F77F667D3CE}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{DE5CAFD9-93B9-4883-A1D0-1D3D5E012BD0}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-3"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="rvb" ID="{A63B8887-9308-4A99-888D-403FB2D01C02}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="jump1" ID="{3EA8FA06-63A5-45EA-99E1-EFBB8607DAB9}" ShortID="676263416" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="jump1" ID="{F96CF133-CFFF-40AA-B807-645376A022DE}" ShortID="597084958">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0301048504741065"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.55943125455872"/>
+												<Property Name="FadeOutShape" Type="int16" Value="3"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.632201859956236"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>jump1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="jump1" ID="{F96CF133-CFFF-40AA-B807-645376A022DE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="jump2" ID="{790A4841-7CFF-401C-9DC5-D85F6E92D107}" ShortID="64399041" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="jump2" ID="{1A66F326-167B-4201-A72E-E3D6BD9837CA}" ShortID="676591338">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00605908096280094"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.462509846827134"/>
+												<Property Name="FadeOutShape" Type="int16" Value="3"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.71699124726477"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>jump2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="jump2" ID="{1A66F326-167B-4201-A72E-E3D6BD9837CA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="jump3" ID="{0126CA28-9768-4AD4-B73D-496D28A60B1C}" ShortID="961886403" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="jump3" ID="{F6337B18-EBCD-4058-ABCA-DBA6A70D2596}" ShortID="882160051">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0143959700948213"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.411724744711889"/>
+												<Property Name="FadeOutShape" Type="int16" Value="3"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.365657640408461"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>jump3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="jump3" ID="{F6337B18-EBCD-4058-ABCA-DBA6A70D2596}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="jump4" ID="{7CC8B07A-1160-4182-87C4-6E444341DCBD}" ShortID="765494726" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="jump4" ID="{55BF0448-41EA-4347-B7CC-B1F123C95DC6}" ShortID="101351762">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0293679339897885"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.627091766958425"/>
+												<Property Name="FadeOutShape" Type="int16" Value="3"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.606361460612691"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>jump4.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="jump4" ID="{55BF0448-41EA-4347-B7CC-B1F123C95DC6}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
