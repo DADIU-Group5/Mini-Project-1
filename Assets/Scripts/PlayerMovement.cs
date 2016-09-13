@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpHeight = 1.0f;
     private float jumpEndTime;
     Vector3 jumpStartPos, jumpEndPos;
+    private bool canMove = true;
 
     // Use this for initialization
     void Start()
@@ -117,7 +118,7 @@ public class PlayerMovement : MonoBehaviour
 
             float newY = (fraction - fraction * fraction) * 4 * jumpHeight + jumpEndPos.y;
 
-            if ((1 - fraction) >= 0.9 && hugoAnimator.GetBool("JumpFalling"))
+            if ((1 - fraction) >= 0.9f && hugoAnimator.GetBool("JumpFalling"))
             {
                 hugoAnimator.SetBool("JumpFalling", false);
             }
@@ -126,13 +127,16 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            GetComponent<Rigidbody>().isKinematic = false;
-            transform.localScale = new Vector3(1, 1, 1);
+            canMove = true;
         }
     }
 
     void AttemptMove(int horizontal, int vertical)
     {
+        if (!canMove)
+        {
+            return;
+        }
         Transform transform = GetComponent<Transform>();
         // Attempt move to left
         if (horizontal < 0)
@@ -142,51 +146,50 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (lane == Lane.Middle)
                 {
-                    //transform.position = leftLane;
                     lane = Lane.Left;
                     jumpEndTime = Time.timeSinceLevelLoad + jumpTime;
                     jumpStartPos = middleLane;
                     jumpEndPos = leftLane;
                     hugoAnimator.SetTrigger("Jump");
                     hugoAnimator.SetBool("JumpFalling", true);
+                    canMove = false;
                 }
                 else
                 {
-                    //transform.position = middleLane;
                     lane = Lane.Middle;
                     jumpEndTime = Time.timeSinceLevelLoad + jumpTime;
                     jumpStartPos = rightLane;
                     jumpEndPos = middleLane;
                     hugoAnimator.SetTrigger("Jump");
                     hugoAnimator.SetBool("JumpFalling", true);
+                    canMove = false;
                 }
             }
         }
         else if (horizontal > 0)
         {
-
             // Not in rightmost lane
             if (lane != Lane.Right)
             {
                 if (lane == Lane.Middle)
                 {
-                    //transform.position = rightLane;
                     lane = Lane.Right;
                     jumpEndTime = Time.timeSinceLevelLoad + jumpTime;
                     jumpStartPos = middleLane;
                     jumpEndPos = rightLane;
                     hugoAnimator.SetTrigger("Jump");
                     hugoAnimator.SetBool("JumpFalling", true);
+                    canMove = false;
                 }
                 else
                 {
-                    //transform.position = middleLane;
                     lane = Lane.Middle;
                     jumpEndTime = Time.timeSinceLevelLoad + jumpTime;
                     jumpStartPos = leftLane;
                     jumpEndPos = middleLane;
                     hugoAnimator.SetTrigger("Jump");
                     hugoAnimator.SetBool("JumpFalling", true);
+                    canMove = false;
                 }
             }
         }
