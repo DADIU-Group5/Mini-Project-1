@@ -118,11 +118,6 @@ public class PlayerMovement : MonoBehaviour
 
             float newY = (fraction - fraction * fraction) * 4 * jumpHeight + jumpEndPos.y;
 
-            if ((1 - fraction) >= 0.9f && hugoAnimator.GetBool("JumpFalling"))
-            {
-                hugoAnimator.SetBool("JumpFalling", false);
-            }
-
             transform.position = new Vector3(newX, newY, newZ);
         }
         else
@@ -151,7 +146,6 @@ public class PlayerMovement : MonoBehaviour
                     jumpStartPos = middleLane;
                     jumpEndPos = leftLane;
                     hugoAnimator.SetTrigger("Jump");
-                    hugoAnimator.SetBool("JumpFalling", true);
                     canMove = false;
                 }
                 else
@@ -161,7 +155,6 @@ public class PlayerMovement : MonoBehaviour
                     jumpStartPos = rightLane;
                     jumpEndPos = middleLane;
                     hugoAnimator.SetTrigger("Jump");
-                    hugoAnimator.SetBool("JumpFalling", true);
                     canMove = false;
                 }
             }
@@ -178,7 +171,6 @@ public class PlayerMovement : MonoBehaviour
                     jumpStartPos = middleLane;
                     jumpEndPos = rightLane;
                     hugoAnimator.SetTrigger("Jump");
-                    hugoAnimator.SetBool("JumpFalling", true);
                     canMove = false;
                 }
                 else
@@ -188,7 +180,6 @@ public class PlayerMovement : MonoBehaviour
                     jumpStartPos = leftLane;
                     jumpEndPos = middleLane;
                     hugoAnimator.SetTrigger("Jump");
-                    hugoAnimator.SetBool("JumpFalling", true);
                     canMove = false;
                 }
             }
