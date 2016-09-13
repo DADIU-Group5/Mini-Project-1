@@ -24,14 +24,6 @@ public class GameState : MonoBehaviour
     public int numbersPerScoreIncrease = 10;
     [Range(0, 1)]
     public float scoreMultiplierIncrease = 0.1f;
-    // number
-    [Header("Number")]
-    [Range(0, 99)]
-    public int lastNumber = 0;
-    [Range(1, 10)]
-    public int numberToLoseLife = 5;
-    [Range(1, 10)]
-    public int numberToGiveLife = 6;
     // other
     [Header("Other")]
     public bool unbeatable;
@@ -39,6 +31,10 @@ public class GameState : MonoBehaviour
     public int maxLifes = 3;
     [Range(1, 5)]
     public float laneWidth = 1.5f;
+    [Range(1f, 3f)]
+    public int missedNumbersThreshold = 5;
+    public int numberToGiveLife = 6;
+    public int lastNumber;
 
     public Cart cart;
 
@@ -54,7 +50,8 @@ public class GameState : MonoBehaviour
     private float currentSpeedMultiplier = 1;
     private float currentScoreMultiplier = 1;
     private int numberStreakWithoutMiss = 0;
-    private bool completedNumberCycle;
+
+    private float timeSinceGameStarted;
 
     // Use this for initialization
     void Awake () {
@@ -62,9 +59,6 @@ public class GameState : MonoBehaviour
         {
             _instance = this;
             Init();
-
-            //Play footstep sound
-           // AkSoundEngine.PostEvent("footstep", this.gameObject);
         }
         else
         {
@@ -75,11 +69,9 @@ public class GameState : MonoBehaviour
 
     private void Init()
     {
+        timeSinceGameStarted = Time.time;
         currentNumberSpeed = initialSpeed;
         playerLives = maxLifes;
-        
-        int speedLevel = (lastNumber / numbersPerSpeedIncrease);
-        currentNumberSpeed = initialSpeed + initialSpeed * (speedLevel * speedMultiplierIncrease);
     }
 
     public int GetNumber()
@@ -107,32 +99,23 @@ public class GameState : MonoBehaviour
         //Determine if the right number was caught.
         if (newNum == GetNextNumber())
         {
-            
+            if (numberStreak == numberToGiveLife - 1 && playerLives < maxLifes)
+            {
+                GiveLife();
+            }
+            numberStreakWithoutMiss = (numberStreakWithoutMiss + 1) % numberToGiveLife;
 
             //Play pick up sound
-           // AkSoundEngine.PostEvent("correctNumberPickup", this.gameObject);
+            AkSoundEngine.PostEvent("correctNumberPickup", this.gameObject);
             
             lastNumber = newNum;
             numberStreak++;
-            if (lastNumber == 99)
-                completedNumberCycle = true;
-
-            // give extra life
-            if (numberStreak >= numberToGiveLife && playerLives < maxLifes)
-            {
-                GiveLife();
-                numberStreak = 0;
-            }
-
             //Reset the amount of missed correct numbers.
             missedNumbers = 0;
 
-            // update speed for first number cycle 0-99
-            if (!completedNumberCycle)
-            {
-                int speedLevel = (lastNumber / numbersPerSpeedIncrease);
-                currentNumberSpeed = initialSpeed + initialSpeed * (speedLevel * speedMultiplierIncrease);
-            }
+            // update speed
+            int speedLevel = (lastNumber / numbersPerSpeedIncrease);
+            currentNumberSpeed = initialSpeed + initialSpeed * (speedLevel * speedMultiplierIncrease);
 
             //update score
             currentScoreMultiplier = 1 + (numberStreak / numbersPerScoreIncrease) * scoreMultiplierIncrease;
@@ -146,7 +129,7 @@ public class GameState : MonoBehaviour
             currentScoreMultiplier = 1;
 
             //Play pick up sound
-          //  AkSoundEngine.PostEvent("wrongNumberPickup", this.gameObject);
+            AkSoundEngine.PostEvent("wrongNumberPickup", this.gameObject);
 
             UIController._instance.UpdateMultiplier(currentScoreMultiplier);
             LoseLife();
@@ -208,11 +191,21 @@ public class GameState : MonoBehaviour
             UIController._instance.UpdateMultiplier(currentScoreMultiplier);
 
 
-            if (missedNumbers >= numberToLoseLife)
+            if (missedNumbers >= missedNumbersThreshold)
             {
                 missedNumbers = 0;
                 LoseLife();
             }
         }
+    }
+
+    public float GetTimeSinceGameStarted()
+    {
+        return timeSinceGameStarted;
+    }
+
+    public void ResetTimeSinceGameStarted()
+    {
+        timeSinceGameStarted = Time.time;
     }
 }
