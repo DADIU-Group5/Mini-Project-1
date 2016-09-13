@@ -220,6 +220,7 @@ public class Cart : MonoBehaviour {
         }
 
         spawner.Spawn(currentPosition);
+        AkSoundEngine.PostEvent("truckJump", this.gameObject);
         AkSoundEngine.PostEvent("numberDrop", this.gameObject);
 
         nextMove += cartMoveTimer;
