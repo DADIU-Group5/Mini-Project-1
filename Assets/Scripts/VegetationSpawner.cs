@@ -17,7 +17,12 @@ public class VegetationSpawner : MonoBehaviour {
 
     public void SpawnObject()
     {
-        GameObject vegetation = bushes[Random.Range(0, bushes.Length)];
+        GameObject vegetation;
+        if (Random.Range(0,4) < 1)
+        {
+           vegetation = bushes[0];
+        } else
+            vegetation = bushes[1];
 
         float xCoord = Random.Range(7, 16);
         if (Random.Range(0,2) == 1)
