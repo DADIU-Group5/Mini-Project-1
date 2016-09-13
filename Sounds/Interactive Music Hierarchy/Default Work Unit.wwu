@@ -230,6 +230,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<MusicSegment Name="stilhed 1 takt" ID="{A34B980D-D597-458E-8640-0E547A5F6AC1}" ShortID="848732554">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="4864.86486486487"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
@@ -280,7 +283,7 @@
 										<MusicCue Name="Exit Cue" ID="{BFCBBECA-23DD-4A1C-8063-3585F351D9D2}">
 											<PropertyList>
 												<Property Name="CueType" Type="int16" Value="1"/>
-												<Property Name="TimeMs" Type="Real64" Value="2162.16666666667"/>
+												<Property Name="TimeMs" Type="Real64" Value="4324.32432432432"/>
 											</PropertyList>
 										</MusicCue>
 									</CueList>
@@ -694,6 +697,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<MusicSegment Name="stilhed 1 takt" ID="{C6C42F3B-BF43-43EE-86E8-6BFF19346A5E}" ShortID="688503658">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="5348.60734463277"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
@@ -747,7 +753,7 @@
 										<MusicCue Name="Exit Cue" ID="{19592C57-6A20-4894-A475-9F25F4E49D2E}">
 											<PropertyList>
 												<Property Name="CueType" Type="int16" Value="1"/>
-												<Property Name="TimeMs" Type="Real64" Value="2162.16666666667"/>
+												<Property Name="TimeMs" Type="Real64" Value="4324.32432432432"/>
 											</PropertyList>
 										</MusicCue>
 									</CueList>
@@ -1160,6 +1166,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<MusicSegment Name="stilhed 1 takt" ID="{77CDF684-3A5B-4011-9439-C43BDFD96448}" ShortID="769699275">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="5135.13513513513"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
@@ -1213,7 +1222,7 @@
 										<MusicCue Name="Exit Cue" ID="{B57402D1-974C-4E2D-A143-AE71AB7DCDF3}">
 											<PropertyList>
 												<Property Name="CueType" Type="int16" Value="1"/>
-												<Property Name="TimeMs" Type="Real64" Value="2162.16666666667"/>
+												<Property Name="TimeMs" Type="Real64" Value="4324.32432432432"/>
 											</PropertyList>
 										</MusicCue>
 									</CueList>
@@ -1525,6 +1534,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<MusicSegment Name="stilhed 1 takt" ID="{83887BDC-B5C1-4141-85CD-5D68E156C92D}" ShortID="396852038">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="5135.13513513513"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
@@ -1578,7 +1590,7 @@
 										<MusicCue Name="Exit Cue" ID="{D913648A-13A2-4E60-9374-7E8746818E63}">
 											<PropertyList>
 												<Property Name="CueType" Type="int16" Value="1"/>
-												<Property Name="TimeMs" Type="Real64" Value="2162.16666666667"/>
+												<Property Name="TimeMs" Type="Real64" Value="4324.32432432432"/>
 											</PropertyList>
 										</MusicCue>
 									</CueList>
@@ -2659,6 +2671,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<MusicSegment Name="stilhed 1 takt" ID="{8CC91A9C-C28C-4804-97C0-2BF7E3A576ED}" ShortID="404156066">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="5270.27027027027"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
@@ -2712,7 +2727,7 @@
 										<MusicCue Name="Exit Cue" ID="{C7B74E7E-97AE-4D1C-8F9A-36BD33073B74}">
 											<PropertyList>
 												<Property Name="CueType" Type="int16" Value="1"/>
-												<Property Name="TimeMs" Type="Real64" Value="2162.16666666667"/>
+												<Property Name="TimeMs" Type="Real64" Value="4324.32432432432"/>
 											</PropertyList>
 										</MusicCue>
 									</CueList>
@@ -3022,6 +3037,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<MusicSegment Name="stilhed 1 takt" ID="{4E5BEC6C-F2E7-4E78-952E-76B8C93DFC49}" ShortID="80814710">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="4919.22881355932"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
@@ -3075,7 +3093,7 @@
 										<MusicCue Name="Exit Cue" ID="{776FF369-8DE3-48E6-8FAA-B8D394A20B41}">
 											<PropertyList>
 												<Property Name="CueType" Type="int16" Value="1"/>
-												<Property Name="TimeMs" Type="Real64" Value="2162.16666666667"/>
+												<Property Name="TimeMs" Type="Real64" Value="4324.32432432432"/>
 											</PropertyList>
 										</MusicCue>
 									</CueList>
@@ -3377,6 +3395,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<MusicSegment Name="stilhed 1 takt" ID="{67B5F933-6DDF-4A1A-B920-245D3A8B304B}" ShortID="47452756">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="5342.95762711864"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
@@ -3430,7 +3451,7 @@
 										<MusicCue Name="Exit Cue" ID="{1501175F-36DF-45E9-BC76-526CD6DCF2E8}">
 											<PropertyList>
 												<Property Name="CueType" Type="int16" Value="1"/>
-												<Property Name="TimeMs" Type="Real64" Value="2162.16666666667"/>
+												<Property Name="TimeMs" Type="Real64" Value="4324.32432432432"/>
 											</PropertyList>
 										</MusicCue>
 									</CueList>
@@ -3732,6 +3753,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<MusicSegment Name="stilhed 1 takt" ID="{DAD2B4D9-F6C7-419D-B219-AFDCDEA94F60}" ShortID="286895826">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="5071.77118644068"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
@@ -3785,7 +3809,7 @@
 										<MusicCue Name="Exit Cue" ID="{FE735052-B36D-48D0-AEDD-F6C433638D54}">
 											<PropertyList>
 												<Property Name="CueType" Type="int16" Value="1"/>
-												<Property Name="TimeMs" Type="Real64" Value="2162.16666666667"/>
+												<Property Name="TimeMs" Type="Real64" Value="4324.32432432432"/>
 											</PropertyList>
 										</MusicCue>
 									</CueList>
