@@ -101,6 +101,7 @@ public class UIController : MonoBehaviour {
     {
         Time.timeScale = 0;
         playerMove.enabled = false;
+        AkSoundEngine.Suspend(true);
     }
 
     /// <summary>
@@ -115,6 +116,8 @@ public class UIController : MonoBehaviour {
 
     public void DisplayLossScreen()
     {
+        // stop all sounds
+        AkSoundEngine.StopAll();
         losePanel.gameObject.SetActive(true);
         playerMove.enabled = false;
         RotatingWheel._instance.StopRotate();
@@ -145,6 +148,9 @@ public class UIController : MonoBehaviour {
                 countingDown = false;
                 unpauseCountdown.gameObject.SetActive(false);
                 playerMove.enabled = true;
+
+                // resume sound
+                AkSoundEngine.WakeupFromSuspend();
             }
         }
     }
