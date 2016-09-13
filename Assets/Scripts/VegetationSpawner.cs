@@ -52,7 +52,7 @@ public class VegetationSpawner : MonoBehaviour {
     }
 
     public void StartVegetation()
-    {
+    {/*
         int numberOfPoints = 10;
         Vector3[] points = new Vector3[10];
         int i = 0;
@@ -63,7 +63,7 @@ public class VegetationSpawner : MonoBehaviour {
             {
                 points[i] = test;
                 i++;
-            }
+            }*/
         }
 
         for (int k = 0; k < numberOfPoints; k++)
