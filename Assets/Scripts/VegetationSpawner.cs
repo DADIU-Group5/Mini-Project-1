@@ -50,6 +50,24 @@ public class VegetationSpawner : MonoBehaviour {
         }
     }
 
+    public void StartVegetation()
+    {
+        int numberOfPoints = 10;
+        Vector3[] points = new Vector3[10];
+        int i = 0;
+        while (i < 9)
+        {
+            Vector3 test = wheel.GetComponent<Mesh>().vertices[Random.Range(0, wheel.GetComponent<Mesh>().vertices.Length)];
+            if (test.z < 85 && test.z > -10 && test.y < 216 && test.y > 210)
+            {
+                points[i] = test;
+                i++;
+            }
+        }
+        //Vector3 test = wheel.GetComponent<Mesh>().vertices[0];
+
+    }
+
     public void Vegetation()
     {
         spawnTime = spawnTime / numberSpeed;
