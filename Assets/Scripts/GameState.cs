@@ -145,6 +145,9 @@ public class GameState : MonoBehaviour
             currentScoreMultiplier = 1 + (numberStreak / numbersPerScoreIncrease) * scoreMultiplierIncrease;
             UIController._instance.UpdateScore((int)score);
             UIController._instance.UpdateMultiplierUp(currentScoreMultiplier);
+
+            // pump music
+            SoundEngine._instance.MoveMusicToNextLevel(speedLevel);
         }
         else
         {
