@@ -25,8 +25,11 @@
 						</Effect>
 						<Effect Name="Dialog_Leveler_Soft" ID="{9C1D0FCF-896E-4739-A8E8-B1E908F51CE6}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
 							<PropertyList>
-								<Property Name="Ratio" Type="Real32" Value="3"/>
-								<Property Name="Threshold" Type="Real32" Value="-20"/>
+								<Property Name="AttackTime" Type="Real32" Value="0.11"/>
+								<Property Name="OutputGain" Type="Real32" Value="2.7"/>
+								<Property Name="Ratio" Type="Real32" Value="12.3"/>
+								<Property Name="ReleaseTime" Type="Real32" Value="0.24"/>
+								<Property Name="Threshold" Type="Real32" Value="-53.7"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Dialog_Leveler_Hard" ID="{865FB36F-8717-4D30-AD05-14E56375CD40}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
@@ -100,8 +103,9 @@
 					<ChildrenList>
 						<Effect Name="Light_Expander" ID="{C7E71A3B-745F-47B0-8F31-276DD413F83C}" PluginName="Wwise Expander" CompanyID="0" PluginID="109" PluginType="3">
 							<PropertyList>
-								<Property Name="Ratio" Type="Real32" Value="1.5"/>
-								<Property Name="Threshold" Type="Real32" Value="0"/>
+								<Property Name="OutputGain" Type="Real32" Value="5"/>
+								<Property Name="Ratio" Type="Real32" Value="1.1"/>
+								<Property Name="Threshold" Type="Real32" Value="-15"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Noise_Gate_Fast_Attack" ID="{747A6B61-E953-474C-8227-672C884DA616}" PluginName="Wwise Expander" CompanyID="0" PluginID="109" PluginType="3">
