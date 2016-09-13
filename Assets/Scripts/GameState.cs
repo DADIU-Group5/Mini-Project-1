@@ -245,6 +245,11 @@ public class GameState : MonoBehaviour
         gameOver = b;
     }
 
+    public bool GetGameOver()
+    {
+        return gameOver;
+    }
+
     public void ResetTimeSinceGameStarted()
     {
         timeSinceGameStarted = Time.timeSinceLevelLoad;

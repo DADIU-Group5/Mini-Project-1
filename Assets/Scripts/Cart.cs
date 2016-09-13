@@ -136,6 +136,7 @@ public class Cart : MonoBehaviour {
             }
         }
 
+
         //update the next number.
         if (GameState._instance.lastNumber != lastNumber)
         {
@@ -167,6 +168,12 @@ public class Cart : MonoBehaviour {
                 numbers[i] = digit;
             }
 
+        }
+
+        //On loss the cart jumps very far down, this makes sure it does not.
+        if (GameState._instance.GetGameOver() == true)
+        {
+            return;
         }
 
         if (GameState._instance.GetTimeSinceGameStarted() < jumpEndTime)
