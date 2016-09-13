@@ -54,7 +54,7 @@ public class GameState : MonoBehaviour
     private float currentScoreMultiplier = 1;
     private int numberStreakWithoutMiss = 0;
 
-    private float timeSinceGameStarted;
+    private float timeSinceGameStarted = 0;
 
     // Use this for initialization.
     void Awake () {
@@ -72,7 +72,7 @@ public class GameState : MonoBehaviour
 
     private void Init()
     {
-        timeSinceGameStarted = Time.time;
+        ResetTimeSinceGameStarted();
         gameOver = false;
         currentNumberSpeed = initialSpeed;
         RotatingWheel._instance.ChangeWheelSpeed(currentNumberSpeed);
@@ -220,11 +220,11 @@ public class GameState : MonoBehaviour
 
     public float GetTimeSinceGameStarted()
     {
-        return timeSinceGameStarted;
+        return Time.timeSinceLevelLoad - timeSinceGameStarted;
     }
 
     public void ResetTimeSinceGameStarted()
     {
-        timeSinceGameStarted = Time.time;
+        timeSinceGameStarted = Time.timeSinceLevelLoad;
     }
 }
