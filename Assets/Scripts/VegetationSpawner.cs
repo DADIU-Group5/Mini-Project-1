@@ -22,7 +22,7 @@ public class VegetationSpawner : MonoBehaviour {
         {
            vegetation = bushes[0];
         } else
-            vegetation = bushes[1];
+           vegetation = bushes[1]; //favours bushes[1] by request
 
         float xCoord = Random.Range(7, 16);
         if (Random.Range(0,2) == 1)
@@ -53,11 +53,10 @@ public class VegetationSpawner : MonoBehaviour {
     public void Vegetation()
     {
         spawnTime = spawnTime / numberSpeed;
-        if (spawnTime < 0.5f)
-        {
-            spawnTime = 0.5f;
-        }
-        Debug.Log("spawntime: " + spawnTime);
+
+        //clamping spawntime between 0.1f and 5.0f
+        spawnTime = Mathf.Clamp(spawnTime, 0.1f, 5.0f);
+
         InvokeRepeating("SpawnObject", 0f, spawnTime);
     }
 }
