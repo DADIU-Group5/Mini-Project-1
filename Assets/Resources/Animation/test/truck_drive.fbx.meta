@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 06c76f58764c77b449ceade1a736b854
 timeCreated: 1473755525
+=======
+guid: 6919f50f7635e72479c4e8e9b7f8cffc
+timeCreated: 1473755015
+>>>>>>> 764687268ffd48689f6c29c9880a4fae1c1e50c6
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
@@ -151,7 +156,170 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+<<<<<<< HEAD
     clipAnimations: []
+=======
+    clipAnimations:
+    - serializedVersion: 16
+      name: drive
+      takeName: drive
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: grp_control
+        weight: 1
+      - path: grp_control/cnt_master_01
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_drive_back_01
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_drive_front_01
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_pelvis_01
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_pelvis_01/cnt_animalBaseControl_01
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_pelvis_01/cnt_animalBaseControl_01/cnt_anim_a_01
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_pelvis_01/cnt_animalBaseControl_01/cnt_anim_a_01/cnt_anim_a_02
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_pelvis_01/cnt_animalBaseControl_01/cnt_anim_b_01
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_pelvis_01/cnt_animalBaseControl_01/cnt_anim_b_01/cnt_anim_b_02
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_pelvis_01/cnt_animalBaseControl_01/cnt_anim_c_01
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_pelvis_01/cnt_animalBaseControl_01/cnt_anim_c_01/cnt_anim_c_02
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_pelvis_01/cnt_animalBaseControl_01/cnt_anim_d_01
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_pelvis_01/cnt_animalBaseControl_01/cnt_anim_d_01/cnt_anim_d_02
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_pelvis_01/cnt_animalBaseControl_01/cnt_anim_e_01
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_pelvis_01/cnt_animalBaseControl_01/cnt_anim_e_01/cnt_anim_e_02
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_pelvis_01/cnt_animalBaseControl_01/cnt_anim_f_01
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_pelvis_01/cnt_animalBaseControl_01/cnt_anim_f_01/cnt_anim_f_02
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_pelvis_01/cnt_animalBaseControl_01/cnt_anim_g_01
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_pelvis_01/cnt_animalBaseControl_01/cnt_anim_g_01/cnt_anim_g_02
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_pelvis_01/cnt_animalBaseControl_01/cnt_anim_h_01
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_pelvis_01/cnt_animalBaseControl_01/cnt_anim_h_01/cnt_anim_h_02
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_pelvis_01/cnt_animalBaseControl_01/cnt_anim_i_01
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_pelvis_01/cnt_animalBaseControl_01/cnt_anim_i_01/cnt_anim_i_02
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_pelvis_01/cnt_chest_01
+        weight: 1
+      - path: grp_control/cnt_master_01/cnt_turn_front_01
+        weight: 1
+      - path: grp_geo
+        weight: 1
+      - path: grp_geo/truck5
+        weight: 1
+      - path: grp_rig
+        weight: 1
+      - path: grp_rig/root_01
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_chest_01
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_chest_01/bind_back_01
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_a_01
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_a_01/bind_animal_a_01
+          1
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_b_01
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_b_01/bind_animal_b_01
+          1
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_c_01
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_c_01/bind_animal_c_01
+          1
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_d_01
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_d_01/bind_animal_d_01
+          1
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_e_01
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_e_01/bind_animal_e_01
+          1
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_f_01
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_f_01/bind_animal_f_01
+          1
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_g_01
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_g_01/bind_animal_g_01
+          1
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_h_01
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_h_01/bind_animal_h_01
+          1
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_i_01
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_chest_01/bind_back_01/bind_animalBaseControl_01/bind_animal_i_01/bind_animal_i_01
+          1
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_hip_a_01
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_hip_a_01/bind_l_leg_a_01
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_hip_a_01/bind_l_leg_a_01/bind_l_hand_a_01
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_hip_a_01/bind_r_reg_a_01
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_hip_a_01/bind_r_reg_a_01/bind_r_hand_a_01
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_hip_b_01
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_hip_b_01/bind_l_leg_b_01
+        weight: 1
+      - path: grp_rig/root_01/bind_pelvis_01/bind_hip_b_01/bind_r_reg_b_01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+>>>>>>> 764687268ffd48689f6c29c9880a4fae1c1e50c6
     isReadable: 1
   meshes:
     lODScreenPercentages: []
