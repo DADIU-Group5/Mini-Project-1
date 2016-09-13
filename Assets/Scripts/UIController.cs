@@ -18,6 +18,8 @@ public class UIController : MonoBehaviour {
     public Text multiplier;
     public GameObject losePanel;
     public Text loseScreenStats;
+    public Disco rightLight;
+    public Disco leftLight;
 
     public PlayerMovement playerMove;
 
@@ -102,6 +104,8 @@ public class UIController : MonoBehaviour {
         Time.timeScale = 0;
         playerMove.enabled = false;
         AkSoundEngine.Suspend(true);
+        leftLight.Stop();
+        rightLight.Stop();
     }
 
     /// <summary>
@@ -127,6 +131,8 @@ public class UIController : MonoBehaviour {
             numbers[i].GetComponent<NumberMovement>().Stop();
         }
         loseScreenStats.text = "Highscore: " + PlayerPrefs.GetInt("HighScore") + "\n" + score.text + "\nHighest number: " + GameState._instance.GetNumber();
+        leftLight.Stop();
+        rightLight.Stop();
     }
 
     /// <summary>
@@ -151,6 +157,9 @@ public class UIController : MonoBehaviour {
 
                 // resume sound
                 AkSoundEngine.WakeupFromSuspend();
+
+                leftLight.Resume();
+                rightLight.Resume();
             }
         }
     }

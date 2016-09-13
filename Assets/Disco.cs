@@ -1,42 +1,58 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Disco : MonoBehaviour {
 
-    public float maxDistFromStart = 150;
-    public float averageTime = 2;
+    public Color[] colors;
+    public Image imageCol;
+    Color startCol;
+    int nextCol;
+    float timer;
+    public float changeTime = 2;
     public float timeDiff = 1;
+    float actTime;
+    bool stopped = false;
 
-    private Vector2 startPos;
-    private Vector2 lerpTo;
-    private Vector2 lerpFrom;
-    private bool lerping;
-    private float timer;
-    private float totalTime;
-
-    void Start()
-    {
-        startPos = transform.position;
-        Debug.Log(startPos);
-    }
-
+	// Use this for initialization
+	void Start () {
+        startCol = imageCol.color;
+	}
+	
 	// Update is called once per frame
 	void Update () {
-         timer -= Time.deltaTime;
-         transform.position = Vector2.Lerp(lerpFrom, lerpTo, (timer / totalTime));
-         if(timer <= 0)
-         {
-             NewLerpPos();
-            this.enabled = false;
-         }
-        //transform.position += new Vector3(Random.Range(-20, 20), Random.Range(-20, 20),0);
+        if (stopped)
+        {
+            return;
+        }
+        timer += Time.deltaTime*GameState._instance.GetMultiplier();
+        if(timer >= actTime)
+        {
+            ChooseNewColor();
+        }
+        else
+        {
+            imageCol.color = Color.Lerp(startCol, colors[nextCol], timer / changeTime);
+        }
 	}
 
-    void NewLerpPos()
+    void ChooseNewColor()
     {
-        lerpFrom = transform.position;
-        lerpTo = new Vector2(startPos.x + Random.Range(-maxDistFromStart, maxDistFromStart), startPos.y + Random.Range(-maxDistFromStart, maxDistFromStart));
-        timer = averageTime + Random.Range(-timeDiff, timeDiff);
-        totalTime = timer;
+        startCol = imageCol.color;
+        nextCol = Random.Range(0, colors.Length);
+        actTime = changeTime + Random.Range(-timeDiff, timeDiff);
+        timer = 0;
+    }
+
+    public void Stop()
+    {
+        stopped = true;
+        GetComponent<Animator>().enabled = false;
+    }
+
+    public void Resume()
+    {
+        stopped = false;
+        GetComponent<Animator>().enabled = true;
     }
 }

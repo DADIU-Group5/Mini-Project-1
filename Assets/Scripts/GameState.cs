@@ -104,6 +104,11 @@ public class GameState : MonoBehaviour
         return laneWidth;
     }
 
+    public float GetMultiplier()
+    {
+        return currentScoreMultiplier;
+    }
+
     public void PlayerGotNumber(int newNum)
     {
         // Determine if the right number was caught.
