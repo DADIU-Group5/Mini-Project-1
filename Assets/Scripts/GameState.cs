@@ -44,6 +44,7 @@ public class GameState : MonoBehaviour
     public Animator playerAnimator;
 
     // Private fields.
+    private bool gameOver = false;
     private float score;
     private int missedNumbers;
     private int numberStreak;
@@ -72,6 +73,7 @@ public class GameState : MonoBehaviour
     private void Init()
     {
         timeSinceGameStarted = Time.time;
+        gameOver = false;
         currentNumberSpeed = initialSpeed;
         RotatingWheel._instance.ChangeWheelSpeed(currentNumberSpeed);
         playerLives = maxLifes;
@@ -80,8 +82,11 @@ public class GameState : MonoBehaviour
     private void Update()
     {
         // Update score every tick by the number-speed.
-        score += Time.deltaTime * currentNumberSpeed;
-        UIController._instance.UpdateScore((int)score);
+        if (!gameOver)
+        {
+            score += Time.deltaTime * currentNumberSpeed;
+            UIController._instance.UpdateScore((int)score);
+        }
     }
 
     public int GetNumber()
@@ -170,6 +175,7 @@ public class GameState : MonoBehaviour
         if (playerLives <= 0 && !unbeatable)
         {
             // Game over.
+            gameOver = true;
 
             // Animate fall.
             playerAnimator.SetBool("Fall", true);
