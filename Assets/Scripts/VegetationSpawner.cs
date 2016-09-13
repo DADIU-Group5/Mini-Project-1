@@ -59,7 +59,8 @@ public class VegetationSpawner : MonoBehaviour {
     }
 
     public void StartVegetation()
-    {/*
+    {
+        /*int x = (int)Mathf.Round(wheel.transform.position.y + wheel.transform.rad )
         int numberOfPoints = 10;
         Vector3[] points = new Vector3[10];
         int i = 0;
