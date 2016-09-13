@@ -32,6 +32,21 @@ namespace AK
         static const AkUniqueID WRONGNUMBERPICKUP = 2318428819U;
     } // namespace EVENTS
 
+    namespace STATES
+    {
+        namespace PAUSE
+        {
+            static const AkUniqueID GROUP = 3092587493U;
+
+            namespace STATE
+            {
+                static const AkUniqueID PAUSE = 3092587493U;
+                static const AkUniqueID RESUMED = 3730495584U;
+            } // namespace STATE
+        } // namespace PAUSE
+
+    } // namespace STATES
+
     namespace SWITCHES
     {
         namespace BASS
