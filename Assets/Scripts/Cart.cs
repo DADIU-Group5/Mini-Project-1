@@ -16,8 +16,11 @@ public class Cart : MonoBehaviour {
     public AnimationCurve curve;
     //Time it takes to move between the spots.
     public float movementTime = 1f;
-    //number object to show next number.
-    public GameObject numberObject;
+
+    private double hornSoundTimer = 2.0;
+    private double nextHorn;
+    private double animalsPartySoundTimer = 3.0;
+    private double nextCheer;
 
     float LaneWidth= 4.0f;
 
@@ -34,20 +37,47 @@ public class Cart : MonoBehaviour {
     private Vector3 startZ;
     private float timer;
     private bool finalMove = false;
-    private int lastNumber = -1;
-    private GameObject[] numbers;
-    private GameObject cartNumber;
 
     void Start()
     {
         spawner = GetComponent<Spawner>();
         LaneWidth = GameState._instance.GetLaneWidth();
-        cartNumber = gameObject.transform.Find("CartNumber").gameObject;
-        numbers = new GameObject[1]; 
+
+        AkSoundEngine.PostEvent("jungleAmbience", this.gameObject);
+        AkSoundEngine.PostEvent("truckEngine", this.gameObject);
+
+        System.Random random = new System.Random();
+        double rnd = random.NextDouble();
+
+        nextHorn = Time.timeSinceLevelLoad + rnd;
+
+        rnd = random.NextDouble();
+
+        nextCheer = Time.timeSinceLevelLoad + rnd;
     }
 
     void Update()
     {
+        if (nextHorn <= Time.timeSinceLevelLoad)
+        {
+            System.Random random = new System.Random();
+            double rnd = random.NextDouble() * 10;
+
+            nextHorn = Time.timeSinceLevelLoad + rnd;
+
+            AkSoundEngine.PostEvent("truckHonk", this.gameObject);
+        }
+
+        if (nextCheer <= Time.timeSinceLevelLoad)
+        {
+            System.Random random = new System.Random();
+            double rnd = random.NextDouble() * 10;
+
+            nextCheer = Time.timeSinceLevelLoad + rnd;
+
+            AkSoundEngine.PostEvent("partyAnimals", this.gameObject);
+        }
+        
         currentPosition = gameObject.transform.position;
         if (nextMove <= Time.timeSinceLevelLoad)
         {
@@ -83,35 +113,6 @@ public class Cart : MonoBehaviour {
                 temp.x = transform.position.x;
                 transform.position = temp;
             }
-        }
-
-        //update the next number.
-        if (GameState._instance.lastNumber != lastNumber)
-        {
-            lastNumber = GameState._instance.lastNumber;
-            foreach (GameObject gm in numbers)
-            {
-                DestroyImmediate(gm, true);
-            }
-
-            string Digits = (lastNumber + 1).ToString();
-
-            numbers = new GameObject[Digits.Length];
-            
-            float distance = -0.75f;
-
-            for (int i = 0; i < Digits.Length; i++)
-            {
-                float addValue = 0;
-                if (Digits.Length > 1 && i == 0)
-                {
-                    addValue = distance;
-                }
-
-                GameObject digit = (GameObject)Instantiate(Resources.Load("Textures/numbers_" + Digits[i]), transform.position + new Vector3(.25f, 0, 0) + (transform.right * addValue), transform.rotation);
-                digit.transform.SetParent(cartNumber.transform);
-            }
-            
         }
     }
 

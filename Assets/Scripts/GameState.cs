@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 
-[RequireComponent(typeof(AkBank))]
 public class GameState : MonoBehaviour
 {
     // singleton
@@ -35,12 +34,15 @@ public class GameState : MonoBehaviour
     [Range(1f, 3f)]
     public int missedNumbersThreshold = 5;
     public int numberToGiveLife = 6;
-    public int lastNumber;
 
     public Cart cart;
 
+    // For changing the player animation
+    public Animator playerAnimator;
+
     // private fields
     private float score;
+    private int lastNumber;
     private int missedNumbers;
     private int numberStreak;
     private float currentNumberSpeed;
@@ -55,6 +57,9 @@ public class GameState : MonoBehaviour
         {
             _instance = this;
             Init();
+
+            //Play footstep sound
+            AkSoundEngine.PostEvent("footstep", this.gameObject);
         }
         else
         {
@@ -99,8 +104,10 @@ public class GameState : MonoBehaviour
                 GiveLife();
             }
             numberStreakWithoutMiss = (numberStreakWithoutMiss + 1) % numberToGiveLife;
-            
 
+            //Play pick up sound
+            AkSoundEngine.PostEvent("correctNumberPickup", this.gameObject);
+            
             lastNumber = newNum;
             numberStreak++;
             //Reset the amount of missed correct numbers.
@@ -115,19 +122,16 @@ public class GameState : MonoBehaviour
             score += scorePerNumber * currentScoreMultiplier;
             UIController._instance.UpdateScore((int)score);
             UIController._instance.UpdateMultiplier(currentScoreMultiplier);
-
-            // play correct number sound
-            AkSoundEngine.PostEvent("correctNumberPickup", this.gameObject);
         }
         else
         {
             numberStreak = 0;
             currentScoreMultiplier = 1;
-            UIController._instance.UpdateMultiplier(currentScoreMultiplier);
 
-            // play wrong number sound
+            //Play pick up sound
             AkSoundEngine.PostEvent("wrongNumberPickup", this.gameObject);
 
+            UIController._instance.UpdateMultiplier(currentScoreMultiplier);
             LoseLife();
         }
         UIController._instance.UpdateNextNumber(GetNextNumber());
@@ -137,6 +141,10 @@ public class GameState : MonoBehaviour
     public void LoseLife()
     {
         playerLives--;
+
+        // Animate stumble
+        playerAnimator.SetTrigger("Stumble");
+
         //Moves the cart further away from the player.
         cart.MoveCartAway(playerLives);
         UIController._instance.UpdateLives(playerLives);
@@ -144,6 +152,9 @@ public class GameState : MonoBehaviour
         if (playerLives <= 0 && !unbeatable)
         {
             // game over
+
+            // Animate fall
+            playerAnimator.SetBool("Fall", true);
 
             // update highscore if we beat it
             if (!PlayerPrefs.HasKey("HighScore") || PlayerPrefs.GetInt("HighScore") < score)
@@ -160,6 +171,8 @@ public class GameState : MonoBehaviour
 
     public void GiveLife()
     {
+        // Animate player speeding up to go nearer the cart
+        playerAnimator.SetBool("Sprint", true);
         playerLives++;
         //TODO Moves the cart closer to the player.
         cart.MoveCartAway(playerLives);

@@ -5,7 +5,7 @@ public class RotatingWheel : MonoBehaviour {
 
     public static RotatingWheel _instance;
 
-    float speed = 4.5f; //3.5f seems to match 12 speed, 4.5 seems to match 17.
+    float speed = 3.5f; // counts for 10f in number speed
 
     void Awake()
     {

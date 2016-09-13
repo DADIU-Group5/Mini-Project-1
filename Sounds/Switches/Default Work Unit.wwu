@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{EB1A5031-1CD5-4346-A246-79498B18CC90}" SchemaVersion="72">
+<WwiseDocument Type="WorkUnit" ID="{C28EB939-EF25-4D59-A07C-00788980F2C7}" SchemaVersion="72">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{EB1A5031-1CD5-4346-A246-79498B18CC90}" PersistMode="Standalone">
+		<WorkUnit Name="Default Work Unit" ID="{C28EB939-EF25-4D59-A07C-00788980F2C7}" PersistMode="Standalone">
 			<ChildrenList>
-				<SwitchGroup Name="musik" ID="{20627559-D058-49A8-B630-11B50C274CAB}">
+				<SwitchGroup Name="fodtrin" ID="{D4275CDE-B19C-4922-943C-BB03A7151FE7}">
 					<ChildrenList>
-						<Switch Name="musik1" ID="{EAF54B9A-6D1A-4090-933E-CAF589E969F3}"/>
-						<Switch Name="musik2" ID="{4FE25901-AFDC-4487-9D61-17FB10BB91D2}"/>
+						<Switch Name="ymer" ID="{E8EBD2FD-B73B-411A-AFCF-C2743918BC05}"/>
+						<Switch Name="gulv" ID="{2C6AE20C-49DA-4C83-A77A-DA6E95FCD9E8}"/>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>
