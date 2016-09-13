@@ -3,10 +3,11 @@
 	<Switches>
 		<WorkUnit Name="Default Work Unit" ID="{EB1A5031-1CD5-4346-A246-79498B18CC90}" PersistMode="Standalone">
 			<ChildrenList>
-				<SwitchGroup Name="musik" ID="{20627559-D058-49A8-B630-11B50C274CAB}">
+				<SwitchGroup Name="bongo1" ID="{20627559-D058-49A8-B630-11B50C274CAB}">
 					<ChildrenList>
-						<Switch Name="musik1" ID="{EAF54B9A-6D1A-4090-933E-CAF589E969F3}"/>
-						<Switch Name="musik2" ID="{4FE25901-AFDC-4487-9D61-17FB10BB91D2}"/>
+						<Switch Name="rhythm1" ID="{EAF54B9A-6D1A-4090-933E-CAF589E969F3}"/>
+						<Switch Name="rhytm2" ID="{4FE25901-AFDC-4487-9D61-17FB10BB91D2}"/>
+						<Switch Name="silence" ID="{479D7B2B-8EC6-440A-A6FE-5D316A8E890A}"/>
 					</ChildrenList>
 				</SwitchGroup>
 				<SwitchGroup Name="drums" ID="{8BDFE052-F42C-4305-A7A6-2368A3061551}">
@@ -14,6 +15,59 @@
 						<Switch Name="beat1" ID="{B0759937-51B2-4AF5-80AC-0330567C15FE}"/>
 						<Switch Name="beat2" ID="{9E611F33-B8DC-48CA-8018-B8F2204633A5}"/>
 						<Switch Name="beat3" ID="{9C84CBAD-CCC4-44DD-BD7A-049D869C2178}"/>
+						<Switch Name="silence" ID="{B8330FE0-7871-4A3A-B414-5AE6E210988C}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="guitar1" ID="{CFB40D6F-E0D5-4A8F-B60C-463A08BDC878}">
+					<ChildrenList>
+						<Switch Name="riff1" ID="{9BE55A04-C6D7-499C-AD92-3BB3CECC1021}"/>
+						<Switch Name="riff2" ID="{EEF1AFED-2B7C-48FC-B592-DBD6D890FA95}"/>
+						<Switch Name="lead" ID="{B926CE7D-B7A0-4631-9759-2F080A11DB75}"/>
+						<Switch Name="silence" ID="{74B0D22D-4DC9-483A-9F44-751894137D3B}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="guitar2" ID="{57661C8F-A646-4E17-AC21-356ACD4D881D}">
+					<ChildrenList>
+						<Switch Name="riff1" ID="{CE0BF1DC-AD57-4E4F-B526-32AB4F493886}"/>
+						<Switch Name="riff2" ID="{8EC61F3F-1FCE-4F20-BF08-D9F25FEE870A}"/>
+						<Switch Name="silence" ID="{386EA520-A6EC-4BC1-8B86-D3C7BA1C76F5}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="bongo2" ID="{AA3180EA-8A46-4BDE-8FEE-499EA20CDC72}">
+					<ChildrenList>
+						<Switch Name="rhythm1" ID="{71F428B9-1699-4DE2-BEAB-A25BBEF3B059}"/>
+						<Switch Name="rhytm2" ID="{60E2AE58-38EB-435A-83F9-F64040CB02F4}"/>
+						<Switch Name="rhytm3" ID="{54EF544F-A33F-4A7A-B43A-56D44C826875}"/>
+						<Switch Name="silence" ID="{5F437E1D-150F-474B-B67B-1511D6350E21}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="bass" ID="{2660FA80-F79D-4DAB-9932-3437D8D11AEB}">
+					<ChildrenList>
+						<Switch Name="riff1" ID="{447543EC-1A2A-4D06-A263-A042FCEA6DAD}"/>
+						<Switch Name="riff2" ID="{01BDED36-80B5-45FC-B705-BAB6F8863F61}"/>
+						<Switch Name="riff3" ID="{97F614E0-8F21-445A-8FD6-D543C36B978B}"/>
+						<Switch Name="silence" ID="{659EB495-74BB-4F02-B9C2-FD0176665831}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="horns1" ID="{23AB3DE3-3D6C-4A45-A37C-16514EA1D313}">
+					<ChildrenList>
+						<Switch Name="segment1" ID="{38CE1832-C983-47FD-9A57-2AFD79285C13}"/>
+						<Switch Name="segment2" ID="{AA0FCCE8-2F3A-4A11-A98E-1A9C9B5ACD43}"/>
+						<Switch Name="silence" ID="{AEF8748E-1011-4199-AD27-06E23ACE494F}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="horns2" ID="{5C830BDC-4E49-4A22-A585-0990FEB2BE87}">
+					<ChildrenList>
+						<Switch Name="segment1" ID="{4AC19168-F45E-404D-AD58-8A0E83DF6AB5}"/>
+						<Switch Name="segment2" ID="{45A4388B-2505-4944-9E44-15729BF7334D}"/>
+						<Switch Name="silence" ID="{7B2D63EC-17F2-4D41-9DBE-B00828505982}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="horns3" ID="{19CFF09E-77B2-4F22-A804-84FAC386D473}">
+					<ChildrenList>
+						<Switch Name="segment1" ID="{67E4EC9C-A9ED-4E16-9575-FFD99C31A845}"/>
+						<Switch Name="segment2" ID="{FE36F34B-4C56-421E-8A04-83BE2CA3B823}"/>
+						<Switch Name="silence" ID="{FF2A349F-6315-472A-B9EB-852EDD6FCBBB}"/>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>
