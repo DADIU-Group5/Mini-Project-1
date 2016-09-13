@@ -37,6 +37,9 @@ public class Cart : MonoBehaviour {
     private Vector3 startZ;
     private float timer;
     private bool finalMove = false;
+    private GameObject[] numbers;
+    private GameObject cartNumber;
+    private int lastNumber = -1;
 
     void Start()
     {
@@ -54,6 +57,9 @@ public class Cart : MonoBehaviour {
         rnd = random.NextDouble();
 
         nextCheer = Time.timeSinceLevelLoad + rnd;
+
+        cartNumber = gameObject.transform.Find("CartNumber").gameObject;
+        numbers = new GameObject[1];
     }
 
     void Update()
@@ -113,6 +119,39 @@ public class Cart : MonoBehaviour {
                 temp.x = transform.position.x;
                 transform.position = temp;
             }
+        }
+
+        //update the next number.
+        if (GameState._instance.lastNumber != lastNumber)
+        {
+         //   Debug.Log()
+            lastNumber = GameState._instance.lastNumber;
+            foreach (GameObject gm in numbers)
+            {
+                DestroyImmediate(gm, true);
+            }
+
+            string Digits = (lastNumber + 1).ToString();
+
+            numbers = new GameObject[Digits.Length];
+
+            float distance = -0.75f;
+
+            for (int i = 0; i < Digits.Length; i++)
+            {
+                float addValue = 0;
+                if (Digits.Length > 1 && i == 0)
+                {
+                    addValue = distance/2;
+                }
+                else
+                    addValue = -distance/2;
+
+                GameObject digit = (GameObject)Instantiate(Resources.Load("Textures/numbers_" + Digits[i]), cartNumber.transform.position + new Vector3(.0f, 0, -0.5f) + (cartNumber.transform.right * addValue), cartNumber.transform.rotation);
+                digit.transform.SetParent(cartNumber.transform);
+                numbers[i] = digit;
+            }
+
         }
     }
 

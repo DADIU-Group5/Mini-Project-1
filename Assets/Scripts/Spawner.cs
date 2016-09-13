@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour {
     public Number numberPrefab;
 
     [Header("Throwing Animation")]
-    [Range(0, 15)]
+    [Range(-3, 15)]
     public float spawnZ = 11;
 
     [Range(0.1f, 5)]
