@@ -33,17 +33,26 @@ public class VegetationSpawner : MonoBehaviour {
 
     void Update()
     {
-        if (numberSpeed != GameState._instance.GetNumberSpeed())
+        if (GameState._instance.GetNumberSpeed() == 0f)
+        {
+            CancelInvoke();
+        }
+        else if (numberSpeed != GameState._instance.GetNumberSpeed())
         {
             CancelInvoke();
             numberSpeed = GameState._instance.GetNumberSpeed();
             Vegetation();
-        } 
+        }
     }
 
     public void Vegetation()
     {
         spawnTime = spawnTime / numberSpeed;
+        if (spawnTime < 0.5f)
+        {
+            spawnTime = 0.5f;
+        }
+        Debug.Log("spawntime: " + spawnTime);
         InvokeRepeating("SpawnObject", 0f, spawnTime);
     }
 }
