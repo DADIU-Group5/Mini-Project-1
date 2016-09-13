@@ -24,6 +24,7 @@ public class UIController : MonoBehaviour {
     private bool countingDown = false;
     private float countdown = 3;
     private DateTime countTo;
+    private Animator multiplierAnim;
 
     /// <summary>
     /// Makes it a singleton.
@@ -39,6 +40,7 @@ public class UIController : MonoBehaviour {
             Debug.LogError("There should not be 2 UIControllers, destroys the newly created UIController");
             Destroy(gameObject);
         }
+        multiplierAnim = multiplier.GetComponent<Animator>();
     }
 
     /// <summary>
@@ -74,7 +76,21 @@ public class UIController : MonoBehaviour {
     /// <param name="newMultiplier"></param>
     public void UpdateMultiplier(float newMultiplier)
     {
-        multiplier.gameObject.SetActive(true);   
+        Debug.Log("should not happen");
+        multiplier.gameObject.SetActive(true);
+        multiplierAnim.SetTrigger("Bigger");
+        multiplier.text = "X " + newMultiplier;
+    }
+
+    public void UpdateMultiplierUp(float newMultiplier)
+    {
+        multiplierAnim.SetTrigger("Bigger");
+        multiplier.text = "X " + newMultiplier;
+    }
+
+    public void UpdateMultiplierDown(float newMultiplier)
+    {
+        multiplierAnim.SetTrigger("Smaller");
         multiplier.text = "X " + newMultiplier;
     }
 
