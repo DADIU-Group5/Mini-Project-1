@@ -62,6 +62,13 @@
 						<Property Name="WetDryMix" Type="Real32" Value="1"/>
 					</PropertyList>
 				</Effect>
+				<Effect Name="master" ID="{8839B34A-8DCE-42B3-BD01-C986DD7B2C7A}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+					<PropertyList>
+						<Property Name="OutputGain" Type="Real32" Value="5"/>
+						<Property Name="Ratio" Type="Real32" Value="8"/>
+						<Property Name="Threshold" Type="Real32" Value="-12"/>
+					</PropertyList>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>
