@@ -62,6 +62,26 @@
 						<Property Name="WetDryMix" Type="Real32" Value="1"/>
 					</PropertyList>
 				</Effect>
+				<Effect Name="master" ID="{8839B34A-8DCE-42B3-BD01-C986DD7B2C7A}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+					<PropertyList>
+						<Property Name="OutputGain" Type="Real32" Value="3"/>
+						<Property Name="Ratio" Type="Real32" Value="8"/>
+						<Property Name="Threshold" Type="Real32" Value="-12"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="music" ID="{79517986-7AE4-4FBE-BFCC-B04BDBA10350}" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+					<PropertyList>
+						<Property Name="DelayLengthsMode" Type="int32" Value="1"/>
+						<Property Name="DelayTime2" Type="Real32" Value="23.5"/>
+						<Property Name="HFRatio" Type="Real32" Value="9"/>
+						<Property Name="ReverbTime" Type="Real32" Value="5"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Wwise_Parametric_EQ_05" ID="{EB55C468-C77A-4BF3-AC09-0CE248F61368}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="GainBand3" Type="Real32" Value="-16"/>
+					</PropertyList>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

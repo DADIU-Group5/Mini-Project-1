@@ -1,11 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 06c76f58764c77b449ceade1a736b854
-=======
 guid: 6919f50f7635e72479c4e8e9b7f8cffc
-timeCreated: 1473755015
-licenseType: Pro
->>>>>>> 99a71fbaa8a8273bb9e2e1dc90eca25da8a030f1
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
@@ -155,9 +149,6 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-<<<<<<< HEAD
-    clipAnimations: []
-=======
     clipAnimations:
     - serializedVersion: 16
       name: drive
@@ -318,7 +309,6 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 1
->>>>>>> 99a71fbaa8a8273bb9e2e1dc90eca25da8a030f1
     isReadable: 1
   meshes:
     lODScreenPercentages: []
