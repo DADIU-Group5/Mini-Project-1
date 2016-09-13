@@ -51,7 +51,7 @@ public class GameState : MonoBehaviour
     private float currentScoreMultiplier = 1;
     private int numberStreakWithoutMiss = 0;
 
-    private System.DateTime timeSinceGameStarted;
+    private float timeSinceGameStarted;
 
     // Use this for initialization
     void Awake () {
@@ -69,7 +69,7 @@ public class GameState : MonoBehaviour
 
     private void Init()
     {
-        timeSinceGameStarted = System.DateTime.Now;
+        timeSinceGameStarted = Time.time;
         currentNumberSpeed = initialSpeed;
         playerLives = maxLifes;
     }
@@ -199,13 +199,13 @@ public class GameState : MonoBehaviour
         }
     }
 
-    public int GetTimeSinceGameStarted()
+    public float GetTimeSinceGameStarted()
     {
-        return timeSinceGameStarted.CompareTo(System.DateTime.Now); 
+        return timeSinceGameStarted;
     }
 
     public void ResetTimeSinceGameStarted()
     {
-        timeSinceGameStarted = System.DateTime.Now;
+        timeSinceGameStarted = Time.time;
     }
 }
