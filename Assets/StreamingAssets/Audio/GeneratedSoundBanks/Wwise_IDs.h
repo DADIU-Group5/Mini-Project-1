@@ -16,6 +16,7 @@ namespace AK
         static const AkUniqueID CORRECTNUMBERPICKUP = 1078311194U;
         static const AkUniqueID FOOTSTEP = 1866025847U;
         static const AkUniqueID GAMEOVER = 4158285989U;
+        static const AkUniqueID JUMP = 3833651337U;
         static const AkUniqueID JUNGLEAMBIENCE = 2397454474U;
         static const AkUniqueID MENUPRESSSTART = 2736691391U;
         static const AkUniqueID MUSIC = 3991942870U;
@@ -26,6 +27,7 @@ namespace AK
         static const AkUniqueID TRUCKENDTURN = 678720620U;
         static const AkUniqueID TRUCKENGINE = 4294099536U;
         static const AkUniqueID TRUCKHONK = 1929616820U;
+        static const AkUniqueID TRUCKJUMP = 2600610582U;
         static const AkUniqueID TRUCKSTARTTURN = 582500891U;
         static const AkUniqueID WRONGNUMBERPICKUP = 2318428819U;
     } // namespace EVENTS
