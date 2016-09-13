@@ -59,7 +59,7 @@ public class GameState : MonoBehaviour
             Init();
 
             //Play footstep sound
-            AkSoundEngine.PostEvent("footstep", this.gameObject);
+           // AkSoundEngine.PostEvent("footstep", this.gameObject);
         }
         else
         {
@@ -106,7 +106,7 @@ public class GameState : MonoBehaviour
             numberStreakWithoutMiss = (numberStreakWithoutMiss + 1) % numberToGiveLife;
 
             //Play pick up sound
-            AkSoundEngine.PostEvent("correctNumberPickup", this.gameObject);
+           // AkSoundEngine.PostEvent("correctNumberPickup", this.gameObject);
             
             lastNumber = newNum;
             numberStreak++;
@@ -129,7 +129,7 @@ public class GameState : MonoBehaviour
             currentScoreMultiplier = 1;
 
             //Play pick up sound
-            AkSoundEngine.PostEvent("wrongNumberPickup", this.gameObject);
+          //  AkSoundEngine.PostEvent("wrongNumberPickup", this.gameObject);
 
             UIController._instance.UpdateMultiplier(currentScoreMultiplier);
             LoseLife();
@@ -174,7 +174,6 @@ public class GameState : MonoBehaviour
         // Animate player speeding up to go nearer the cart
         playerAnimator.SetBool("Sprint", true);
         playerLives++;
-        //TODO Moves the cart closer to the player.
         cart.MoveCartAway(playerLives);
         UIController._instance.UpdateLives(playerLives);
     }
