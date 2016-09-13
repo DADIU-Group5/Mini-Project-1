@@ -12,7 +12,10 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+							<ObjectRef Name="music" ID="{D633E8FC-DABE-4373-8126-2C66453001AF}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="rvbMusic" ID="{E3C4283C-7FD0-4EE4-A5D5-71997514C372}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -363,7 +366,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+							<ObjectRef Name="music" ID="{D633E8FC-DABE-4373-8126-2C66453001AF}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -566,9 +569,20 @@
 							</Playlist>
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="beat3" ID="{61A47997-7D24-428F-A914-80B126CB5118}" ShortID="221448519">
+							<PropertyList>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+									<ObjectRef Name="New_Wwise_Parametric_EQ_05" ID="{EB55C468-C77A-4BF3-AC09-0CE248F61368}" WorkUnitID="{B717B861-3C69-4859-898E-FF25CFC90875}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
@@ -829,7 +843,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+							<ObjectRef Name="music" ID="{D633E8FC-DABE-4373-8126-2C66453001AF}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -1285,13 +1299,18 @@
 				<MusicSwitchContainer Name="Guitar2" ID="{BF149549-8AE5-464F-9603-C8CC03A2CADF}" ShortID="326048163">
 					<PropertyList>
 						<Property Name="Tempo" Type="Real64" Value="111"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+							<ObjectRef Name="music" ID="{D633E8FC-DABE-4373-8126-2C66453001AF}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -1645,7 +1664,10 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+							<ObjectRef Name="music" ID="{D633E8FC-DABE-4373-8126-2C66453001AF}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="rvbMusic" ID="{E3C4283C-7FD0-4EE4-A5D5-71997514C372}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -2102,13 +2124,21 @@
 				<MusicPlaylistContainer Name="bongoMain" ID="{979470B7-CF88-4179-900D-C96685990186}" ShortID="556937186">
 					<PropertyList>
 						<Property Name="Tempo" Type="Real64" Value="111"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+							<ObjectRef Name="music" ID="{D633E8FC-DABE-4373-8126-2C66453001AF}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="rvbMusic" ID="{E3C4283C-7FD0-4EE4-A5D5-71997514C372}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -2201,13 +2231,18 @@
 				<MusicPlaylistContainer Name="Shaker" ID="{365B5335-1515-4937-A5FC-3C600835C24D}" ShortID="89838168">
 					<PropertyList>
 						<Property Name="Tempo" Type="Real64" Value="111"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>7</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+							<ObjectRef Name="music" ID="{D633E8FC-DABE-4373-8126-2C66453001AF}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -2309,7 +2344,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+							<ObjectRef Name="music" ID="{D633E8FC-DABE-4373-8126-2C66453001AF}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -2773,7 +2808,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+							<ObjectRef Name="music" ID="{D633E8FC-DABE-4373-8126-2C66453001AF}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -3130,7 +3165,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+							<ObjectRef Name="music" ID="{D633E8FC-DABE-4373-8126-2C66453001AF}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -3487,7 +3522,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CE6C1C20-E8B7-46CE-886A-09DE628C3742}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
+							<ObjectRef Name="music" ID="{D633E8FC-DABE-4373-8126-2C66453001AF}" WorkUnitID="{09334258-2406-4696-8D12-290EF45A6647}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
