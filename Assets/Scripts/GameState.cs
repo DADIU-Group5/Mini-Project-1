@@ -44,6 +44,7 @@ public class GameState : MonoBehaviour
     public Animator playerAnimator;
 
     // Private fields.
+    private bool gameOver = false;
     private float score;
     private int missedNumbers;
     private int numberStreak;
@@ -53,7 +54,7 @@ public class GameState : MonoBehaviour
     private float currentScoreMultiplier = 1;
     private int numberStreakWithoutMiss = 0;
 
-    private float timeSinceGameStarted;
+    private float timeSinceGameStarted = 0;
 
     // Use this for initialization.
     void Awake () {
@@ -71,7 +72,8 @@ public class GameState : MonoBehaviour
 
     private void Init()
     {
-        timeSinceGameStarted = Time.time;
+        ResetTimeSinceGameStarted();
+        gameOver = false;
         currentNumberSpeed = initialSpeed;
         RotatingWheel._instance.ChangeWheelSpeed(currentNumberSpeed);
         playerLives = maxLifes;
@@ -80,8 +82,11 @@ public class GameState : MonoBehaviour
     private void Update()
     {
         // Update score every tick by the number-speed.
-        score += Time.deltaTime * currentNumberSpeed;
-        UIController._instance.UpdateScore((int)score);
+        if (!gameOver)
+        {
+            score += Time.deltaTime * currentNumberSpeed;
+            UIController._instance.UpdateScore((int)score);
+        }
     }
 
     public int GetNumber()
@@ -102,6 +107,11 @@ public class GameState : MonoBehaviour
     public float GetLaneWidth()
     {
         return laneWidth;
+    }
+
+    public float GetMultiplier()
+    {
+        return currentScoreMultiplier;
     }
 
     public void PlayerGotNumber(int newNum)
@@ -134,7 +144,7 @@ public class GameState : MonoBehaviour
             score += scorePerNumber * currentScoreMultiplier;
             currentScoreMultiplier = 1 + (numberStreak / numbersPerScoreIncrease) * scoreMultiplierIncrease;
             UIController._instance.UpdateScore((int)score);
-            UIController._instance.UpdateMultiplier(currentScoreMultiplier);
+            UIController._instance.UpdateMultiplierUp(currentScoreMultiplier);
         }
         else
         {
@@ -144,7 +154,7 @@ public class GameState : MonoBehaviour
             // Play pick up sound.
             AkSoundEngine.PostEvent("wrongNumberPickup", this.gameObject);
 
-            UIController._instance.UpdateMultiplier(currentScoreMultiplier);
+            UIController._instance.UpdateMultiplierDown(currentScoreMultiplier);
             LoseLife();
         }
         UIController._instance.UpdateNextNumber(GetNextNumber());
@@ -165,6 +175,7 @@ public class GameState : MonoBehaviour
         if (playerLives <= 0 && !unbeatable)
         {
             // Game over.
+            gameOver = true;
 
             // Animate fall.
             playerAnimator.SetBool("Fall", true);
@@ -201,7 +212,7 @@ public class GameState : MonoBehaviour
             currentScoreMultiplier -= scoreMultiplierIncrease;
             if (currentScoreMultiplier < 1)
                 currentScoreMultiplier = 1;
-            UIController._instance.UpdateMultiplier(currentScoreMultiplier);
+            UIController._instance.UpdateMultiplierDown(currentScoreMultiplier);
 
 
             if (missedNumbers >= missedNumbersThreshold)
@@ -214,11 +225,11 @@ public class GameState : MonoBehaviour
 
     public float GetTimeSinceGameStarted()
     {
-        return timeSinceGameStarted;
+        return Time.timeSinceLevelLoad - timeSinceGameStarted;
     }
 
     public void ResetTimeSinceGameStarted()
     {
-        timeSinceGameStarted = Time.time;
+        timeSinceGameStarted = Time.timeSinceLevelLoad;
     }
 }

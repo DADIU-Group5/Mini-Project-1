@@ -5,9 +5,11 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	695384145	rvb			\Default Work Unit\Master Audio Bus\rvb	
+	4004586026	rvbMusic			\Default Work Unit\Master Audio Bus\rvbMusic	
 
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
+	1551236760	Small_Wooden_Room1	Wwise Matrix Reverb			
 	4056684167	master	Wwise Compressor			
 

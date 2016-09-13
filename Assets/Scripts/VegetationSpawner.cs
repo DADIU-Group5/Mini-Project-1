@@ -7,9 +7,11 @@ public class VegetationSpawner : MonoBehaviour {
     public GameObject[] bushes;
     public float spawnTime = 0.5f;
     private float numberSpeed = 1f;
+    public float firstVegetationChange = 30f;
+    public float secondVegetationChange = 60f;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         wheel = GameObject.Find("Wheel");
         numberSpeed = GameState._instance.GetNumberSpeed();
         StartVegetation();
@@ -18,14 +20,26 @@ public class VegetationSpawner : MonoBehaviour {
 
     public void SpawnObject()
     {
-        GameObject vegetation;
-        if (Random.Range(0,4) < 1)
-        {
-           vegetation = bushes[0];
-        } else
-           vegetation = bushes[1]; //favours bushes[1] by request
+        float playTime = GameState._instance.GetTimeSinceGameStarted();
+        playTime = Time.time;
+        //int spawnChance = (int)( 8 / (spawnTime/2));
 
-        float xCoord = Random.Range(7, 16);
+        // TODO: Change 3 with variable.
+        //float chance = playTime / (playTime + 0.001f);
+
+        GameObject vegetation;
+
+        if (Random.Range(0, 8) < 1 || 
+            playTime > firstVegetationChange && Random.Range(0, 8) <= 5 ||
+            playTime > secondVegetationChange && Random.Range(0, 10) <= 9)
+        {
+            vegetation = bushes[0]; //Tree
+        } else 
+        {
+            vegetation = bushes[1]; //favours bushes[1] by request
+        }
+
+        float xCoord = Random.Range(7, 16); // less than 16?
         if (Random.Range(0,2) == 1)
         {
             xCoord = -xCoord;
@@ -66,18 +80,25 @@ public class VegetationSpawner : MonoBehaviour {
         int i = 0;
 
         Vector3[] meshVertices = GameObject.Find("grund").gameObject.transform.GetComponent<MeshFilter>().mesh.vertices;
-
-        while (i < numberOfPoints)
+       
+        int t = 0;
+        while (i < numberOfPoints && t < 100)
         {
+            t++;
             Vector3 test = meshVertices[Random.Range(0, meshVertices.Length)];
+
+            if (test.y > 210)
+            {
+                Debug.Log("meshVertices[0]: " + test.x + ", " + test.y + ", " + test.z);
+            }
             if (test.z < 85 && test.z > -10 && test.y < 216 && test.y > 210)
             {
                 points[i] = test;
                 i++;
             }
         }
-
-        for (int k = 0; k < numberOfPoints; k++)
+        Debug.Log("i is: " + i);
+        for (int k = 0; k < i; k++)
         {
 
             GameObject vegetation = bushes[0];
