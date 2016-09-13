@@ -166,11 +166,13 @@ public class UIController : MonoBehaviour {
 
     public void Restart()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(1);
     }
 
     public void GoToMainMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
 }
