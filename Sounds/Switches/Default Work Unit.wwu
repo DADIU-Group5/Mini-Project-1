@@ -9,6 +9,13 @@
 						<Switch Name="musik2" ID="{4FE25901-AFDC-4487-9D61-17FB10BB91D2}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="drums" ID="{8BDFE052-F42C-4305-A7A6-2368A3061551}">
+					<ChildrenList>
+						<Switch Name="beat1" ID="{B0759937-51B2-4AF5-80AC-0330567C15FE}"/>
+						<Switch Name="beat2" ID="{9E611F33-B8DC-48CA-8018-B8F2204633A5}"/>
+						<Switch Name="beat3" ID="{9C84CBAD-CCC4-44DD-BD7A-049D869C2178}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

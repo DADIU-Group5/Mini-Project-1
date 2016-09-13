@@ -3,7 +3,7 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{B57BAE38-0E88-4A45-BDAD-BC7FC538FD4B}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Desktop\Dadiu\Hold 5\fodtrin"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Desktop\Dadiu\Hold 5\Musik loops\trommer"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
 						<Value Platform="Mac"></Value>
@@ -25,6 +25,7 @@
 				<Property Name="GenerateSoundBanks\SelectedPlatforms" Type="string" Value="+lLMAja09U6RBlKEe0wshi9G6fR9OAxAult2zFbAmVYzLfre25KuT4jKsCBpPWdL"/>
 				<Property Name="GenerateSoundBanks\SelectedSoundBanks" Type="string" Value="OxKSe81NZ0eh8lxPXSAS0w=="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{00000000-0000-0000-0000-000000000000}"/>
+				<Property Name="Interactive Music\{251B1F16-D10A-43DD-9407-1A094A76595B} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPwAAAAAAKGZAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\{62CD7E7B-CB57-4E8C-92F7-084BA5F50191} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP6UpihkwxGVAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\{C9CB8698-4D17-4C4C-8A7C-3739B2F44B62} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPwAAAAAAKGZAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\{CBCF898B-DCCB-41EB-B7D5-083CA45D3690} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPwAAAAAAKGZAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
@@ -37,7 +38,9 @@
 				<Property Name="MonitoringManager\WatchMgr\WatchesVersion" Type="int32" Value="5"/>
 				<Property Name="Music Transition List\{4F12E198-95BB-4930-9969-F912F71A8FB5}\Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{53DCF944-5FAB-4851-AFD2-E703422F9F65}\Expand States" Type="string" Value=""/>
+				<Property Name="Music Transition List\{707B1A13-4D68-45C0-9C97-B5D01F378840}\Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{95C936B7-04E3-4DBF-9FB3-AE6586B1775F}\Expand States" Type="string" Value=""/>
+				<Property Name="Music Transition List\{A20E6B6C-58D1-42EC-B761-FB11DBDA5F16}\Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{F33C16C0-E371-4C75-BC9A-1BEBCD148E67}\Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{FA453867-AD71-48C6-B021-6BBB0445634F}\Expand States" Type="string" Value=""/>
 				<Property Name="PluginUserAcknowledge\SoundSeedAir" Type="bool" Value="True"/>
