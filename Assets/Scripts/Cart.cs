@@ -227,7 +227,6 @@ public class Cart : MonoBehaviour {
         }
 
         spawner.Spawn(currentPosition);
-        AkSoundEngine.PostEvent("truckJump", this.gameObject);
         AkSoundEngine.PostEvent("numberDrop", this.gameObject);
 
         nextMove += cartMoveTimer;
@@ -235,6 +234,12 @@ public class Cart : MonoBehaviour {
         {
             int random = Random.Range(1, 3);
             newLane = (currentLane + random) % 3;
+
+            if (Mathf.Abs(currentLane - newLane) >= 2)
+            {
+                // play sound
+                AkSoundEngine.PostEvent("truckJump", this.gameObject);
+            }
         }
         SetPosition(currentLane, newLane);
         currentLane = newLane;

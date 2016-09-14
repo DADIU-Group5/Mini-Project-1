@@ -8,6 +8,7 @@ public class HugoJump : StateMachineBehaviour {
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
 
+        Debug.Log("Jump");
         AkSoundEngine.PostEvent("jump", GameObject.Find("Hugo"));
     }
 
