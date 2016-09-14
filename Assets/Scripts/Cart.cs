@@ -136,6 +136,11 @@ public class Cart : MonoBehaviour {
             }
         }
 
+        //On loss the cart jumps very far down, this makes sure it does not.
+        if (GameState._instance.GetGameOver() == true)
+        {
+            return;
+        }
 
         //update the next number.
         if (GameState._instance.lastNumber != lastNumber)
@@ -163,17 +168,11 @@ public class Cart : MonoBehaviour {
                 else
                     addValue = -distance/2;
 
-                GameObject digit = (GameObject)Instantiate(Resources.Load("Textures/numbers_" + Digits[i]), cartNumber.transform.position + new Vector3(.0f, 0, -0.5f) + (cartNumber.transform.right * addValue), cartNumber.transform.rotation);
+                GameObject digit = (GameObject)Instantiate(Resources.Load("Textures/numbers_" + Digits[i]), cartNumber.transform.position + new Vector3(0, 0, 0) + (cartNumber.transform.right * addValue*(Digits.Length-1)), cartNumber.transform.rotation);
                 digit.transform.SetParent(cartNumber.transform);
                 numbers[i] = digit;
             }
 
-        }
-
-        //On loss the cart jumps very far down, this makes sure it does not.
-        if (GameState._instance.GetGameOver() == true)
-        {
-            return;
         }
 
         if (GameState._instance.GetTimeSinceGameStarted() < jumpEndTime)

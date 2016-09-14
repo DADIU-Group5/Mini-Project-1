@@ -47,7 +47,7 @@ public class Number : MonoBehaviour {
                 addValue = distance/2;
             }
 
-            GameObject digit = (GameObject)Instantiate(Resources.Load("Textures/numbers_" + Digits[i]), transform.position + new Vector3(.25f, 0, 0) + (-transform.right * distance/2 * i) + (transform.right * addValue), transform.rotation);
+            GameObject digit = (GameObject)Instantiate(Resources.Load("Textures/numbers_" + Digits[i]), transform.position + new Vector3(0f, 0, 0) + (-transform.right * distance/2 * i) + (transform.right * addValue), transform.rotation);
             //GameObject digit = (GameObject) Instantiate(Resources.Load("models/Number"+Digits[i]), transform.position + new Vector3(.25f, 0, 0) + (transform.right * distance * i),transform.rotation);
 
             digit.transform.SetParent(gameObject.transform);

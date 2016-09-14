@@ -35,6 +35,7 @@ public class IntroScreen : MonoBehaviour {
         if(timer >= opacityTime)
         {
             started = true;
+            gameObject.SetActive(false);
         }
         title.color = Color.Lerp(Color.white, Color.clear, (timer / opacityTime));
         buttonImage.color = Color.Lerp(Color.white, Color.clear, (timer / opacityTime));

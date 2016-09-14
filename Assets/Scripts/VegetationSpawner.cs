@@ -31,7 +31,7 @@ public class VegetationSpawner : MonoBehaviour {
 
         if (Random.Range(0, 8) < 1 || 
             playTime > firstVegetationChange && Random.Range(0, 8) <= 5 ||
-            playTime > secondVegetationChange && Random.Range(0, 10) <= 9)
+            playTime > secondVegetationChange && Random.Range(0, 10) <= 8)
         {
             vegetation = bushes[0]; //Tree
         } else 
@@ -39,10 +39,10 @@ public class VegetationSpawner : MonoBehaviour {
             vegetation = bushes[1]; //favours bushes[1] by request
         }
 
-        float xCoord = Random.Range(7, 10); // less than 16?
+        float xCoord = Random.Range(3f, 9f); // less than 16?
         if (Random.Range(0,2) == 1)
         {
-            xCoord = -xCoord;
+            xCoord = -xCoord-2;
         }
         // spawn
         vegetation = (GameObject)Instantiate(vegetation, transform.position + new Vector3(xCoord, -21.74f, 93.37f) + (transform.right), Quaternion.Euler(24.3f,0,0 ));

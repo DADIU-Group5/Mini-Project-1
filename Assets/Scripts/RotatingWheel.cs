@@ -7,6 +7,10 @@ public class RotatingWheel : MonoBehaviour {
 
     public float radius = 217.5f; // Approximate radius of the wheel.
     public float speed = 4.5f; // 3.5f seems to fit a speed of 12, 4.5 seems to fit a speed of 17.
+    public float slowdownTime = 1.6f; // Time it takes to stop.
+
+    private float slowStartTime = 0f; // Time when stop was initiated.
+    private bool stop = false;
 
     void Awake()
     {
@@ -22,8 +26,16 @@ public class RotatingWheel : MonoBehaviour {
     }
 
 	void Update () {
-        transform.Rotate(-Time.deltaTime * speed, 0, 0);
-	}
+        if (stop)
+        {
+            float factor = (slowStartTime + slowdownTime - Time.timeSinceLevelLoad) / slowdownTime;
+            transform.Rotate(-Time.deltaTime * Mathf.Lerp(0f, speed, factor), 0, 0);
+        }
+        else
+        {
+            transform.Rotate(-Time.deltaTime * speed, 0, 0);
+        }
+    }
 
     // The wheel matches its rotational speed to a given surface-velocity
     public void ChangeWheelSpeed(float newSpeed)
@@ -38,6 +50,8 @@ public class RotatingWheel : MonoBehaviour {
 
     public void StopRotate()
     {
-        speed = 0;
+        stop = true;
+        slowStartTime = Time.timeSinceLevelLoad;
+        //speed = 0;
     }
 }

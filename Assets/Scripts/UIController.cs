@@ -92,6 +92,11 @@ public class UIController : MonoBehaviour {
     {
         multiplierAnim.SetTrigger("Bigger");
         multiplier.text = "X " + newMultiplier;
+        if(Math.Truncate(newMultiplier)==newMultiplier)
+        {
+            rightLight.QuickAnim();
+            leftLight.QuickAnim();
+        }
     }
 
     public void UpdateMultiplierDown(float newMultiplier)

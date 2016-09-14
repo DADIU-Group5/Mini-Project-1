@@ -37,6 +37,17 @@ public class Disco : MonoBehaviour {
         }
 	}
 
+    public void QuickAnim()
+    {
+        GetComponent<Animator>().speed = 3;
+        Invoke("NormalSpeed", 1f);
+    }
+
+    void NormalSpeed()
+    {
+        GetComponent<Animator>().speed = 1;
+    }
+
     void ChooseNewColor()
     {
         startCol = imageCol.color;
