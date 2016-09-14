@@ -31,7 +31,7 @@ public class VegetationSpawner : MonoBehaviour {
 
         if (Random.Range(0, 8) < 1 || 
             playTime > firstVegetationChange && Random.Range(0, 8) <= 5 ||
-            playTime > secondVegetationChange && Random.Range(0, 10) <= 9)
+            playTime > secondVegetationChange && Random.Range(0, 10) <= 8)
         {
             vegetation = bushes[0]; //Tree
         } else 
