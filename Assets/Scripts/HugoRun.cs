@@ -13,7 +13,7 @@ public class HugoRun : StateMachineBehaviour {
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
 
-        AkSoundEngine.PostEvent("footstep", GameObject.Find("Hugo"));
+        //AkSoundEngine.PostEvent("footstep", GameObject.Find("Hugo"));
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
