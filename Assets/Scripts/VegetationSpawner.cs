@@ -21,7 +21,7 @@ public class VegetationSpawner : MonoBehaviour {
     public void SpawnObject()
     {
         float playTime = GameState._instance.GetTimeSinceGameStarted();
-        playTime = Time.time;
+        //playTime = Time.time;
         //int spawnChance = (int)( 8 / (spawnTime/2));
 
         // TODO: Change 3 with variable.
