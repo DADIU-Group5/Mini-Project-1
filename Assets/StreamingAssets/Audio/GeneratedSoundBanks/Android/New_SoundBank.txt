@@ -1,0 +1,180 @@
+Event	ID	Name			Wwise Object Path	Notes
+	582500891	truckStartTurn			\Default Work Unit\truckStartTurn	
+	678720620	truckEndTurn			\Default Work Unit\truckEndTurn	
+	953277036	resume			\Default Work Unit\resume	
+	1078311194	correctNumberPickup			\Default Work Unit\correctNumberPickup	
+	1866025847	footstep			\Default Work Unit\footstep	
+	1929616820	truckHonk			\Default Work Unit\truckHonk	
+	2318428819	wrongNumberPickup			\Default Work Unit\wrongNumberPickup	
+	2397454474	jungleAmbience			\Default Work Unit\jungleAmbience	
+	2531827761	numberDrop			\Default Work Unit\numberDrop	
+	2600610582	truckJump			\Default Work Unit\truckJump	
+	2736691391	menuPressStart			\Default Work Unit\menuPressStart	
+	3092587493	pause			\Default Work Unit\pause	
+	3751012050	partyAnimals			\Default Work Unit\partyAnimals	
+	3833651337	jump			\Default Work Unit\jump	
+	3991942870	music			\Default Work Unit\music	
+	4158285989	gameOver			\Default Work Unit\gameOver	
+	4294099536	truckEngine			\Default Work Unit\truckEngine	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3092587493	pause			\Default Work Unit\pause	
+
+State	ID	Name	State Group			Notes
+	748895195	None	pause			
+	3092587493	pause	pause			
+	3730495584	resumed	pause			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	990562102	pause	pause	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	825409407	truckSpeed			\Default Work Unit\truckSpeed	
+
+Modulator LFO	ID	Name			Wwise Object Path	Notes
+	18808235	New Modulator LFO_01			\Default Work Unit\New Modulator LFO_01	
+	926443815	New Modulator LFO			\Default Work Unit\New Modulator LFO	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	805203703	Master Secondary Bus			\Default Work Unit\Master Secondary Bus	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	music			\Default Work Unit\Master Audio Bus\music	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	695384145	rvb			\Default Work Unit\Master Audio Bus\rvb	
+	4004586026	rvbMusic			\Default Work Unit\Master Audio Bus\rvbMusic	
+
+Effect plug-ins	ID	Name	Type				Notes
+	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
+	402483881	Wwise Delay (Custom)	Wwise Delay			
+	531085421	New_Wwise_Compressor_01	Wwise Compressor			
+	654807232	Chipmunk	Wwise Pitch Shifter			
+	960762675	New_Wwise_Delay	Wwise Delay			
+	1252796875	Light_Expander	Wwise Expander			
+	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
+	1551236760	Small_Wooden_Room1	Wwise Matrix Reverb			
+	2171939413	Dialog_Leveler_Hard	Wwise Compressor			
+	2689776682	New_Wwise_Parametric_EQ_02	Wwise Parametric EQ			
+	2689776683	New_Wwise_Parametric_EQ_03	Wwise Parametric EQ			
+	2689776684	New_Wwise_Parametric_EQ_04	Wwise Parametric EQ			
+	2689776685	New_Wwise_Parametric_EQ_05	Wwise Parametric EQ			
+	2755291684	Pumping_and_Breathing_1	Wwise Compressor			
+	3043085106	High_Impact	Wwise Compressor			
+	4056684167	master	Wwise Compressor			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	6534581	fugle skrål_02	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\fugle skrål_8F7DB64D.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\jungleAmbience\monkey\fugle skrål_02		1663784
+	7869278	græs2	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\græs2_F98ADAF9.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\græs\græs2		30552
+	10817445	impact20	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact20_5E0D3849.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact20		118944
+	16302344	TruckSound Rattle less flanger	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\TruckSound Rattle less flanger_AC0E5EAE.wem		\Actor-Mixer Hierarchy\Default Work Unit\truck\truck_engine\TruckSound Rattle less flanger		1190576
+	19559311	truck honk	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\truck honk_E8334B9B.wem		\Actor-Mixer Hierarchy\Default Work Unit\truck\truck honk		42076
+	52187491	tal 8	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal 8_E97036DE.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal 8		215372
+	61539371	impact1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact1_D415D21F.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact1		189508
+	62779635	MonkeyColobusLow_SFXB_299	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\MonkeyColobusLow_SFXB.299_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\partyAnimals\partyAnimals\monkey\MonkeyColobusLow_SFXB_299		557116
+	64853793	tal multiplyer 1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal multiplyer 1_574CD82D.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal multiplyer 1		125720
+	77081366	impact11	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact11_67E17904.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact11		339552
+	77479759	impact16	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact16_1258304A.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact16		122472
+	81409355	TruckSound Tone	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\TruckSound Tone_AC0E5EAE.wem		\Actor-Mixer Hierarchy\Default Work Unit\truck\truck_engine\TruckSound Tone		1776096
+	91950173	bongo hi 2 slag	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\bongo hi 2 slag_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\bongo2\rytme1\bongo hi 2 slag\bongo hi 2 slag		830336
+	101351762	jump4	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\jump4_F6F61A19.wem		\Actor-Mixer Hierarchy\Default Work Unit\jump\jump\jump4		186836
+	107995737	ThunderClap_BW_59747	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\ThunderClap_BW.59747_437A7F46.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\jungleAmbience\thunder\ThunderClap_BW_59747		4528188
+	113949881	græs5	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\græs5_9286984A.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\græs\græs5		106688
+	120597399	græs9	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\græs9_20B98DD0.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\græs\græs9		45360
+	129073035	græs8	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\græs8_4DA5D86C.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\græs\græs8		48840
+	130100996	tirescreech1_01	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tirescreech1_29876D67.wem		\Actor-Mixer Hierarchy\Default Work Unit\truck\tires\tirescreech1_01		434484
+	130897733	tal forkert 3	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal forkert 3_2D8793DA.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talWrongPickupxylophone\tal forkert 3		136672
+	131423002	HorseWhinny_BW_59862	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\HorseWhinny_BW.59862_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\partyAnimals\partyAnimals\horse\HorseWhinny_BW_59862		412732
+	133389435	tal forkert 4	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal forkert 4_4DB1A26E.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talWrongPickupxylophone\tal forkert 4		145832
+	138251004	tal 1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal 1_B5FEB570.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal 1		210328
+	142576050	impact2	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact2_C2A5DFCD.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact2		186536
+	145635889	tal forkert 5 horn	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal forkert 5 horn_A4F5748C.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talWrongPickup\tal forkert 5 horn		640628
+	150629011	impact22	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact22_1B685E40.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact22		143788
+	156011984	HorseWhinny_BW_59863	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\HorseWhinny_BW.59863_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\partyAnimals\partyAnimals\horse\HorseWhinny_BW_59863		382012
+	160522890	tal 5	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal 5_E4FD1C45.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal 5		218396
+	186426770	tal drop	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal drop_10B76379.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\tal drop		275548
+	189670651	tema 1 lang med hale quantized	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tema 1 lang med hale quantized_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\blæser3\tema 1 med hale quantizised\tema 1 lang med hale quantized\tema 1 lang med hale quantized		1660608
+	216111202	shaker med rvb	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\shaker med rvb_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\Shaker\shaker med rvb\shaker med rvb		1453040
+	219832462	MonkeyColobus_S08AN_197	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\MonkeyColobus_S08AN.197_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\partyAnimals\partyAnimals\monkey\MonkeyColobus_S08AN_197		460328
+	222699548	elefant4	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\elefant4_E8119AB3.wem		\Actor-Mixer Hierarchy\Default Work Unit\partyAnimals\partyAnimals\elephant\elefant4		347116
+	224896223	beat 2	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\beat 2_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\trommer\beat2\beat 2\beat 2		415200
+	239652858	tal 3	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal 3_15F1E15B.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal 3		214364
+	258006593	lead1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\lead1_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\Guitar1\lead\lead1\lead1		3321148
+	264584960	impact12	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact12_67E17904.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact12		339552
+	268363081	impact15	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact15_67E17904.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact15		339552
+	291768993	ambience with birds 2 noise reduction	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\ambience with birds 2 noise reduction_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\jungleAmbience\birds\ambience with birds 2 noise reduction		2112068
+	301719007	ambience with birds 1 noise reduction	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\ambience with birds 1 noise reduction_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\jungleAmbience\birds\ambience with birds 1 noise reduction		4992068
+	314103666	græs10	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\græs10_0F12C916.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\græs\græs10		35188
+	317168356	bas riff 1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\bas riff 1_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\bas\riff1\bas riff 1\bas riff 1		830336
+	320522711	ambience with water 4	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\ambience with water 4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\jungleAmbience\water\ambience with water 4		960068
+	337793518	beat 3	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\beat 3_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\trommer\beat3\beat 3\beat 3		415200
+	346975780	tal forkert 6 horn 2	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal forkert 6 horn 2_6B5B4731.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talWrongPickup\tal forkert 6 horn 2		433588
+	359828894	rytme b 2	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\rytme b 2_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\Guitar2\riff2\rytme b 2\rytme b 2		415200
+	382708341	rytme 2	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\rytme 2_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\Guitar1\riff2\rytme 2\rytme 2		415200
+	386468354	impact5	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact5_67E17904.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact5		339552
+	389132218	ambience with water 2	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\ambience with water 2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\jungleAmbience\water\ambience with water 2		768068
+	389703462	elefant1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\elefant1_41159157.wem		\Actor-Mixer Hierarchy\Default Work Unit\partyAnimals\partyAnimals\elephant\elefant1		316952
+	398709869	ThunderClap_BW_59744	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\ThunderClap_BW.59744_FA052140.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\jungleAmbience\thunder\ThunderClap_BW_59744		3546172
+	420850915	elefant3	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\elefant3_A04AE2F1.wem		\Actor-Mixer Hierarchy\Default Work Unit\partyAnimals\partyAnimals\elephant\elefant3		465820
+	429626763	fugle skrål_01	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\fugle skrål_3F72AEA9.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\jungleAmbience\monkey\fugle skrål_01		1228952
+	446668179	4  2	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\4  2_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\bas\riff3\4  2\4  2		830336
+	459209670	græs4	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\græs4_D015E1A3.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\græs\græs4		52744
+	510994222	impact10	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact10_67E17904.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact10		509280
+	514521686	blæserakkorder1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\blæserakkorder1_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\blæserakkorder\akkorder1\blæserakkorder1\blæserakkorder1		1660608
+	524445816	ambience with water 3	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\ambience with water 3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\jungleAmbience\water\ambience with water 3		1152068
+	539194505	tal 2	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal 2_7863DDD3.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal 2		217388
+	569688263	bongo alt 1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\bongo alt 1_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\bongo\rytme1\bongo alt 1\bongo alt 1		207632
+	584849755	tirescreech2	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tirescreech2_3DA4FA15.wem		\Actor-Mixer Hierarchy\Default Work Unit\truck\tires\tirescreech2		307980
+	586374784	græs6	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\græs6_86E45AF7.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\græs\græs6		48004
+	586388034	fugle skrål	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\fugle skrål_A9F44887.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\jungleAmbience\monkey\fugle skrål		3380444
+	586994086	tal 9	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal 9_D9C61977.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal 9		219908
+	597084958	jump1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\jump1_2FE80BB2.wem		\Actor-Mixer Hierarchy\Default Work Unit\jump\jump\jump1		407016
+	606303709	græs1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\græs1_935FF9F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\græs\græs1		33524
+	611724881	impact6	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact6_67E17904.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact6		339552
+	617697691	impact18	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact18_67E17904.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact18		339552
+	634415553	ambience with water 1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\ambience with water 1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\jungleAmbience\water\ambience with water 1		1008068
+	639463638	impact13	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact13_67E17904.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact13		848736
+	644526912	blæserriff	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\blæserriff_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\blæser2\blæserriff\blæserriff\blæserriff		830336
+	644832165	tema 1 lang dyb	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tema 1 lang dyb_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\blæser3\tema 1 lang\tema 1 lang\tema 1 lang dyb		1245472
+	657140689	beat 1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\beat 1_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\trommer\beat1\beat 1\beat 1		415200
+	658045610	bongo hi triplets	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\bongo hi triplets_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\bongo2\rytme3\bongo hi triplets\bongo hi triplets		415200
+	662642068	bongo main	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\bongo main_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\bongoMain\bongo main\bongo main		207632
+	676591338	jump2	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\jump2_7818B4C3.wem		\Actor-Mixer Hierarchy\Default Work Unit\jump\jump\jump2		216864
+	698806074	impact9	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact9_8AB10F93.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact9		267872
+	710845848	tirescreech3 lang	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tirescreech3 lang _67E17904.wem		\Actor-Mixer Hierarchy\Default Work Unit\truck\tires\tirescreech3 lang		1431192
+	716709940	impact3	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact3_6A51A408.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact3		214392
+	719676367	græs3	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\græs3_9668B5FE.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\græs\græs3		122380
+	722758616	tal 6	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal 6_CB07D9A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal 6		108996
+	723677576	tal 7	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal 7_9960E4B6.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal 7		224320
+	724762485	MonkeyColobus_S08AN_191	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\MonkeyColobus_S08AN.191_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\partyAnimals\partyAnimals\monkey\MonkeyColobus_S08AN_191		573404
+	725134222	impact7	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact7_138E7F20.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact7		204468
+	737536668	impact14	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact14_67E17904.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact14		509280
+	741256057	impact21	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact21_67E17904.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact21		254688
+	769828088	impact17	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact17_67E17904.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact17		339552
+	784100572	tal 4	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal 4_9E36934D.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal 4		215876
+	787188620	impact4	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact4_0F4E64DC.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact4		209192
+	819063447	blæserakkorder2	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\blæserakkorder2_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\blæserakkorder\akkorder2\blæserakkorder2\blæserakkorder2		830336
+	826680827	tirescreech1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tirescreech1_A39C2380.wem		\Actor-Mixer Hierarchy\Default Work Unit\truck\tires\tirescreech1		1174084
+	837260015	græs7	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\græs7_8A9BE391.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\græs\græs7		42436
+	856808078	tal forkert 6 horn 3	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal forkert 6 horn 3_C3DA8DD2.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talWrongPickup\tal forkert 6 horn 3		471112
+	858981970	start game	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\ start game_158D5026.wem		\Actor-Mixer Hierarchy\Default Work Unit\menu\start game		1201652
+	878719833	rytme b 1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\rytme b 1_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\Guitar2\riff1\rytme b 1\rytme b 1		830336
+	882160051	jump3	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\jump3_5F978065.wem		\Actor-Mixer Hierarchy\Default Work Unit\jump\jump\jump3		182520
+	889608003	bongo triplets	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\bongo triplets_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\bongo2\rytme1\bongo triplets\bongo triplets		830336
+	890241262	stilhed 1 takt	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\stilhed 1 takt_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\bongo\silence 1 bar\stilhed 1 takt\stilhed 1 takt		415200
+	890547720	tal forkert 2	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal forkert 2_2340C0CC.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talWrongPickupxylophone\tal forkert 2		156320
+	916070398	blæsertema2	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\blæsertema2_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\blæser2\blæsertema 2\blæsertema2\blæsertema2		830336
+	920674601	ambience with birds 3 noise reduction	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\ambience with birds 3 noise reduction_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\jungleAmbience\birds\ambience with birds 3 noise reduction		5376068
+	941045280	tal forkert 1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal forkert 1_53BC2F1C.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talWrongPickupxylophone\tal forkert 1		228140
+	949543213	impact8	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact8_AF399669.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact8		222932
+	955239727	tirescreech2_01	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tirescreech2_9360CF87.wem		\Actor-Mixer Hierarchy\Default Work Unit\truck\tires\tirescreech2_01		245668
+	959648345	impact19	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact19_67E17904.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact19		339552
+	974050940	HorseWhinny_BW_59864	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\HorseWhinny_BW.59864_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\partyAnimals\partyAnimals\horse\HorseWhinny_BW_59864		482364
+	978808335	bongo alt 2 (5)	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\bongo alt 2 (5)_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\bongo\rytme2\bongo alt 2 (5)\bongo alt 2 (5)		311416
+	980519862	elefant2	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\elefant2_FD87B73A.wem		\Actor-Mixer Hierarchy\Default Work Unit\partyAnimals\partyAnimals\elephant\elefant2		178980
+	983140521	fugle skrål_03	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\fugle skrål_D77D169C.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\jungleAmbience\monkey\fugle skrål_03		642868
+	998096257	4	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\4 _4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\bas\riff 2\4\4		830336
+	1021396976	ThunderClap_BW_59746	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\ThunderClap_BW.59746_AE7AE3F7.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\jungleAmbience\thunder\ThunderClap_BW_59746		5092412
+	1032580209	truck honk_01	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\truck honk_E0B7F3C7.wem		\Actor-Mixer Hierarchy\Default Work Unit\truck\truck honk_01		97956
+	1050211302	truck jump	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\truck jump_99D3D0A0.wem		\Actor-Mixer Hierarchy\Default Work Unit\truck\truck jump		390248
+	1062553920	rytme 1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\rytme 1_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\Guitar1\riff1\rytme 1\rytme 1		1675704
+
