@@ -140,7 +140,7 @@ public class UIController : MonoBehaviour {
         // stop all sounds
         //AkSoundEngine.StopAll();
         AkSoundEngine.PostEvent("gameOver", GameObject.Find("MusicEmitter"));
-        SoundEngine._instance.MoveMusicToNextLevel(0);
+        //SoundEngine._instance.MoveMusicToNextLevel(0);
 
 
         losePanel.gameObject.SetActive(true);
@@ -202,12 +202,14 @@ public class UIController : MonoBehaviour {
     public void Restart()
     {
         Time.timeScale = 1;
+        AkSoundEngine.StopAll();
         SceneManager.LoadScene(0);
     }
 
     public void GoToMainMenu()
     {
         Time.timeScale = 1;
+        AkSoundEngine.StopAll();
         SceneManager.LoadScene(0);
     }
 }
