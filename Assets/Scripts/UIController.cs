@@ -85,12 +85,14 @@ public class UIController : MonoBehaviour {
         Debug.Log("should not happen");
         multiplier.gameObject.SetActive(true);
         multiplierAnim.SetTrigger("Bigger");
+        multiplier.text = "X " + newMultiplier.ToString("0.0");
         multiplier.text = "X " + newMultiplier;
     }
 
     public void UpdateMultiplierUp(float newMultiplier)
     {
         multiplierAnim.SetTrigger("Bigger");
+        multiplier.text = "X " + newMultiplier.ToString("0.0");
         multiplier.text = "X " + newMultiplier;
         if(Math.Truncate(newMultiplier)==newMultiplier)
         {
@@ -102,6 +104,7 @@ public class UIController : MonoBehaviour {
     public void UpdateMultiplierDown(float newMultiplier)
     {
         multiplierAnim.SetTrigger("Smaller");
+        multiplier.text = "X " + newMultiplier.ToString("0.0");
         multiplier.text = "X " + newMultiplier;
     }
 
