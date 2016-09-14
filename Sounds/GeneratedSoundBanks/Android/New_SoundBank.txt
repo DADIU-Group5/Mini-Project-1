@@ -76,7 +76,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	77479759	impact16	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact16_1258304A.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact16		122472
 	81409355	TruckSound Tone	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\TruckSound Tone_AC0E5EAE.wem		\Actor-Mixer Hierarchy\Default Work Unit\truck\truck_engine\TruckSound Tone		1776096
 	91950173	bongo hi 2 slag	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\bongo hi 2 slag_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\bongo2\rytme1\bongo hi 2 slag\bongo hi 2 slag		830336
-	101351762	jump4	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\jump4_0029CAC1.wem		\Actor-Mixer Hierarchy\Default Work Unit\jump\jump\jump4		186836
+	101351762	jump4	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\jump4_F6F61A19.wem		\Actor-Mixer Hierarchy\Default Work Unit\jump\jump\jump4		186836
 	107995737	ThunderClap_BW_59747	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\ThunderClap_BW.59747_437A7F46.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\jungleAmbience\thunder\ThunderClap_BW_59747		4528188
 	113949881	græs5	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\græs5_9286984A.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\græs\græs5		106688
 	120597399	græs9	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\græs9_20B98DD0.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\græs\græs9		45360
@@ -127,7 +127,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	586374784	græs6	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\græs6_86E45AF7.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\græs\græs6		48004
 	586388034	fugle skrål	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\fugle skrål_A9F44887.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\jungleAmbience\monkey\fugle skrål		3380444
 	586994086	tal 9	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal 9_D9C61977.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal 9		219908
-	597084958	jump1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\jump1_D708A6F2.wem		\Actor-Mixer Hierarchy\Default Work Unit\jump\jump\jump1		407016
+	597084958	jump1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\jump1_2FE80BB2.wem		\Actor-Mixer Hierarchy\Default Work Unit\jump\jump\jump1		407016
 	606303709	græs1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\græs1_935FF9F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\græs\græs1		33524
 	611724881	impact6	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact6_67E17904.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact6		339552
 	617697691	impact18	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact18_67E17904.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact18		339552
@@ -138,7 +138,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	657140689	beat 1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\beat 1_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\trommer\beat1\beat 1\beat 1		415200
 	658045610	bongo hi triplets	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\bongo hi triplets_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\bongo2\rytme3\bongo hi triplets\bongo hi triplets		415200
 	662642068	bongo main	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\bongo main_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\bongoMain\bongo main\bongo main		207632
-	676591338	jump2	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\jump2_E2EE9CB3.wem		\Actor-Mixer Hierarchy\Default Work Unit\jump\jump\jump2		216864
+	676591338	jump2	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\jump2_7818B4C3.wem		\Actor-Mixer Hierarchy\Default Work Unit\jump\jump\jump2		216864
 	698806074	impact9	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact9_8AB10F93.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact9		267872
 	710845848	tirescreech3 lang	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tirescreech3 lang _67E17904.wem		\Actor-Mixer Hierarchy\Default Work Unit\truck\tires\tirescreech3 lang		1431192
 	716709940	impact3	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact3_6A51A408.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact3		214392
@@ -153,13 +153,12 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	784100572	tal 4	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal 4_9E36934D.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talPickup\tal 4		215876
 	787188620	impact4	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\impact4_0F4E64DC.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\impact\impact4		209192
 	819063447	blæserakkorder2	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\blæserakkorder2_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\blæserakkorder\akkorder2\blæserakkorder2\blæserakkorder2		830336
-	822582333	stilhed 2 takter	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\stilhed 2 takter_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\bongo2\silence 2 bars\stilhed 2 takter\stilhed 2 takter		1245472
 	826680827	tirescreech1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tirescreech1_A39C2380.wem		\Actor-Mixer Hierarchy\Default Work Unit\truck\tires\tirescreech1		1174084
 	837260015	græs7	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\græs7_8A9BE391.wem		\Actor-Mixer Hierarchy\Default Work Unit\footsteps\græs\græs7		42436
 	856808078	tal forkert 6 horn 3	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal forkert 6 horn 3_C3DA8DD2.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talWrongPickup\tal forkert 6 horn 3		471112
 	858981970	start game	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\ start game_158D5026.wem		\Actor-Mixer Hierarchy\Default Work Unit\menu\start game		1201652
 	878719833	rytme b 1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\rytme b 1_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\Guitar2\riff1\rytme b 1\rytme b 1		830336
-	882160051	jump3	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\jump3_F6D15820.wem		\Actor-Mixer Hierarchy\Default Work Unit\jump\jump\jump3		182520
+	882160051	jump3	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\jump3_5F978065.wem		\Actor-Mixer Hierarchy\Default Work Unit\jump\jump\jump3		182520
 	889608003	bongo triplets	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\bongo triplets_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\bongo2\rytme1\bongo triplets\bongo triplets		830336
 	890241262	stilhed 1 takt	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\stilhed 1 takt_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\bongo\silence 1 bar\stilhed 1 takt\stilhed 1 takt		415200
 	890547720	tal forkert 2	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\tal forkert 2_2340C0CC.wem		\Actor-Mixer Hierarchy\Default Work Unit\talLyde\talWrongPickupxylophone\tal forkert 2		156320
@@ -176,6 +175,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	998096257	4	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\4 _4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\bas\riff 2\4\4		830336
 	1021396976	ThunderClap_BW_59746	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\ThunderClap_BW.59746_AE7AE3F7.wem		\Actor-Mixer Hierarchy\Default Work Unit\jungle Ambience\jungleAmbience\thunder\ThunderClap_BW_59746		5092412
 	1032580209	truck honk_01	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\truck honk_E0B7F3C7.wem		\Actor-Mixer Hierarchy\Default Work Unit\truck\truck honk_01		97956
-	1050211302	truck jump	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\truck jump_95D8AB1C.wem		\Actor-Mixer Hierarchy\Default Work Unit\truck\truck jump		390248
+	1050211302	truck jump	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\truck jump_99D3D0A0.wem		\Actor-Mixer Hierarchy\Default Work Unit\truck\truck jump		390248
 	1062553920	rytme 1	Y:\Documents\WwiseProjects\musiktest\.cache\Android\SFX\rytme 1_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\Guitar1\riff1\rytme 1\rytme 1		1675704
 

@@ -21,6 +21,13 @@
 							</ReferenceList>
 						</AuxBus>
 						<Bus Name="music" ID="{D633E8FC-DABE-4373-8126-2C66453001AF}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
 									<ObjectRef Name="Pumping_and_Breathing_1" ID="{87BE3270-3D27-45BB-9E46-7F2D9380F523}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
@@ -28,6 +35,13 @@
 							</ReferenceList>
 						</Bus>
 						<AuxBus Name="rvbMusic" ID="{E3C4283C-7FD0-4EE4-A5D5-71997514C372}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
 									<ObjectRef Name="Small_Wooden_Room1" ID="{F7CBE859-36A8-4174-B553-AE32A7FE95FA}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>

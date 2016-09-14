@@ -389,6 +389,12 @@
 								<Element ID="{F0F5C068-A192-4C3A-B4BC-F665D3CBB22B}" Global="false">
 									<ObjectRef Name="water" ID="{F189D9FB-8B39-44D4-B0F1-B12CDE502977}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
 								</Element>
+								<Element ID="{46CD23FB-F0DB-47BC-BDBA-4FD54A2AECCF}" Global="false">
+									<ObjectRef Name="talWrongPickup" ID="{A000F6A2-0E35-4CFD-948B-1DD071F17A97}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
+								</Element>
+								<Element ID="{D0438763-C8CA-4239-8391-612798DDA41C}" Global="false">
+									<ObjectRef Name="bas" ID="{C4EA4B8A-F7F0-4AE2-BC7A-C78B34CD6D55}" WorkUnitID="{518FA576-15CF-465D-8682-7C7718B45365}"/>
+								</Element>
 							</ElementList>
 						</Action>
 					</ChildrenList>
@@ -398,7 +404,14 @@
 						<Action Name="Play" ID="{79353381-6B17-4493-91C9-4E89965A98CF}" ShortID="564936142" Type="Play" Scope="One" Global="false">
 							<ElementList>
 								<Element ID="{DDADEE72-882D-46D7-AF57-DC83AACE09AF}" Global="false">
-									<ObjectRef Name="jump" ID="{B3F2715F-F49B-4B84-8F77-648ACA4B6998}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
+									<ObjectRef Name="græs" ID="{6A3D2120-E7AB-440E-943E-01D919510B2E}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{A1DAA164-B4FB-4F12-B17D-71A863651FE6}" ShortID="558503427" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{B33FE329-8252-4410-92E1-A16E41E3E5AB}" Global="false">
+									<ObjectRef Name="impact" ID="{CB3949E6-E89D-4A2C-8927-92FBB677E6CD}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
 								</Element>
 							</ElementList>
 						</Action>

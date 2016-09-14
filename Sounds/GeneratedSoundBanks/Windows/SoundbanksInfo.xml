@@ -90,7 +90,7 @@
 				</File>
 				<File Id="101351762" Language="SFX">
 					<ShortName>jump4.wav</ShortName>
-					<Path>SFX/jump4_0029CAC1.wem</Path>
+					<Path>SFX/jump4_F6F61A19.wem</Path>
 				</File>
 				<File Id="107995737" Language="SFX">
 					<ShortName>ThunderClap_BW.59747.wav</ShortName>
@@ -270,7 +270,7 @@
 				</File>
 				<File Id="597084958" Language="SFX">
 					<ShortName>jump1.wav</ShortName>
-					<Path>SFX/jump1_D708A6F2.wem</Path>
+					<Path>SFX/jump1_2FE80BB2.wem</Path>
 				</File>
 				<File Id="606303709" Language="SFX">
 					<ShortName>græs1.wav</ShortName>
@@ -302,7 +302,7 @@
 				</File>
 				<File Id="676591338" Language="SFX">
 					<ShortName>jump2.wav</ShortName>
-					<Path>SFX/jump2_E2EE9CB3.wem</Path>
+					<Path>SFX/jump2_7818B4C3.wem</Path>
 				</File>
 				<File Id="698806074" Language="SFX">
 					<ShortName>impact9.wav</ShortName>
@@ -344,10 +344,6 @@
 					<ShortName>blæserakkorder2.wav</ShortName>
 					<Path>SFX/blæserakkorder2_4B8CC0C5.wem</Path>
 				</File>
-				<File Id="822582333" Language="SFX">
-					<ShortName>stilhed 2 takter.wav</ShortName>
-					<Path>SFX/stilhed 2 takter_4B8CC0C5.wem</Path>
-				</File>
 				<File Id="826680827" Language="SFX">
 					<ShortName>tirescreech1.wav</ShortName>
 					<Path>SFX/tirescreech1_A39C2380.wem</Path>
@@ -370,7 +366,7 @@
 				</File>
 				<File Id="882160051" Language="SFX">
 					<ShortName>jump3.wav</ShortName>
-					<Path>SFX/jump3_F6D15820.wem</Path>
+					<Path>SFX/jump3_5F978065.wem</Path>
 				</File>
 				<File Id="889608003" Language="SFX">
 					<ShortName>bongo triplets.wav</ShortName>
@@ -434,7 +430,7 @@
 				</File>
 				<File Id="1050211302" Language="SFX">
 					<ShortName>truck jump.wav</ShortName>
-					<Path>SFX/truck jump_95D8AB1C.wem</Path>
+					<Path>SFX/truck jump_99D3D0A0.wem</Path>
 				</File>
 				<File Id="1062553920" Language="SFX">
 					<ShortName>rytme 1.wav</ShortName>
