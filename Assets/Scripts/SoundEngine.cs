@@ -38,8 +38,6 @@ public class SoundEngine : MonoBehaviour {
 
     public void MoveMusicToNextLevel(int speedLevel)
     {
-
-        speedLevel++;
         switch (speedLevel)
         {
             case 0:

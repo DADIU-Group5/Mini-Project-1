@@ -138,7 +138,11 @@ public class UIController : MonoBehaviour {
     public void DisplayLossScreen()
     {
         // stop all sounds
-        AkSoundEngine.StopAll();
+        //AkSoundEngine.StopAll();
+        AkSoundEngine.PostEvent("gameOver", GameObject.Find("MusicEmitter"));
+        SoundEngine._instance.MoveMusicToNextLevel(0);
+
+
         losePanel.gameObject.SetActive(true);
         playerMove.enabled = false;
         RotatingWheel._instance.StopRotate();
