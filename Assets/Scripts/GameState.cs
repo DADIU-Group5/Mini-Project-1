@@ -147,7 +147,7 @@ public class GameState : MonoBehaviour
             UIController._instance.UpdateMultiplierUp(GetMultiplier());
 
             // pump music
-            SoundEngine._instance.MoveMusicToNextLevel(speedLevel);
+            SoundEngine._instance.MoveMusicToNextLevel(speedLevel + 1);
         }
         else
         {
