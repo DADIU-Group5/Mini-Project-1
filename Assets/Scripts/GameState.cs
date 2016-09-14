@@ -51,7 +51,7 @@ public class GameState : MonoBehaviour
     private float currentNumberSpeed;
     private int playerLives;
     private float currentSpeedMultiplier = 1;
-    private float currentScoreMultiplier = 1;
+    private float currentScoreMultiplier = 0;
     private int numberStreakWithoutMiss = 0;
 
     private float timeSinceGameStarted = 0;
@@ -111,7 +111,7 @@ public class GameState : MonoBehaviour
 
     public float GetMultiplier()
     {
-        return currentScoreMultiplier;
+        return 1 + currentScoreMultiplier * scoreMultiplierIncrease;
     }
 
     public void PlayerGotNumber(int newNum)
@@ -141,10 +141,10 @@ public class GameState : MonoBehaviour
             RotatingWheel._instance.ChangeWheelSpeed(currentNumberSpeed);
 
             // Update score.
-            score += scorePerNumber * currentScoreMultiplier;
-            currentScoreMultiplier = 1 + (numberStreak / numbersPerScoreIncrease) * scoreMultiplierIncrease;
+            score += scorePerNumber * GetMultiplier();
+            currentScoreMultiplier += 1;
             UIController._instance.UpdateScore((int)score);
-            UIController._instance.UpdateMultiplierUp(currentScoreMultiplier);
+            UIController._instance.UpdateMultiplierUp(GetMultiplier());
 
             // pump music
             SoundEngine._instance.MoveMusicToNextLevel(speedLevel);
@@ -152,12 +152,12 @@ public class GameState : MonoBehaviour
         else
         {
             numberStreak = 0;
-            currentScoreMultiplier = 1;
+            currentScoreMultiplier = 0;
 
             // Play pick up sound.
             AkSoundEngine.PostEvent("wrongNumberPickup", this.gameObject);
 
-            UIController._instance.UpdateMultiplierDown(currentScoreMultiplier);
+            UIController._instance.UpdateMultiplierDown(GetMultiplier());
             LoseLife();
         }
         UIController._instance.UpdateNextNumber(GetNextNumber());
@@ -217,10 +217,10 @@ public class GameState : MonoBehaviour
             numberStreak = 0;
             missedNumbers++;
             // Reduce the score multiplier.
-            currentScoreMultiplier -= scoreMultiplierIncrease;
-            if (currentScoreMultiplier < 1)
-                currentScoreMultiplier = 1;
-            UIController._instance.UpdateMultiplierDown(currentScoreMultiplier);
+            currentScoreMultiplier -= 1;
+            if (currentScoreMultiplier < 0)
+                currentScoreMultiplier = 0;
+            UIController._instance.UpdateMultiplierDown(GetMultiplier());
 
 
             if (missedNumbers >= missedNumbersThreshold)
