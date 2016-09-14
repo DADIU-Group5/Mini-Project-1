@@ -1523,7 +1523,7 @@
 									<ChildrenList>
 										<MusicPlaylistItem Name="" ID="{367E518F-F619-4A43-AE43-AB6B44D85D5C}" ShortID="549316918">
 											<PropertyList>
-												<Property Name="LoopCount" Type="int16" Value="2"/>
+												<Property Name="LoopCount" Type="int16" Value="4"/>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
 											<SegmentRef Name="rytme b 2" ID="{7ABDA40B-7603-46C4-9331-680A2065CF2B}"/>

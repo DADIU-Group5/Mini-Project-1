@@ -375,27 +375,23 @@
 				</Event>
 				<Event Name="gameOver" ID="{84F981CD-FEF0-46D9-A3BC-85A54174FB99}">
 					<ChildrenList>
-						<Action Name="Stop All Except" ID="{AC95E78D-13FC-48C1-BED7-E38E71B98400}" ShortID="951509542" Type="Stop" Scope="AllExcept" Global="false">
+						<Action Name="Pause All Except" ID="{E8D95718-6DA3-44A8-B589-ED77069FC7AD}" ShortID="147200626" Type="Pause" Scope="AllExcept" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
 							<ElementList>
-								<Element ID="{C6ECE3F0-757C-4C64-A165-658C12052A38}" Global="false">
-									<ObjectRef Name="birds" ID="{E2CB9914-6565-4220-BE66-B50C094608A3}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
-								</Element>
-								<Element ID="{6BBE0859-7A55-4CF4-86C5-F9130D449288}" Global="false">
-									<ObjectRef Name="monkey" ID="{D8CF6147-D98C-48E7-BA03-54BF7D6D06CF}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
-								</Element>
-								<Element ID="{7E7F25CE-5280-466E-B36D-D14E84F72B7F}" Global="false">
-									<ObjectRef Name="thunder" ID="{4A2C69E4-641E-4C9C-B311-4A1F8563875A}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
-								</Element>
-								<Element ID="{F0F5C068-A192-4C3A-B4BC-F665D3CBB22B}" Global="false">
-									<ObjectRef Name="water" ID="{F189D9FB-8B39-44D4-B0F1-B12CDE502977}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
-								</Element>
-								<Element ID="{46CD23FB-F0DB-47BC-BDBA-4FD54A2AECCF}" Global="false">
+								<Element ID="{49CB3D81-E6C9-48C0-8B44-DEF68712AB38}" Global="false">
 									<ObjectRef Name="talWrongPickup" ID="{A000F6A2-0E35-4CFD-948B-1DD071F17A97}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
 								</Element>
-								<Element ID="{D0438763-C8CA-4239-8391-612798DDA41C}" Global="false">
-									<ObjectRef Name="bas" ID="{C4EA4B8A-F7F0-4AE2-BC7A-C78B34CD6D55}" WorkUnitID="{518FA576-15CF-465D-8682-7C7718B45365}"/>
+								<Element ID="{A2CDBCFD-FDE1-46DE-B72C-97A4B422465A}" Global="false">
+									<ObjectRef Name="talWrongPickupxylophone" ID="{ECD8B12B-DFE2-45F1-A448-7E43EE90AFDC}" WorkUnitID="{6F9A593B-0DC1-4DF6-AABB-C1FE2A9BEFE8}"/>
 								</Element>
 							</ElementList>
+						</Action>
+						<Action Name="Resume All" ID="{4BAD61E3-848F-4B73-8F78-0CF9FF6B11FE}" ShortID="212743535" Type="Resume" Scope="All" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="1"/>
+							</PropertyList>
 						</Action>
 					</ChildrenList>
 				</Event>
